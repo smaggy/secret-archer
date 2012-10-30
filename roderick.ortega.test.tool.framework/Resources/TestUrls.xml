@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SiteUrls id="TestUrls">
+	<site id="DemoBorland" type="WebPage">
+		<url address="http://demo.borland.com/" />
+	</site>
+	<site id="DemoWebApplication" type="WebPage">
+		<url address="http://demo.borland.com/InsuranceWebExtJS/" />
+	</site>
+	<site id="SilkPerformerTestSite" type="WebPage">
+		<url address="http://demo.borland.com/TestSite/Index.html" />
+	</site>
+	<site id="GmoPost" type="WebPage">
+		<url address="http://demo.borland.com/gmopost/" />
+	</site>
+	<site id="ShopIt" type="WebPage">
+		<url address="http://demo.borland.com/ShopItV60/default.asp" />
+	</site>
+	<site id="ExtGwt2Explorer" type="WebPage">
+		<url address="http://demo.borland.com/samples/explorer.html#overview" />
+	</site>
+	<site id="Flex" type="WebPage">
+		<url address="http://demo.borland.com/flex/SilkTest2010R2/index.html" />
+	</site>
+	<site id="Silverlight" type="WebPage">
+		<url address="http://demo.borland.com/WeatherApp/WeatherServiceTestPage.aspx" />
+	</site>
+	<site id="StaticPages" type="WebPage">
+		<url address="http://demo.borland.com/TestSite/picload.html" />
+	</site>
+</SiteUrls>

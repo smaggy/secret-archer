@@ -9,58 +9,58 @@ public class SearchParameters {
 	private String thirdQualifier;
 	
 	public SearchParameters(String mainSearch) {
-		this.mainSearch = mainSearch;
+		setMainSearch(mainSearch);
 	}
 	
 	public SearchParameters(String mainSearch, String firstQualifier) {
-		this.mainSearch = mainSearch;
-		this.firstQualifier = firstQualifier;
+		setMainSearch(mainSearch);
+		setFirstQualifier(firstQualifier);
 	}
 	
 	public SearchParameters(String mainSearch, String firstQualifier, String secondQualifier) {
-		this.mainSearch = mainSearch;
-		this.firstQualifier = firstQualifier;
-		this.secondQualifier = secondQualifier;
+		setMainSearch(mainSearch);
+		setFirstQualifier(firstQualifier);
+		setSecondQualifier(secondQualifier);
 	}
 	
 	public SearchParameters(String mainSearch, String firstQualifier, String secondQualifier, String thirdQualifier) {
-		this.mainSearch = mainSearch;
-		this.firstQualifier = firstQualifier;
-		this.secondQualifier = secondQualifier;
-		this.thirdQualifier = thirdQualifier;
+		setMainSearch(mainSearch);
+		setFirstQualifier(firstQualifier);
+		setSecondQualifier(secondQualifier);
+		setThirdQualifier(thirdQualifier);
 	}
 	
 	public SearchParameters(boolean searchExplicitly, String mainSearch) {
-		this.explicit = searchExplicitly;
-		this.mainSearch = mainSearch;
+		setExplicitSearch(searchExplicitly);
+		setMainSearch(mainSearch);
 	}
 	
 	public SearchParameters(boolean searchExplicitly, String mainSearch, String firstQualifier) {
-		this.explicit = searchExplicitly;
-		this.mainSearch = mainSearch;
-		this.firstQualifier = firstQualifier;
+		setExplicitSearch(searchExplicitly);
+		setMainSearch(mainSearch);
+		setFirstQualifier(firstQualifier);
 	}
 	
 	public SearchParameters(boolean searchExplicitly ,String mainSearch, String firstQualifier, String secondQualifier) {
-		this.explicit = searchExplicitly;
-		this.mainSearch = mainSearch;
-		this.firstQualifier = firstQualifier;
-		this.secondQualifier = secondQualifier;
+		setExplicitSearch(searchExplicitly);
+		setMainSearch(mainSearch);
+		setFirstQualifier(firstQualifier);
+		setSecondQualifier(secondQualifier);
 	}
 	
 	public SearchParameters(boolean searchExplicitly, String mainSearch, String firstQualifier, String secondQualifier, String thirdQualifier) {
-		this.explicit = searchExplicitly;
-		this.mainSearch = mainSearch;
-		this.firstQualifier = firstQualifier;
-		this.secondQualifier = secondQualifier;
-		this.thirdQualifier = thirdQualifier;
+		setExplicitSearch(searchExplicitly);
+		setMainSearch(mainSearch);
+		setFirstQualifier(firstQualifier);
+		setSecondQualifier(secondQualifier);
+		setThirdQualifier(thirdQualifier);
 	}
 	
 	public boolean isExplicitSearch() {
 		return explicit;
 	}
 
-	public void setExplicitSearch(boolean searchExplicitly) {
+	private void setExplicitSearch(boolean searchExplicitly) {
 		this.explicit = searchExplicitly;
 	}
 
@@ -68,7 +68,7 @@ public class SearchParameters {
 		return mainSearch;
 	}
 	
-	public void setMainSearch(String mainSearch) {
+	private void setMainSearch(String mainSearch) {
 		this.mainSearch = mainSearch;
 	}
 	
@@ -76,7 +76,7 @@ public class SearchParameters {
 		return firstQualifier;
 	}
 	
-	public void setFirstQualifier(String firstQualifier) {
+	private void setFirstQualifier(String firstQualifier) {
 		this.firstQualifier = firstQualifier;
 	}
 	
@@ -84,7 +84,7 @@ public class SearchParameters {
 		return secondQualifier;
 	}
 	
-	public void setSecondQualifier(String secondQualifier) {
+	private void setSecondQualifier(String secondQualifier) {
 		this.secondQualifier = secondQualifier;
 	}
 	
@@ -92,7 +92,7 @@ public class SearchParameters {
 		return thirdQualifier;
 	}
 	
-	public void setThirdQualifier(String thirdQualifier) {
+	private void setThirdQualifier(String thirdQualifier) {
 		this.thirdQualifier = thirdQualifier;
 	}
 	

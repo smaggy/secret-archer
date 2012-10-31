@@ -8,22 +8,19 @@ import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterfa
 public class SilktestWebSuggestBox implements AbstractWebSuggestBoxInterface, TestObjectInterface {
 
 	@Override
-	public void select(String textToEnter, int numCharsToEnter,
-			boolean selectExact, String otherCriteria, String otherCriteria2) {
+	public void select(String textToEnter, int numCharsToEnter, boolean selectExact, String otherCriteria, String otherCriteria2) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void select(String textToEnter, int numCharsToEnter,
-			boolean selectExact, String otherCriteria) {
+	public void select(String textToEnter, int numCharsToEnter, boolean selectExact, String otherCriteria) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void select(String textToEnter, int numCharsToEnter,
-			boolean selectExact) {
+	public void select(String textToEnter, int numCharsToEnter, boolean selectExact) {
 		// TODO Auto-generated method stub
 
 	}
@@ -53,15 +50,13 @@ public class SilktestWebSuggestBox implements AbstractWebSuggestBoxInterface, Te
 	}
 
 	@Override
-	public List<List<String>> searchAndReturnList(String textToEnter,
-			int numCharsToEnter) {
+	public List<List<String>> searchAndReturnList(String textToEnter, int numCharsToEnter) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void pickSuggestion(String textSearchedFor, boolean selectExact,
-			String otherCriteria, String otherCriteria2) {
+	public void pickSuggestion(String textSearchedFor, boolean selectExact, String otherCriteria, String otherCriteria2) {
 		// TODO Auto-generated method stub
 
 	}

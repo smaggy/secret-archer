@@ -24,6 +24,7 @@ public class Runner {
 	public void beforeClass() {
 		
 	}
+	
 	@Before
 	public void before() {
 		guiWebFactory = new GenericGuiWebFactory();
@@ -35,14 +36,17 @@ public class Runner {
 		
 		System.out.println("==== new test ====");
 	}
+	
 	@Test
 	public void test01() {
 		
 	}
+	
 	@After
 	public void after() {
 		
 	}
+	
 	@AfterClass
 	public void afterClass() {
 		

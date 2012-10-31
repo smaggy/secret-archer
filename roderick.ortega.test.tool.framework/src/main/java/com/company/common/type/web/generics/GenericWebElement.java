@@ -21,4 +21,10 @@ public class GenericWebElement extends GenericTestObject implements AbstractWebE
 		return null;
 	}
 
+	@Override
+	public String getDomAttribute(String attribute) {
+		System.out.println("GenericWebElement|getDomAttribute: " + attribute);
+		return null;
+	}
+
 }

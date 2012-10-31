@@ -21,4 +21,10 @@ public class SilktestWebElement extends SilktestTestObject implements AbstractWe
 		return null;
 	}
 
+	@Override
+	public String getDomAttribute(String attribute) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

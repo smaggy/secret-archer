@@ -4,23 +4,23 @@
 		<xpath>//TITLE[@textContents='InsuranceWeb: Home']</xpath>
 		<css>css_</css>
 		<object id="ServiceSelector" type="WebListBox">
-			<xpath>//SELECT[@id='quick-link:jump-menu']</xpath>
+			<xpath>//SELECT[@name='quick-link:jump-menu']</xpath>
 			<css>css_</css>
 		</object>
 		<object id="Email" type="WebTextField">
-			<xpath>//INPUT[@id='login-form:email']</xpath>
+			<xpath>//INPUT[@name='login-form:email']</xpath>
 			<css>css_</css>
 		</object>
 		<object id="Password" type="WebTextField">
-			<xpath>//INPUT[@id='login-form:password']</xpath>
+			<xpath>//INPUT[@name='login-form:password']</xpath>
 			<css>css_</css>
 		</object>
 		<object id="LoginButton" type="WebButton">
-			<xpath>//INPUT[@id='login-form:login']</xpath>
+			<xpath>//INPUT[@name='login-form:login']</xpath>
 			<css>css_</css>
 		</object>
-		<object id="SignInButton" type="WebButton">
-			<xpath>//INPUT[@id='login-form:signup']</xpath>
+		<object id="SignUpButton" type="WebButton">
+			<xpath>//INPUT[@name='login-form:signup']</xpath>
 			<css>css_</css>
 		</object>
 		<object id="NewsletterSignUpEmail" type="WebTextField">
@@ -48,11 +48,11 @@
 			<css>css_</css>
 		</object>
 		<object id="LoggedInUserDetails" type="WebButton">
-			<xpath>//FORM[@id='logout-form']//INPUT[@id='logout-form:details']</xpath>
+			<xpath>//FORM[@id='logout-form']//INPUT[@name='logout-form:details']</xpath>
 			<css>css_</css>
 		</object>
 		<object id="LogoutButton" type="WebButton">
-			<xpath>//FORM[@id='logout-form']//INPUT[@id='logout-form:logout']</xpath>
+			<xpath>//FORM[@id='logout-form']//INPUT[@name='logout-form:logout']</xpath>
 			<css>css_</css>
 		</object>
 	</page>
@@ -96,52 +96,194 @@
 		<xpath>//TITLE[@textContents='InsuranceWeb: Automobile Instant Quote']</xpath>
 		<css></css>
 		<object id="Title" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f1']</xpath>
+			<xpath>//INPUT[@name='autoquote:f1']</xpath>
 			<css></css>
 		</object>
 		<object id="FirstName" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f2']</xpath>
+			<xpath>//INPUT[@name='autoquote:f2']</xpath>
 			<css></css>
 		</object>
 		<object id="LastName" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f3']</xpath>
+			<xpath>//INPUT[@name='autoquote:f3']</xpath>
 			<css></css>
 		</object>
 		<object id="Address" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f5']</xpath>
+			<xpath>//INPUT[@name='autoquote:f5']</xpath>
 			<css></css>
 		</object>
 		<object id="City" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f7']</xpath>
+			<xpath>//INPUT[@name='autoquote:f7']</xpath>
 			<css></css>
 		</object>
 		<object id="StateOrProvince" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f8']</xpath>
+			<xpath>//INPUT[@name='autoquote:f8']</xpath>
 			<css></css>
 		</object>
 		<object id="ZipCode" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f9']</xpath>
+			<xpath>//INPUT[@name='autoquote:f9']</xpath>
 			<css></css>
 		</object>
 		<object id="Telephone" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f10']</xpath>
+			<xpath>//INPUT[@name='autoquote:f10']</xpath>
 			<css></css>
 		</object>
 		<object id="Email" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f11']</xpath>
+			<xpath>//INPUT[@name='autoquote:f11']</xpath>
 			<css></css>
 		</object>
 		<object id="Comment" type="WebTextField">
-			<xpath>//INPUT[@id='autoquote:f12']</xpath>
+			<xpath>//INPUT[@name='autoquote:f12']</xpath>
 			<css></css>
 		</object>
 		<object id="Submit" type="WebLink">
-			<xpath>//FORM[@id='autoquote']//A</xpath>
+			<xpath>//FORM[@name='autoquote']//A</xpath>
 			<css></css>
 		</object>
 	</page>
 	<page id="NotImplemetedYetPage" type="WebPage">
 		<xpath>//TITLE[@textContents='InsuranceWeb: NotImplYet']</xpath>
 		<css></css>
+	</page>
+	<page id="AutomobileInstantQuote" type="WebPage">
+		<xpath>//TITLE[@textContents='InsuranceWeb: Automobile Instant Quote']</xpath>
+		<css></css>
+		<object id="ZipCode" type="WebTextField">
+			<xpath>//INPUT[@name='autoquote:zipcode']</xpath>
+			<css></css>
+		</object>
+		<object id="Email" type="WebTextField">
+			<xpath>//INPUT[@name='autoquote:e-mail']</xpath>
+			<css></css>
+		</object>
+		<object id="AutomobileTypeCar" type="WebRadioButton">
+			<xpath>//INPUT[@value='car']</xpath>
+			<css></css>
+		</object>
+		<object id="AutomobileTypeTruck" type="WebRadioButton">
+			<xpath>//INPUT[@value='truck']</xpath>
+			<css></css>
+		</object>
+		<object id="Age" type="WebTextField">
+			<xpath>//INPUT[@name='autoquote:age']</xpath>
+			<css></css>
+		</object>
+		<object id="GenderMale" type="WebRadioButton">
+			<xpath>//INPUT[@value='Male']</xpath>
+			<css></css>
+		</object>
+		<object id="GenderFemale" type="WebRadioButton">
+			<xpath>//INPUT[@value='Female']</xpath>
+			<css></css>
+		</object>
+		<object id="DrivingRecordExcellent" type="WebRadioButton">
+			<xpath>//INPUT[@value='Excellent']</xpath>
+			<css></css>
+		</object>
+		<object id="DrivingRecordGood" type="WebRadioButton">
+			<xpath>//INPUT[@value='Good']</xpath>
+			<css></css>
+		</object>
+		<object id="DrivingRecordFair" type="WebRadioButton">
+			<xpath>//INPUT[@value='Fair']</xpath>
+			<css></css>
+		</object>
+		<object id="DrivingRecordPoor" type="WebRadioButton">
+			<xpath>//INPUT[@value='Poor']</xpath>
+			<css></css>
+		</object>
+		<object id="Year" type="WebTextField">
+			<xpath>//INPUT[@name='autoquote:year']</xpath>
+			<css></css>
+		</object>
+		<object id="Make" type="WebListBox">
+			<xpath>//INPUT[@id='makeCombo']</xpath>
+			<css></css>
+		</object>
+		<object id="MakeArrowDown" type="WebElement">
+			<xpath>//INPUT[@id='makeCombo']/../IMG</xpath>
+			<css></css>
+		</object>
+		<object id="MakeDivWrapper" type="WebElement">
+			<!-- for ie browser through selenium -->
+			<xpath>//DIV[@id='ext-gen11']</xpath>
+			<css></css>
+		</object>
+		<object id="Model" type="WebListBox">
+			<xpath>//INPUT[@id='modelCombo']</xpath>
+			<css></css>
+		</object>
+		<object id="ModelArrowDown" type="WebElement">
+			<xpath>//INPUT[@id='modelCombo']/../IMG</xpath>
+			<css></css>
+		</object>
+		<object id="ModelDivWrapper" type="WebElement">
+			<!-- for ie browser through selenium -->
+			<xpath>//DIV[@id='ext-gen14']</xpath>
+			<css></css>
+		</object>
+		<object id="FinancialInfoOwn" type="WebRadioButton">
+			<xpath>//INPUT[@value='Own']</xpath>
+			<css></css>
+		</object>
+		<object id="FinancialInfoFinance" type="WebRadioButton">
+			<xpath>//INPUT[@value='Finance']</xpath>
+			<css></css>
+		</object>
+		<object id="FinancialInfoLease" type="WebRadioButton">
+			<xpath>//INPUT[@value='Lease']</xpath>
+			<css></css>
+		</object>
+		<object id="ResultZipCode" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[1]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultAge" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[2]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultGender" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[3]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultDrivingRecord" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[4]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultAutomobileType" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[5]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultAutomobileYear" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[6]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultAutomobileMake" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[7]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultAutomobileModel" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[8]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultFinancialInfo" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/DIV[9]</xpath>
+			<css></css>
+		</object>
+		<object id="ResultInstantQuote" type="WebElement">
+			<xpath>//FORM[@id='quote-result']/H1[2]</xpath>
+			<css></css>
+		</object>
+		<object id="NextButton" type="WebButton">
+			<xpath>//INPUT[@name='autoquote:next']</xpath>
+			<css></css>
+		</object>
+		<object id="NewQuoteButton" type="WebButton">
+			<xpath>//INPUT[@name='quote-result:new-quote']</xpath>
+			<css></css>
+		</object>
+		<object id="PurchaseButton" type="WebButton">
+			<xpath>//INPUT[@name='quote-result:purchase-quote']</xpath>
+			<css></css>
+		</object>
 	</page>
 </frame>

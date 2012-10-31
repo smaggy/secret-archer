@@ -78,6 +78,11 @@ public class SeleniumWebElement extends SeleniumTestObject implements TestObject
 		// TODO reo check to see if this is valid
 		return null;
 	}
+	
+	@Override
+	public String getDomAttribute(String attribute) {
+		return getWebElement().getAttribute(attribute);
+	}
 
 	@Override
 	public String getText() {

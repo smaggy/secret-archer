@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame id="DemoWebApplication">
+	<page id="LoginPage" type="WebPage">
+		<xpath>//TITLE[@textContents='InsuranceWeb: Home']</xpath>
+		<css>css_</css>
+		<object id="ServiceSelector" type="WebListBox">
+			<xpath>//SELECT[@id='quick-link:jump-menu']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="Email" type="WebTextField">
+			<xpath>//INPUT[@id='login-form:email']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="Password" type="WebTextField">
+			<xpath>//INPUT[@id='login-form:password']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="LoginButton" type="WebButton">
+			<xpath>//INPUT[@id='login-form:login']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="SignInButton" type="WebButton">
+			<xpath>//INPUT[@id='login-form:signup']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="NewsletterSignUpEmail" type="WebTextField">
+			<xpath>//FORM[@id='j_id28']//INPUT[@name='j_id28:j_id29']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="NewsletterSignUpSubmit" type="WebButton">
+			<xpath>//FORM[@id='j_id28']//A[@href='notImplYet.jsf']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="LearnMoreLink" type="WebLink">
+			<xpath>//DIV[@id='lower-content']//P[@class='abstract'][1]//A[@href='notImplYet.jsf']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="AllServicesLink" type="WebLink">
+			<xpath>//DIV[@id='infobox-1']//A[@href='notImplYet.jsf']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="NewsArchiveLink" type="WebLink">
+			<xpath>//DIV[@class='column-right']//A[@href='notImplYet.jsf']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="LoggedInUserName" type="WebElement">
+			<xpath>//FORM[@id='logout-form']//DIV[2]</xpath>
+			<css>css_</css>
+		</object>
+		<object id="LoggedInUserDetails" type="WebButton">
+			<xpath>//FORM[@id='logout-form']//INPUT[@id='logout-form:details']</xpath>
+			<css>css_</css>
+		</object>
+		<object id="LogoutButton" type="WebButton">
+			<xpath>//FORM[@id='logout-form']//INPUT[@id='logout-form:logout']</xpath>
+			<css>css_</css>
+		</object>
+	</page>
+	<page id="TopNavigation" type="WebPage">
+		<xpath>//TITLE</xpath>
+		<css>css_</css>
+		<object id="NavigationList" type="WebList">
+			<xpath>//DIV[@id='nav']/UL</xpath>
+			<css>css_</css>
+		</object>
+		<object id="Home" type="WebLink">
+			<xpath>//DIV[@id='nav']//LI[@id='home']/A</xpath>
+			<css>css_</css>
+		</object>
+		<object id="Account" type="WebLink">
+			<xpath>//DIV[@id='nav']/UL//LI[2]//A</xpath>
+			<css>css_</css>
+		</object>
+		<object id="ContactUs" type="WebLink">
+			<xpath>//DIV[@id='nav']//LI[@id='contact']/A</xpath>
+			<css>css_</css>
+		</object>
+	</page>
+	<page id="AccountDetailsPage" type="WebPage">
+		<xpath>//TITLE[@textContents='InsuranceWeb: Account Details']</xpath>
+		<css>css_</css>
+		<object id="UserFullName" type="WebElement">
+			<xpath>//DIV[@id='content']/H1</xpath>
+			<css>css_</css>
+		</object>
+		<object id="ContactInformation" type="WebElement">
+			<xpath>//DIV[@id='content']/DIV</xpath>
+			<css>css_</css>
+		</object>
+		<object id="PurchasedQuotesTableWrapper" type="WebElement">
+			<xpath>//DIV[@id='ext-gen16']</xpath>
+			<css>css_</css>
+		</object>
+	</page>
+	<page id="ContactUsPage" type="WebPage">
+		<xpath>//TITLE[@textContents='InsuranceWeb: Automobile Instant Quote']</xpath>
+		<css></css>
+		<object id="Title" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f1']</xpath>
+			<css></css>
+		</object>
+		<object id="FirstName" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f2']</xpath>
+			<css></css>
+		</object>
+		<object id="LastName" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f3']</xpath>
+			<css></css>
+		</object>
+		<object id="Address" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f5']</xpath>
+			<css></css>
+		</object>
+		<object id="City" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f7']</xpath>
+			<css></css>
+		</object>
+		<object id="StateOrProvince" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f8']</xpath>
+			<css></css>
+		</object>
+		<object id="ZipCode" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f9']</xpath>
+			<css></css>
+		</object>
+		<object id="Telephone" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f10']</xpath>
+			<css></css>
+		</object>
+		<object id="Email" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f11']</xpath>
+			<css></css>
+		</object>
+		<object id="Comment" type="WebTextField">
+			<xpath>//INPUT[@id='autoquote:f12']</xpath>
+			<css></css>
+		</object>
+		<object id="Submit" type="WebLink">
+			<xpath>//FORM[@id='autoquote']//A</xpath>
+			<css></css>
+		</object>
+	</page>
+	<page id="NotImplemetedYetPage" type="WebPage">
+		<xpath>//TITLE[@textContents='InsuranceWeb: NotImplYet']</xpath>
+		<css></css>
+	</page>
+</frame>

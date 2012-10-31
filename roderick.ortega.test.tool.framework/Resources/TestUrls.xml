@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SiteUrls id="TestUrls">
+	<site id="Resources" type="WebPage">
+		<url>http://resources.qa.medplus.com/PortalAutomation/default.html</url>
+	</site>
 	<site id="DemoBorland" type="WebPage">
 		<url>http://demo.borland.com/</url>
 	</site>

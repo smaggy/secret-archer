@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame id="testAutomation">
+	<page id="TestAutomationPage" type="WebApplication">
+		<xpath>/BrowserApplication</xpath>
+		<css></css>
+		<object id="NavToTextFields" type="WebLink">
+			<xpath>//A[@id='nav_textfields']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToText" type="WebLink">
+			<xpath>//A[@id='nav_text']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToCheckBoxes" type="WebLink">
+			<xpath>//A[@id='nav_checkboxes']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToButtons" type="WebLink">
+			<xpath>//A[@id='nav_buttons']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToRadioButtons" type="WebLink">
+			<xpath>//A[@id='nav_radiobuttons']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToLinks" type="WebLink">
+			<xpath>//A[@id='nav_links']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToListBoxes" type="WebLink">
+			<xpath>//A[@id='nav_listboxes']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToTables" type="WebLink">
+			<xpath>//A[@id='nav_tables']</xpath>
+			<css></css>
+		</object>
+		<object id="NavToNestedFormsAndControls" type="WebLink">
+			<xpath>//A[@id='nav_nested']</xpath>
+			<css></css>
+		</object>
+		<object id="DialogBox_AlertBox" type="WebButton">
+			<xpath>//DIV[@id='dialogBoxes']//BUTTON[@id='button_id01']</xpath>
+			<css></css>
+		</object>
+		<object id="DialogBox_ConfirmBox" type="WebButton">
+			<xpath>//DIV[@id='dialogBoxes']//BUTTON[@id='button_id02']</xpath>
+			<css></css>
+		</object>
+		<object id="DialogBox_PromptBox" type="WebButton">
+			<xpath>//DIV[@id='dialogBoxes']//BUTTON[@id='button_id03']</xpath>
+			<css></css>
+		</object>
+		<object id="DialogBox_Alert01" type="WebButton">
+			<xpath>//DIV[@id='dialogBoxes']//BUTTON[@id='button_id04']</xpath>
+			<css></css>
+		</object>
+		<object id="DialogBox_Alert02" type="WebButton">
+			<xpath>//DIV[@id='dialogBoxes']//BUTTON[@id='button_id05']</xpath>
+			<css></css>
+		</object>
+		<object id="TextField01" type="WebTextField">
+			<xpath>//INPUT[@id='textfield_id01']</xpath>
+			<css></css>
+		</object>
+		<object id="TextField02" type="WebTextField">
+			<xpath>//INPUT[@id='textfield_id02']</xpath>
+			<css></css>
+		</object>
+		<object id="TextField03" type="WebTextField">
+			<xpath>//INPUT[@id='textfield_id03']</xpath>
+			<css></css>
+		</object>
+		<object id="TextField04" type="WebTextField">
+			<xpath>//INPUT[@id='textfield_id04']</xpath>
+			<css></css>
+		</object>
+		<object id="TextField05" type="WebTextField">
+			<xpath>//INPUT[@name='textfield_name05']</xpath>
+			<css></css>
+		</object>
+		<object id="CheckBox01" type="WebCheckBox">
+			<xpath>//INPUT[@id='checkbox_id01']</xpath>
+			<css></css>
+		</object>
+		<object id="CheckBox02" type="WebCheckBox">
+			<xpath>//INPUT[@id='checkbox_id02']</xpath>
+			<css></css>
+		</object>
+		<object id="CheckBox03" type="WebCheckBox">
+			<xpath>//INPUT[@id='checkbox_id03']</xpath>
+			<css></css>
+		</object>
+		<object id="CheckBox04" type="WebCheckBox">
+			<xpath>//INPUT[@id='checkbox_id04']</xpath>
+			<css></css>
+		</object>
+		<object id="CheckBox05" type="WebCheckBox">
+			<xpath>//INPUT[@id='checkbox_id05']</xpath>
+			<css></css>
+		</object>
+		<object id="CheckBox06" type="WebCheckBox">
+			<xpath>//INPUT[@name='checkbox_name06']</xpath>
+			<css></css>
+		</object>
+		<object id="CheckBox07" type="WebCheckBox">
+			<xpath>//INPUT[@id='checkbox_id07']</xpath>
+			<css></css>
+		</object>
+		<object id="Button01" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@id='button_id01']</xpath>
+			<css></css>
+		</object>
+		<object id="Button02" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@id='button_id02']</xpath>
+			<css></css>
+		</object>
+		<object id="Button03" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@id='button_id03']</xpath>
+			<css></css>
+		</object>
+		<object id="Button04" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@id='button_id04']</xpath>
+			<css></css>
+		</object>
+		<object id="Button05" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@id='button_id05']</xpath>
+			<css></css>
+		</object>
+		<object id="Button06" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@id='button_id06']</xpath>
+			<css></css>
+		</object>
+		<object id="Button07" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@id='button_id07']</xpath>
+			<css></css>
+		</object>
+		<object id="Button08" type="WebButton">
+			<xpath>//DIV[@id='buttons']//INPUT[@name='button_name08']</xpath>
+			<css></css>
+		</object>
+		<object id="RadioButton01" type="WebRadioButton">
+			<xpath>//INPUT[@id='group01_radio01_id']</xpath>
+			<css></css>
+		</object>
+		<object id="RadioButton02" type="WebRadioButton">
+			<xpath>//INPUT[@id='group01_radio02_id']</xpath>
+			<css></css>
+		</object>
+		<object id="RadioButton03" type="WebRadioButton">
+			<xpath>//INPUT[@id='group01_radio03_id']</xpath>
+			<css></css>
+		</object>
+		<object id="RadioButton04" type="WebRadioButton">
+			<xpath>//INPUT[@id='group02_radio01_id']</xpath>
+			<css></css>
+		</object>
+		<object id="RadioButton05" type="WebRadioButton">
+			<xpath>//INPUT[@id='group02_radio02_id']</xpath>
+			<css></css>
+		</object>
+		<object id="RadioButton06" type="WebRadioButton">
+			<xpath>//INPUT[@id='group03_radio01_id']</xpath>
+			<css></css>
+		</object>
+		<object id="RadioButton07" type="WebRadioButton">
+			<xpath>//INPUT[@id='group03_radio02_id']</xpath>
+			<css></css>
+		</object>
+		<object id="Link01" type="WebLink">
+			<xpath>//DIV[@id='links']//A[@id='link_control_01_id']</xpath>
+			<css></css>
+		</object>
+		<object id="Link02" type="WebLink">
+			<xpath>//DIV[@id='links']//A[@id='link_control_02_id']</xpath>
+			<css></css>
+		</object>
+		<object id="Link03" type="WebLink">
+			<xpath>//DIV[@id='links']//A[@id='link_control_03_id']</xpath>
+			<css></css>
+		</object>
+		<object id="Link04" type="WebLink">
+			<xpath>//DIV[@id='links']//A[@id='link_control_04_id']</xpath>
+			<css></css>
+		</object>
+		<object id="Link05" type="WebLink">
+			<xpath>//DIV[@id='links']//A[@name='link_control_05_name']</xpath>
+			<css></css>
+		</object>
+		<object id="ListBox01" type="WebListBox">
+			<xpath>//SELECT[@id='OrgSelection01']</xpath>
+			<css></css>
+		</object>
+		<object id="ListBox02" type="WebListBox">
+			<xpath>//SELECT[@id='OrgSelection02']</xpath>
+			<css></css>
+		</object>
+		<object id="Table01" type="WebTable">
+			<xpath>//TABLE[@id='oatable01']</xpath>
+			<css></css>
+		</object>
+		<object id="Table02" type="WebTable">
+			<xpath>//TABLE[@id='oatable02']</xpath>
+			<css></css>
+		</object>
+	</page>
+</frame>

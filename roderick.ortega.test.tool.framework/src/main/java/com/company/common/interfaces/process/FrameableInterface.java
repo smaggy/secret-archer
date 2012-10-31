@@ -1,4 +1,4 @@
-package com.company.common.interfaces.action;
+package com.company.common.interfaces.process;
 
 import java.io.File;
 import java.io.IOException;

@@ -8,7 +8,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
-import com.company.common.interfaces.action.FrameableInterface;
+import com.company.common.interfaces.process.FrameableInterface;
 import com.company.common.types.CssSelector;
 import com.company.common.types.FrameParameters;
 import com.company.common.types.Locator;

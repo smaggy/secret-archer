@@ -8,7 +8,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 import com.company.common.frame.AbstractAutomationFrame;
-import com.company.common.interfaces.action.FrameableInterface;
+import com.company.common.interfaces.process.FrameableInterface;
 
 public class MockTestAbstractAutomationFrame extends AbstractAutomationFrame implements FrameableInterface {
 

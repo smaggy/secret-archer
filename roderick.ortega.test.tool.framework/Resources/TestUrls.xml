@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SiteUrls id="TestUrls">
 	<site id="DemoBorland" type="WebPage">
-		<url address="http://demo.borland.com/" />
+		<url>http://demo.borland.com/</url>
 	</site>
 	<site id="DemoWebApplication" type="WebPage">
-		<url address="http://demo.borland.com/InsuranceWebExtJS/" />
+		<url>http://demo.borland.com/InsuranceWebExtJS/</url>
 	</site>
 	<site id="SilkPerformerTestSite" type="WebPage">
-		<url address="http://demo.borland.com/TestSite/Index.html" />
+		<url>http://demo.borland.com/TestSite/Index.html</url>
 	</site>
 	<site id="GmoPost" type="WebPage">
-		<url address="http://demo.borland.com/gmopost/" />
+		<url>http://demo.borland.com/gmopost/</url>
 	</site>
 	<site id="ShopIt" type="WebPage">
-		<url address="http://demo.borland.com/ShopItV60/default.asp" />
+		<url>http://demo.borland.com/ShopItV60/default.asp</url>
 	</site>
 	<site id="ExtGwt2Explorer" type="WebPage">
-		<url address="http://demo.borland.com/samples/explorer.html#overview" />
+		<url>http://demo.borland.com/samples/explorer.html#overview</url>
 	</site>
 	<site id="Flex" type="WebPage">
-		<url address="http://demo.borland.com/flex/SilkTest2010R2/index.html" />
+		<url>http://demo.borland.com/flex/SilkTest2010R2/index.html</url>
 	</site>
 	<site id="Silverlight" type="WebPage">
-		<url address="http://demo.borland.com/WeatherApp/WeatherServiceTestPage.aspx" />
+		<url>http://demo.borland.com/WeatherApp/WeatherServiceTestPage.aspx</url>
 	</site>
 	<site id="StaticPages" type="WebPage">
-		<url address="http://demo.borland.com/TestSite/picload.html" />
+		<url>http://demo.borland.com/TestSite/picload.html</url>
 	</site>
 </SiteUrls>

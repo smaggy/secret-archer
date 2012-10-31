@@ -45,8 +45,6 @@ public abstract class AbstractAutomationFrame implements FrameableInterface {
 	@Override
 	public CssSelector getCssSelector(FrameParameters frameParameters) throws XPathExpressionException {
 		
-		// this is untested
-		
 		switch (frameParameters.getFrameParameterType()) {
 		
 		case PAGE_ONLY:

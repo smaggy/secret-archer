@@ -1,0 +1,5 @@
+
+REM meant to be a batch file.  change the extension and make sure silktest is installed
+REM cd "C:\Program Files\Silk\SilkTest\ng\JTF"
+cd "C:\Program Files (x86)\Silk\SilkTest\ng\JTF"
+mvn install:install-file -Dfile=silktest-jtf-nodeps.jar -DgroupId=silktest-jtf -DartifactId=silktest-java-test-framework -Dversion=2011H3 -Dpackaging=jar

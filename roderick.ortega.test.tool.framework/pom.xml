@@ -44,6 +44,11 @@
 		<artifactId>mail</artifactId>
 		<version>1.4.5</version>
 	</dependency>
+	<dependency>
+		<groupId>silktest-jtf</groupId>
+		<artifactId>silktest-java-test-framework</artifactId>
+		<version>2011H3</version>
+	</dependency>
   </dependencies>
   <build>
   	<finalName>${project.artifactId}-${project.version}</finalName>

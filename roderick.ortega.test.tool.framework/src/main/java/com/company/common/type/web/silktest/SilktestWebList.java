@@ -2,14 +2,21 @@ package com.company.common.type.web.silktest;
 
 import java.util.List;
 
+import com.borland.silktest.jtf.xbrowser.DomElement;
+import com.company.common.browser.SilktestWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
 import com.company.common.interfaces.type.AbstractWebElementInterface;
 import com.company.common.interfaces.type.AbstractWebListInterface;
+import com.company.common.types.Locator;
 import com.company.common.types.SearchParameters;
 
 public class SilktestWebList extends SilktestWebElement implements AbstractWebListInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
+
+	public SilktestWebList(DomElement domElement, Locator locator, SilktestWebBrowser webBrowser) {
+		super(domElement, locator, webBrowser);
+	}
 
 	@Override
 	public AbstractWebElementInterface getListItem(int itemIndex) {

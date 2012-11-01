@@ -87,7 +87,7 @@ public class SilktestWebTable extends SilktestWebElement implements AbstractWebT
 		System.out.println("SilktestWebTable|getTableText");
 		List<List<String>> table = new ArrayList<List<String>>();
 		int totalRows = this.getRowCount();
-		for (int i = 1; i <= totalRows; i++) {
+		for (int i = 1; i < totalRows; i++) {
 			table.add(getRowText(i));
 		}
 		return table;

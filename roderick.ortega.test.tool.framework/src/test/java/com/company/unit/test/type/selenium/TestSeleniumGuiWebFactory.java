@@ -22,7 +22,7 @@ import com.company.common.type.web.selenium.SeleniumGuiWebFactory;
 import com.company.common.types.FrameParameters;
 import com.company.common.types.Locator;
 
-public class TestGenericGuiWebFactory {
+public class TestSeleniumGuiWebFactory {
 	
 	private static AbstractGuiWebFactoryInterface guiWebFactory;
 	private static AbstractWebBrowserInterface webBrowser;

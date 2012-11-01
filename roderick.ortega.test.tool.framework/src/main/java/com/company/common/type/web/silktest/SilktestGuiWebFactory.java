@@ -19,62 +19,62 @@ public class SilktestGuiWebFactory extends AbstractGuiWebFactory implements Abst
 	
 	@Override
 	public AbstractWebButtonInterface createWebButton(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebButton: [" + locator + "]");
+		return getBrowser().findWebButton(locator);
 	}
 
 	@Override
 	public AbstractWebCheckBoxInterface createWebCheckBox(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebCheckBox: [" + locator + "]");
+		return getBrowser().findWebCheckBox(locator);
 	}
 
 	@Override
 	public AbstractWebElementInterface createWebElement(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebElement: [" + locator + "]");
+		return getBrowser().findWebElement(locator);
 	}
 
 	@Override
 	public AbstractWebLinkInterface createWebLink(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebLink: [" + locator + "]");
+		return getBrowser().findWebLink(locator);
 	}
 
 	@Override
 	public AbstractWebListInterface createWebList(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebList: [" + locator + "]");
+		return getBrowser().findWebList(locator);
 	}
 
 	@Override
 	public AbstractWebListBoxInterface createWebListBox(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebListBox: [" + locator + "]");
+		return getBrowser().findWebListBox(locator);
 	}
 
 	@Override
 	public AbstractWebRadioButtonInterface createWebRadioButton(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebRadioButton: [" + locator + "]");
+		return getBrowser().findWebRadioButton(locator);
 	}
 
 	@Override
 	public AbstractWebTableInterface createWebTable(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebTable: [" + locator + "]");
+		return getBrowser().findWebTable(locator);
 	}
 
 	@Override
 	public AbstractWebTableRowInterface createWebTableRow(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebTableRow: [" + locator + "]");
+		return getBrowser().findWebTableRow(locator);
 	}
 
 	@Override
 	public AbstractWebTextFieldInterface createWebTextField(Locator locator) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SilktestGuiWebFactory|createWebTextField: [" + locator + "]");
+		return getBrowser().findWebTextField(locator);
 	}
 
 }

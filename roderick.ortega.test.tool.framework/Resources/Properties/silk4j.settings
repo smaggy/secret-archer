@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<recorderProject version="11.0">
+  <applicationConfiguration>
+    <moduleNamePattern>*\iexplore.exe</moduleNamePattern>
+    <commandLinePattern></commandLinePattern>
+    <techDomain>Auto</techDomain>
+    <baseStateInfo class="com.borland.silktest.recorder.project.RecorderBrowserBaseStateInfo">
+      <logicalName>WebBrowser</logicalName>
+      <executable>%ProgramFiles%\Internet Explorer\iexplore.exe</executable>
+      <commandLineArguments></commandLineArguments>
+      <workingDirectory>%ProgramFiles%\Internet Explorer</workingDirectory>
+      <className>BrowserApplication</className>
+      <locator>/BrowserApplication</locator>
+      <url></url>
+    </baseStateInfo>
+  </applicationConfiguration>
+  <actions/>
+  <agentOptions/>
+  <runBaseStateBeforeRecordAndReplay>true</runBaseStateBeforeRecordAndReplay>
+  <replaySpeed>Fast</replaySpeed>
+</recorderProject>

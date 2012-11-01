@@ -12,4 +12,5 @@ public interface AbstractWebTableInterface extends AbstractWebElementInterface, 
 	public int getRowCount();
 	public List<AbstractWebTableRowInterface> getRows();
 	public List<String> getRowText(int rowIndex);
+	public List<List<String>> getTableText();
 }

@@ -145,8 +145,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebElements: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebElementInterface> retList = new ArrayList<AbstractWebElementInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebElement(webElement, null, this));
+			retList.add(new SeleniumWebElement(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -156,8 +158,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebButtons: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebButtonInterface> retList = new ArrayList<AbstractWebButtonInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebButton(webElement, null, this));
+			retList.add(new SeleniumWebButton(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -167,8 +171,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebLinks: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebLinkInterface> retList = new ArrayList<AbstractWebLinkInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebLink(webElement, null, this));
+			retList.add(new SeleniumWebLink(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return null;
 	}
@@ -178,8 +184,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebLists: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebListInterface> retList = new ArrayList<AbstractWebListInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebList(webElement, null, this));
+			retList.add(new SeleniumWebList(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -189,8 +197,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebListBoxes: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebListBoxInterface> retList = new ArrayList<AbstractWebListBoxInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebListBox(webElement, null, this));
+			retList.add(new SeleniumWebListBox(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -200,8 +210,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebRadioButtons: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebRadioButtonInterface> retList = new ArrayList<AbstractWebRadioButtonInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebRadioButton(webElement, null, this));
+			retList.add(new SeleniumWebRadioButton(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -211,8 +223,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebTables: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebTableInterface> retList = new ArrayList<AbstractWebTableInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebTable(webElement, null, this));
+			retList.add(new SeleniumWebTable(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -222,8 +236,12 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebTableRows: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebTableRowInterface> retList = new ArrayList<AbstractWebTableRowInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebTableRow(webElement, null, this));
+			SeleniumWebTableRow row = new SeleniumWebTableRow(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this);
+			row.setIndex(counter);
+			retList.add(row);
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -233,8 +251,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebTextFields: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebTextFieldInterface> retList = new ArrayList<AbstractWebTextFieldInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebTextField(webElement, null, this));
+			retList.add(new SeleniumWebTextField(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}
@@ -244,8 +264,10 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		System.out.println("SeleniumWebBrowser|findAllWebCheckBoxes: " + locator);
 		List<WebElement> webElements = getWebDriver().findElements(By.xpath(locator.getXPathLocator()));
 		List<AbstractWebCheckBoxInterface> retList = new ArrayList<AbstractWebCheckBoxInterface>();
+		int counter = 1;
 		for (WebElement webElement : webElements) {
-			retList.add(new SeleniumWebCheckBox(webElement, null, this));
+			retList.add(new SeleniumWebCheckBox(webElement, new Locator(locator.getXPathLocator() + "[" + counter + "]"), this));
+			counter = counter + 1;
 		}
 		return retList;
 	}

@@ -8,11 +8,11 @@ import com.company.common.browser.SeleniumWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
+import com.company.common.interfaces.type.AbstractSeleniumWebElementInterface;
 import com.company.common.types.CssSelector;
 import com.company.common.types.Locator;
 
-public class SeleniumWebElement extends SeleniumTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractWebElementInterface {
+public class SeleniumWebElement extends SeleniumTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractSeleniumWebElementInterface {
 	
 	private WebElement webElement;
 	private SeleniumWebBrowser webBrowser;

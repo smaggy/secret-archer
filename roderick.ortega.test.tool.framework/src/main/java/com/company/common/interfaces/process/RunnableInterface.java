@@ -5,5 +5,5 @@ public interface RunnableInterface {
 	public void testcaseSetup() throws Exception;
 	public void testcase() throws Exception;
 	public void testcaseTeardown() throws Exception;
-	public void SuiteTeardown() throws Exception;
+	public void suiteTeardown() throws Exception;
 }

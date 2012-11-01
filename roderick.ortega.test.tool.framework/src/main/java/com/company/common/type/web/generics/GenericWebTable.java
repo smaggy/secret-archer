@@ -61,4 +61,10 @@ public class GenericWebTable extends GenericWebElement implements AbstractWebTab
 		return null;
 	}
 
+	@Override
+	public List<List<String>> getTableText() {
+		System.out.println("GenericWebTable|getTableText");
+		return null;
+	}
+
 }

@@ -61,4 +61,10 @@ public class SilktestWebTable extends SilktestWebElement implements TestObjectIn
 		return null;
 	}
 
+	@Override
+	public List<List<String>> getTableText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

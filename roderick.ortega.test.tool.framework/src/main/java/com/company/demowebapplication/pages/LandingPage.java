@@ -42,7 +42,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void setEmail(String email) throws XPathExpressionException {
-		if (getDto().getLandingPageDto().getEmail() == null) {
+		if (email != null) {
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Email"))).setText(email);
 		}
 		else {
@@ -52,7 +52,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void setPassword(String password) throws XPathExpressionException {
-		if (getDto().getLandingPageDto().getPassword() == null) {
+		if (password != null) {
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Password"))).setText(password);
 		}
 		else {
@@ -82,7 +82,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void selectService(ServiceTypeEnum serviceType) throws XPathExpressionException {
-		if (getDto().getLandingPageDto().getService() == null) {
+		if (serviceType != null) {
 			getWebFactory().createWebListBox(getLocator(new FrameParameters("LandingPage","ServiceSelector"))).select(serviceType.toString());
 		}
 		else {
@@ -107,7 +107,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void setNewsletterSignUpEmail(String email) throws XPathExpressionException {
-		if (getDto().getLandingPageDto().getNewsletterEmail() == null) {
+		if (email != null) {
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","NewsletterSignUpEmail"))).setText(email);
 		}
 		else {

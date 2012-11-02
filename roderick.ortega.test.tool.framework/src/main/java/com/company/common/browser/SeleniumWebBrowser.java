@@ -6,7 +6,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.company.common.interfaces.action.FindableInterface;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
@@ -39,7 +38,7 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 	
 	public SeleniumWebBrowser() {
 		// default - internet explorer version of webDriver
-		setWebDriver(new InternetExplorerDriver());
+		// setWebDriver(new InternetExplorerDriver());
 	}
 	
 	public WebDriver getWebDriver() {

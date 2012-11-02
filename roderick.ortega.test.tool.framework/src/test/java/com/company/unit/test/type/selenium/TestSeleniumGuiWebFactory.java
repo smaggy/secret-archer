@@ -10,6 +10,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.xml.sax.SAXException;
 
 import com.company.common.browser.SeleniumWebBrowser;
@@ -32,8 +34,13 @@ public class TestSeleniumGuiWebFactory {
 	
 	@BeforeClass
 	public static void beforeClass() throws ParserConfigurationException, SAXException, IOException {
+		System.setProperty("webdriver.chrome.driver", "C:/software/ChromiumDriver/chromedriver.exe"); 
+
+		WebDriver webDriver = new HtmlUnitDriver();
+		
 		guiWebFactory = new SeleniumGuiWebFactory();
 		SeleniumWebBrowser seleniumWebBrowser = new SeleniumWebBrowser();
+		seleniumWebBrowser.setWebDriver(webDriver);
 		webBrowser = seleniumWebBrowser;
 		guiWebFactory.setBrowser(webBrowser);
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
@@ -180,6 +187,6 @@ public class TestSeleniumGuiWebFactory {
 	
 	@AfterClass
 	public static void afterClass() {
-		//webBrowser.close();
+		// webBrowser.close();
 	}
 }

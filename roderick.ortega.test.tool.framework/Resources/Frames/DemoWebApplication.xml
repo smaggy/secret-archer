@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frame id="DemoWebApplication">
-	<page id="LoginPage" type="WebPage">
+	<page id="LandingPage" type="WebPage">
 		<xpath>//TITLE[@textContents='InsuranceWeb: Home']</xpath>
 		<css>css_</css>
 		<object id="ServiceSelector" type="WebListBox">
@@ -56,7 +56,27 @@
 			<css>css_</css>
 		</object>
 	</page>
-	<page id="TopNavigation" type="WebPage">
+	<page id="SiteFooterNavigation" type="WebPage">
+		<xpath>//TITLE</xpath>
+		<css>css_</css>
+		<object id="Home" type="WebLink">
+			<xpath>//DIV[id='footer']//A[1]</xpath>
+			<css>css_</css>
+		</object>
+		<object id="WebService" type="WebLink">
+			<xpath>//DIV[id='footer']//A[2]</xpath>
+			<css>css_</css>
+		</object>
+		<object id="Settings" type="WebLink">
+			<xpath>//DIV[id='footer']//A[3]</xpath>
+			<css>css_</css>
+		</object>
+		<object id="ContactUs" type="WebLink">
+			<xpath>//DIV[id='footer']//A[4]</xpath>
+			<css>css_</css>
+		</object>
+	</page>
+	<page id="SiteTopNavigation" type="WebPage">
 		<xpath>//TITLE</xpath>
 		<css>css_</css>
 		<object id="NavigationList" type="WebList">
@@ -76,7 +96,7 @@
 			<css>css_</css>
 		</object>
 	</page>
-	<page id="AccountDetailsPage" type="WebPage">
+	<page id="DetailsPage" type="WebPage">
 		<xpath>//TITLE[@textContents='InsuranceWeb: Account Details']</xpath>
 		<css>css_</css>
 		<object id="UserFullName" type="WebElement">
@@ -144,7 +164,7 @@
 		<xpath>//TITLE[@textContents='InsuranceWeb: NotImplYet']</xpath>
 		<css></css>
 	</page>
-	<page id="AutomobileInstantQuote" type="WebPage">
+	<page id="AutomobileInstantQuotePage" type="WebPage">
 		<xpath>//TITLE[@textContents='InsuranceWeb: Automobile Instant Quote']</xpath>
 		<css></css>
 		<object id="ZipCode" type="WebTextField">

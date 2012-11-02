@@ -5,7 +5,12 @@ import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 
 public abstract class AbstractGuiWebFactory implements AbstractGuiWebFactoryInterface, BrowseableInterface {
+	
 	private AbstractWebBrowserInterface browser;
+	
+	public AbstractGuiWebFactory(AbstractWebBrowserInterface webBrowser) {
+		this.setBrowser(webBrowser);
+	}
 
 	public AbstractWebBrowserInterface getBrowser() {
 		System.out.println("AbstractGuiWebFactory|getBrowser");
@@ -16,4 +21,5 @@ public abstract class AbstractGuiWebFactory implements AbstractGuiWebFactoryInte
 		System.out.println("AbstractGuiWebFactory|setBrowser: " + browser);
 		this.browser = browser;
 	}
+	
 }

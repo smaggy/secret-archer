@@ -1,6 +1,7 @@
 package com.company.application2.type.web.silktest;
 
 import com.company.common.interfaces.action.BrowseableInterface;
+import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.type.AbstractWebButtonInterface;
 import com.company.common.interfaces.type.AbstractWebCheckBoxInterface;
@@ -17,6 +18,11 @@ import com.company.common.types.Locator;
 
 public class SilktestGuiWebFactory extends AbstractGuiWebFactory implements AbstractGuiWebFactoryInterface, BrowseableInterface {
 	
+	public SilktestGuiWebFactory(AbstractWebBrowserInterface webBrowser) {
+		super(webBrowser);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public AbstractWebButtonInterface createWebButton(Locator locator) {
 		// TODO Auto-generated method stub

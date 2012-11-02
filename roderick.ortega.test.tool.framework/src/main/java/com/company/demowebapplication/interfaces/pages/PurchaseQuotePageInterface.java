@@ -1,11 +1,11 @@
 package com.company.demowebapplication.interfaces.pages;
 
 public interface PurchaseQuotePageInterface extends SiteFooterNavigationInterface, SiteTopNavigationInterface, AbstractSitePageInterface {
-	public String getLoggedInUser();
-	public void setCreditCardOwner();
-	public void setCreditCardNumber();
-	public void setExpirationDate();
-	public void selectPurchase();
-	public boolean congratulationPageExists();
-	public void selectViewPurchasedQuotes();
+	public String getLoggedInUser() throws Exception;
+	public void setCreditCardOwner() throws Exception;
+	public void setCreditCardNumber() throws Exception;
+	public void setExpirationDate() throws Exception;
+	public void selectPurchase() throws Exception;
+	public boolean congratulationPageExists() throws Exception;
+	public void selectViewPurchasedQuotes() throws Exception;
 }

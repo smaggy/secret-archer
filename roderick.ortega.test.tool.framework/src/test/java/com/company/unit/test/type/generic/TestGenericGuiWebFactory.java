@@ -31,8 +31,8 @@ public class TestGenericGuiWebFactory {
 	
 	@Before
 	public void before() {
-		guiWebFactory = new GenericGuiWebFactory();
 		webBrowser = new GenericWebBrowser();
+		guiWebFactory = new GenericGuiWebFactory(webBrowser);
 		guiWebFactory.setBrowser(webBrowser);
 		locator = new Locator("//ELEMENT[@id='AutomationId']");
 		System.out.println("==== new test ====");

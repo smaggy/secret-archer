@@ -1,6 +1,7 @@
 package com.company.common.type.web.generics;
 
 import com.company.common.interfaces.action.BrowseableInterface;
+import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.type.AbstractWebButtonInterface;
 import com.company.common.interfaces.type.AbstractWebCheckBoxInterface;
@@ -17,6 +18,10 @@ import com.company.common.types.Locator;
 
 public class GenericGuiWebFactory extends AbstractGuiWebFactory implements AbstractGuiWebFactoryInterface, BrowseableInterface {
 	
+	public GenericGuiWebFactory(AbstractWebBrowserInterface webBrowser) {
+		super(webBrowser);
+	}
+
 	@Override
 	public AbstractWebButtonInterface createWebButton(Locator locator) {
 		System.out.println("GenericGuiWebFactory|createWebButton: " + locator);

@@ -1,6 +1,7 @@
 package com.company.common.type.web.selenium;
 
 import com.company.common.interfaces.action.BrowseableInterface;
+import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.type.AbstractWebButtonInterface;
 import com.company.common.interfaces.type.AbstractWebCheckBoxInterface;
@@ -16,6 +17,10 @@ import com.company.common.type.web.abstracts.factory.AbstractGuiWebFactory;
 import com.company.common.types.Locator;
 
 public class SeleniumGuiWebFactory extends AbstractGuiWebFactory implements AbstractGuiWebFactoryInterface, BrowseableInterface {
+
+	public SeleniumGuiWebFactory(AbstractWebBrowserInterface webBrowser) {
+		super(webBrowser);
+	}
 
 	@Override
 	public AbstractWebButtonInterface createWebButton(Locator locator) {

@@ -1,15 +1,15 @@
 package com.company.demowebapplication.interfaces.pages;
 
 public interface ContactUsPageInterface extends AbstractSitePageInterface, SiteFooterNavigationInterface, SiteTopNavigationInterface {
-	public void setTitle();
-	public void setFirstName();
-	public void setLastName();
-	public void setAddress();
-	public void setCity();
-	public void setStateProvince();
-	public void setZipPostalCode();
-	public void setTelephone();
-	public void setEmail();
-	public void setComment();
-	public void selectSubmit();
+	public void setTitle() throws Exception;
+	public void setFirstName() throws Exception;
+	public void setLastName() throws Exception;
+	public void setAddress() throws Exception;
+	public void setCity() throws Exception;
+	public void setStateProvince() throws Exception;
+	public void setZipPostalCode() throws Exception;
+	public void setTelephone() throws Exception;
+	public void setEmail() throws Exception;
+	public void setComment() throws Exception;
+	public void selectSubmit() throws Exception;
 }

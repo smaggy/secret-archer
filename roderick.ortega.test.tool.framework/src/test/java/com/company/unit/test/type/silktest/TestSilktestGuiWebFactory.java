@@ -31,8 +31,7 @@ public class TestSilktestGuiWebFactory {
 	public static void beforeClass() throws Exception {
 		
 		webBrowser = new SilktestWebBrowser();
-		guiWebFactory = new SilktestGuiWebFactory();
-		guiWebFactory.setBrowser(webBrowser);
+		guiWebFactory = new SilktestGuiWebFactory(webBrowser);
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		testAutomationFrame = new XmlFrameBridge(new File("./Resources/Frames/TestAutomation.xml"));
 		demoWebApplication = new XmlFrameBridge(new File("./Resources/Frames/DemoWebApplication.xml"));
@@ -61,93 +60,93 @@ public class TestSilktestGuiWebFactory {
 	@Test
 	public void test02() throws Exception {
 		webBrowser.navigate(xmlUrlBridge.getUrl("DemoWebApplication"));
-		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "Email"))).setText("john.smith@gmail.com");
-		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "Password"))).setText("john");
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "LoginButton"))).select();
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "LogoutButton"))).select();
+		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "Email"))).setText("john.smith@gmail.com");
+		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "Password"))).setText("john");
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "LoginButton"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "LogoutButton"))).select();
 	}
 	
 	@Test
 	public void test03() throws Exception {
 		webBrowser.navigate(xmlUrlBridge.getUrl("DemoWebApplication"));
-		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "Email"))).setText("john.smith@gmail.com");
-		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "Password"))).setText("john");
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "LoginButton"))).select();
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "LoggedInUserDetails"))).select();
+		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "Email"))).setText("john.smith@gmail.com");
+		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "Password"))).setText("john");
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "LoginButton"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "LoggedInUserDetails"))).select();
 		
-		String username = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AccountDetailsPage", "UserFullName"))).getText();
+		String username = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("DetailsPage", "UserFullName"))).getText();
 		System.out.println("Username= [" + username + "]");
-		String contactInformation = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AccountDetailsPage", "ContactInformation"))).getText();
+		String contactInformation = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("DetailsPage", "ContactInformation"))).getText();
 		System.out.println("ContactInformation= [" + contactInformation + "]");
 		
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("TopNavigation", "Home"))).select();
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "LogoutButton"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("SiteTopNavigation", "Home"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "LogoutButton"))).select();
 	}
 	
 	@Test
 	public void test04() throws Exception {
 		webBrowser.navigate(xmlUrlBridge.getUrl("DemoWebApplication"));
-		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "Email"))).setText("john.smith@gmail.com");
-		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "Password"))).setText("john");
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "LoginButton"))).select();
+		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "Email"))).setText("john.smith@gmail.com");
+		guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "Password"))).setText("john");
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "LoginButton"))).select();
 		
-		guiWebFactory.createWebListBox(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "ServiceSelector"))).select("Auto Quote");
+		guiWebFactory.createWebListBox(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "ServiceSelector"))).select("Auto Quote");
 		
 		// needed a sleep because going faster than browser could load
 		Thread.sleep(4000);
 		
-		String zipCode = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ZipCode"))).getDomAttribute("value");
+		String zipCode = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ZipCode"))).getDomAttribute("value");
 		System.out.println("ZipCode= [" + zipCode + "]");
-		String eMail = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "Email"))).getDomAttribute("value");
+		String eMail = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "Email"))).getDomAttribute("value");
 		System.out.println("Email= [" + eMail + "]");
 		
-		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "AutomobileTypeCar"))).select();
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "NextButton"))).select();
+		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "AutomobileTypeCar"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "NextButton"))).select();
 		
-		String age = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "Age"))).getDomAttribute("value");
+		String age = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "Age"))).getDomAttribute("value");
 		System.out.println("Age= [" + age + "]");
 		
-		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "GenderMale"))).select();
-		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "DrivingRecordExcellent"))).select();
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "NextButton"))).select();
+		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "GenderMale"))).select();
+		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "DrivingRecordExcellent"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "NextButton"))).select();
 		
 		// needed a sleep because going faster than page could load
 		Thread.sleep(4000);
 		
-		String year = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "Year"))).getDomAttribute("value");
+		String year = guiWebFactory.createWebTextField(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "Year"))).getDomAttribute("value");
 		System.out.println("Year= [" + year + "]");
 		
-		guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "MakeArrowDown"))).click();
+		guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "MakeArrowDown"))).click();
 		
 		// needed a sleep because going faster than list could load
 		Thread.sleep(4000);
 		
-		String expandedMakeLocator = demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "MakeDivWrapper")).getXPathLocator() + "/DIV";
+		String expandedMakeLocator = demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "MakeDivWrapper")).getXPathLocator() + "/DIV";
 		List<AbstractWebElementInterface> makeElements = webBrowser.findAllWebElements(new Locator(expandedMakeLocator));
 		makeElements.get(0).click();
 		
-		guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ModelArrowDown"))).click();
+		guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ModelArrowDown"))).click();
 		
 		// needed a sleep because going faster than list could load
 		Thread.sleep(4000);
 		
-		String expandedModelLocator = demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ModelDivWrapper")).getXPathLocator() + "/DIV";
+		String expandedModelLocator = demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ModelDivWrapper")).getXPathLocator() + "/DIV";
 		List<AbstractWebElementInterface> modelElements = webBrowser.findAllWebElements(new Locator(expandedModelLocator));
 		modelElements.get(0).click();
 		
-		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "FinancialInfoOwn"))).select();
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "NextButton"))).select();
+		guiWebFactory.createWebRadioButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "FinancialInfoOwn"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "NextButton"))).select();
 		
-		String resultZipCode = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultZipCode"))).getText();
-		String resultAge = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultAge"))).getText();
-		String resultGender = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultGender"))).getText();
-		String resultDrivingRecord = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultDrivingRecord"))).getText();
-		String resultautomobileType = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultAutomobileType"))).getText();
-		String resultYear = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultAutomobileYear"))).getText();
-		String resultMake = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultAutomobileMake"))).getText();
-		String resultModel = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultAutomobileModel"))).getText();
-		String resultFinancialInfo = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultFinancialInfo"))).getText();
-		String resultInstantQuote = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuote", "ResultInstantQuote"))).getText();
+		String resultZipCode = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultZipCode"))).getText();
+		String resultAge = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultAge"))).getText();
+		String resultGender = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultGender"))).getText();
+		String resultDrivingRecord = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultDrivingRecord"))).getText();
+		String resultautomobileType = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultAutomobileType"))).getText();
+		String resultYear = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultAutomobileYear"))).getText();
+		String resultMake = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultAutomobileMake"))).getText();
+		String resultModel = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultAutomobileModel"))).getText();
+		String resultFinancialInfo = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultFinancialInfo"))).getText();
+		String resultInstantQuote = guiWebFactory.createWebElement(demoWebApplication.getTestObjectLocator(new FrameParameters("AutomobileInstantQuotePage", "ResultInstantQuote"))).getText();
 		
 		System.out.println("resultZipCode= [" + resultZipCode + "]");
 		System.out.println("resultAge= [" + resultAge + "]");
@@ -160,8 +159,8 @@ public class TestSilktestGuiWebFactory {
 		System.out.println("resultFinancialInfo= [" + resultFinancialInfo + "]");
 		System.out.println("resultInstantQuote= [" + resultInstantQuote + "]");
 		
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("TopNavigation", "Home"))).select();
-		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LoginPage", "LogoutButton"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("SiteTopNavigation", "Home"))).select();
+		guiWebFactory.createWebButton(demoWebApplication.getTestObjectLocator(new FrameParameters("LandingPage", "LogoutButton"))).select();
 	}
 	
 	@Test

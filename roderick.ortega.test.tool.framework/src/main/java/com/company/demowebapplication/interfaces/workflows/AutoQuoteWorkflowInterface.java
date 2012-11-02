@@ -1,7 +1,7 @@
 package com.company.demowebapplication.interfaces.workflows;
 
-public interface AutoQuoteWorkflowInterface {
-	public void login();
-	public void enterDataToForm();
-	public void verifySubmittedData();
+public interface AutoQuoteWorkflowInterface extends AbstractSiteWorkflowInterface {
+	public void login() throws Exception;
+	public void enterDataToForm() throws Exception;
+	public void verifySubmittedData() throws Exception;
 }

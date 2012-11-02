@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.company.common.interfaces.process.TestcaseRunnableInterface;
+import com.company.unit.test.silktest.pages.demowebapplication.generic.TestAutoQuoteWorkflow;
 import com.company.unit.test.silktest.pages.demowebapplication.generic.TestLandingPage;
 
 public class Runner {
@@ -16,6 +17,7 @@ public class Runner {
 	@BeforeClass
 	public static void beforeClass() {
 		testcase = new TestLandingPage();
+		testcase = new TestAutoQuoteWorkflow();
 	}
 	
 	@Before

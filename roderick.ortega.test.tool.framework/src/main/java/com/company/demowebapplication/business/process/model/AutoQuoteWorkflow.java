@@ -1,5 +1,9 @@
 package com.company.demowebapplication.business.process.model;
 
+import java.io.File;
+
+import com.company.common.interfaces.action.PageBuildableInterface;
+import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.process.DataLoadableInterface;
 import com.company.common.types.VerificationParameters;
 import com.company.common.utils.Verifiable;
@@ -13,23 +17,41 @@ import com.company.demowebapplication.enums.ServiceTypeEnum;
 import com.company.demowebapplication.interfaces.pages.AutomobileInstantQuotePageInterface;
 import com.company.demowebapplication.interfaces.pages.LandingPageInterface;
 import com.company.demowebapplication.interfaces.workflows.AutoQuoteWorkflowInterface;
+import com.company.demowebapplication.pages.AutomobileInstantQuotePage;
+import com.company.demowebapplication.pages.LandingPage;
 
-public class AutoQuoteWorkflow extends AbstractSiteWorkflow implements AutoQuoteWorkflowInterface, DataLoadableInterface {
+public class AutoQuoteWorkflow extends AbstractSiteWorkflow implements AutoQuoteWorkflowInterface, DataLoadableInterface, PageBuildableInterface {
 
 	private LandingPageInterface lp;
 	private AutomobileInstantQuotePageInterface aiqp;
-	private LandingPageDto lpDto = this.getDto().getLandingPageDto();
-	private AutomobileInstantQuotePageDto aiqpDto = this.getDto().getAutomobileInstantQuotePageDto();
+	private LandingPageDto lpDto;// = this.getDto().getLandingPageDto();
+	private AutomobileInstantQuotePageDto aiqpDto;// = this.getDto().getAutomobileInstantQuotePageDto();
+	
+	public AutoQuoteWorkflow(AbstractGuiWebFactoryInterface webFactory) {
+		super(webFactory);
+	}
 	
 	@Override
-	public void login() throws Exception {
+	public void buildPages() throws Exception {
+		this.lp = new LandingPage(new File("./Resources/Frames/DemoWebApplication.xml"), this.getWebFactory());
+		this.aiqp = new AutomobileInstantQuotePage(new File("./Resources/Frames/DemoWebApplication.xml"), this.getWebFactory());
+	}
+	
+	@Override
+	public void login(LandingPageDto lpDto) throws Exception {
+		if (lpDto == null) {
+			lpDto = this.lpDto;
+		}
 		lp.setEmail(lpDto.getEmail());
 		lp.setPassword(lpDto.getPassword());
 		lp.selectService(ServiceTypeEnum.AUTO_QUOTE);
 	}
 
 	@Override
-	public void enterDataToForm() throws Exception {
+	public void enterDataToForm(AutomobileInstantQuotePageDto aiqpDto) throws Exception {
+		if (aiqpDto == null) {
+			aiqpDto = this.aiqpDto;
+		}
 		aiqp.setZipCode(aiqpDto.getZipCode());
 		aiqp.setEmail(aiqpDto.getEmail());
 		aiqp.selectAutomobileType(AutomobileTypeEnum.CAR);
@@ -46,7 +68,10 @@ public class AutoQuoteWorkflow extends AbstractSiteWorkflow implements AutoQuote
 	}
 
 	@Override
-	public void verifySubmittedData() throws Exception {
+	public void verifySubmittedData(AutomobileInstantQuotePageDto aiqpDto) throws Exception {
+		if (aiqpDto == null) {
+			aiqpDto = this.aiqpDto;
+		}
 		Verifiable.continueOnError(new VerificationParameters(aiqp.getDisplayedZipCode(), aiqpDto.getZipCode(), "Verify Zip Code"));
 		Verifiable.continueOnError(new VerificationParameters(aiqp.getDisplayedAge(), aiqpDto.getAge(), "Verify Age"));
 		Verifiable.continueOnError(new VerificationParameters(aiqp.getDisplayedGender(), aiqpDto.getGender(), "Verify Gender"));

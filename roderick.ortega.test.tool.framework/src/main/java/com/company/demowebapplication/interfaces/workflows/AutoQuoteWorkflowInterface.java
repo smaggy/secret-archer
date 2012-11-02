@@ -1,7 +1,10 @@
 package com.company.demowebapplication.interfaces.workflows;
 
+import com.company.demowebapplication.data.AutomobileInstantQuotePageDto;
+import com.company.demowebapplication.data.LandingPageDto;
+
 public interface AutoQuoteWorkflowInterface extends AbstractSiteWorkflowInterface {
-	public void login() throws Exception;
-	public void enterDataToForm() throws Exception;
-	public void verifySubmittedData() throws Exception;
+	public void login(LandingPageDto lpDto) throws Exception;
+	public void enterDataToForm(AutomobileInstantQuotePageDto aiqpDto) throws Exception;
+	public void verifySubmittedData(AutomobileInstantQuotePageDto aiqpDto) throws Exception;
 }

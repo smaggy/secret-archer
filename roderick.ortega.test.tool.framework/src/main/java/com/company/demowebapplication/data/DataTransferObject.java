@@ -7,6 +7,7 @@ public class DataTransferObject {
 	private FindAnInsuranceAgentPageDto findAnInsuranceAgentPageDto;
 	private LandingPageDto landingPageDto;
 	private PurchaseQuotePageDto purchaseQuotePageDto;
+	private SiteTopNavigationDto siteTopNavigationDto;
 	
 	public AutomobileInstantQuotePageDto getAutomobileInstantQuotePageDto() {
 		
@@ -86,6 +87,23 @@ public class DataTransferObject {
 	
 	public void setPurchaseQuotePageDto(PurchaseQuotePageDto purchaseQuotePageDto) {
 		this.purchaseQuotePageDto = purchaseQuotePageDto;
+	}
+
+	public SiteTopNavigationDto getSiteTopNavigationDto() {
+		
+		// TODO: build a data factory
+		
+		if (siteTopNavigationDto == null) {
+			return new SiteTopNavigationDto();
+		}
+		else {
+			return siteTopNavigationDto;
+		}
+		
+	}
+
+	public void setSiteTopNavigationDto(SiteTopNavigationDto siteTopNavigationDto) {
+		this.siteTopNavigationDto = siteTopNavigationDto;
 	}
 	
 }

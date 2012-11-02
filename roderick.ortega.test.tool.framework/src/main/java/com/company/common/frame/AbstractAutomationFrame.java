@@ -17,6 +17,10 @@ public abstract class AbstractAutomationFrame implements FrameableInterface {
 	
 	private XmlFrameBridge xmlFrameBridge;
 	
+	public AbstractAutomationFrame() {
+		
+	}
+	
 	public AbstractAutomationFrame(File frameFile) throws ParserConfigurationException, SAXException, IOException {
 		this.xmlFrameBridge = new XmlFrameBridge(frameFile);
 	}

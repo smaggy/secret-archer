@@ -8,6 +8,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
+import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.process.DataLoadableInterface;
 import com.company.common.interfaces.process.FrameableInterface;
 import com.company.common.types.FrameParameters;
@@ -16,28 +17,8 @@ import com.company.demowebapplication.interfaces.pages.LandingPageInterface;
 
 public class LandingPage extends AbstractSitePage implements DataLoadableInterface, LandingPageInterface, FrameableInterface {
 
-	public LandingPage(File frameFile) throws ParserConfigurationException, SAXException, IOException {
-		super(frameFile);
-	}
-
-	@Override
-	public void selectHome() throws XPathExpressionException {
-		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","Home"))).select();
-	}
-
-	@Override
-	public void selectWebService() throws XPathExpressionException {
-		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","WebService"))).select();
-	}
-
-	@Override
-	public void selectSettings() throws XPathExpressionException {
-		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","Settings"))).select();
-	}
-
-	@Override
-	public void selectContactUs() throws XPathExpressionException {
-		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","ContactUs"))).select();
+	public LandingPage(File frameFile, AbstractGuiWebFactoryInterface webFactory) throws ParserConfigurationException, SAXException, IOException {
+		super(frameFile, webFactory);
 	}
 
 	@Override

@@ -25,8 +25,7 @@ public class TestLandingPage implements TestcaseRunnableInterface {
 		webFactory = new GenericGuiWebFactory(webBrowser);
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		
-		landingPage = new LandingPage(new File("./Resources/Frames/DemoWebApplication.xml"));
-		landingPage.setWebFactory(webFactory);
+		landingPage = new LandingPage(new File("./Resources/Frames/DemoWebApplication.xml"), webFactory);
 	}
 
 	@Override

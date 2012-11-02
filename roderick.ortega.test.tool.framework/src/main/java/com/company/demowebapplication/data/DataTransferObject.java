@@ -14,11 +14,9 @@ public class DataTransferObject {
 		// TODO: build a data factory
 		
 		if (automobileInstantQuotePageDto == null) {
-			return new AutomobileInstantQuotePageDto();
+			automobileInstantQuotePageDto = new AutomobileInstantQuotePageDto();
 		}
-		else {
-			return automobileInstantQuotePageDto;
-		}
+		return automobileInstantQuotePageDto;
 	}
 	
 	public void setAutomobileInstantQuotePageDto(AutomobileInstantQuotePageDto automobileInstantQuotePageDto) {
@@ -30,11 +28,9 @@ public class DataTransferObject {
 		// TODO: build a data factory
 		
 		if (contactUsPageDto == null) {
-			return new ContactUsPageDto();
+			contactUsPageDto = new ContactUsPageDto(); 
 		}
-		else {
-			return contactUsPageDto;
-		}
+		return contactUsPageDto;
 	}
 	
 	public void setContactUsPageDto(ContactUsPageDto contactUsPageDto) {
@@ -46,11 +42,9 @@ public class DataTransferObject {
 		// TODO: build a data factory
 		
 		if (findAnInsuranceAgentPageDto == null) {
-			return new FindAnInsuranceAgentPageDto();
+			findAnInsuranceAgentPageDto = new FindAnInsuranceAgentPageDto();
 		}
-		else {
-			return findAnInsuranceAgentPageDto;
-		}
+		return findAnInsuranceAgentPageDto;
 	}
 	
 	public void setFindAnInsuranceAgentPageDto(FindAnInsuranceAgentPageDto findAnInsuranceAgentPageDto) {
@@ -62,11 +56,9 @@ public class DataTransferObject {
 		// TODO: build a data factory
 		
 		if (landingPageDto == null) {
-			return new LandingPageDto();
+			landingPageDto = new LandingPageDto();
 		}
-		else {
-			return landingPageDto;
-		}
+		return landingPageDto;
 	}
 	
 	public void setLandingPageDto(LandingPageDto landingPageDto) {
@@ -78,11 +70,9 @@ public class DataTransferObject {
 		// TODO: build a data factory
 		
 		if (purchaseQuotePageDto == null) {
-			return new PurchaseQuotePageDto();
+			purchaseQuotePageDto = new PurchaseQuotePageDto();
 		}
-		else {
-			return purchaseQuotePageDto;
-		}
+		return purchaseQuotePageDto;
 	}
 	
 	public void setPurchaseQuotePageDto(PurchaseQuotePageDto purchaseQuotePageDto) {
@@ -94,12 +84,9 @@ public class DataTransferObject {
 		// TODO: build a data factory
 		
 		if (siteTopNavigationDto == null) {
-			return new SiteTopNavigationDto();
+			siteTopNavigationDto = new SiteTopNavigationDto();
 		}
-		else {
-			return siteTopNavigationDto;
-		}
-		
+		return siteTopNavigationDto;
 	}
 
 	public void setSiteTopNavigationDto(SiteTopNavigationDto siteTopNavigationDto) {

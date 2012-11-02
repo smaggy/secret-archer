@@ -16,7 +16,7 @@ public class SilktestWebTextField extends SilktestWebElement implements Abstract
 	
 	@Override
 	public void setText(String text) {
-		System.out.println("SilktestWebTextField|select");
+		System.out.println("SilktestWebTextField|setText: [" + text + "]");
 		((DomTextField) getDomElement()).setText(text);
 	}
 

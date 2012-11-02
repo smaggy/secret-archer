@@ -1,31 +1,29 @@
-package com.company.unit.test.silktest.pages.demowebapplication.generic;
+package com.company.unit.test.pages.demowebapplication;
 
 import java.io.File;
 
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.process.TestcaseRunnableInterface;
+import com.company.common.object.helpers.AbstractTestcase;
 import com.company.common.object.helpers.XmlUrlBridge;
-import com.company.common.type.web.generics.GenericGuiWebFactory;
-import com.company.common.type.web.generics.GenericWebBrowser;
 import com.company.demowebapplication.data.DataTransferObject;
 import com.company.demowebapplication.interfaces.pages.LandingPageInterface;
 import com.company.demowebapplication.pages.LandingPage;
 
-public class RunnableLandingPage implements TestcaseRunnableInterface {
+public class RunnableLandingPageTestcase extends AbstractTestcase implements TestcaseRunnableInterface {
 
 	private LandingPageInterface landingPage;
-	private AbstractGuiWebFactoryInterface webFactory;
-	private AbstractWebBrowserInterface webBrowser;
 	private XmlUrlBridge xmlUrlBridge;
+	
+	public RunnableLandingPageTestcase(AbstractWebBrowserInterface webBrowser, AbstractGuiWebFactoryInterface webFactory) {
+		super(webBrowser, webFactory);
+	}
 	
 	@Override
 	public void testcaseSetup() throws Exception {
-		webBrowser = new GenericWebBrowser();
-		webFactory = new GenericGuiWebFactory(webBrowser);
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
-		
-		landingPage = new LandingPage(new File("./Resources/Frames/DemoWebApplication.xml"), webFactory);
+		landingPage = new LandingPage(new File("./Resources/Frames/DemoWebApplication.xml"), this.getWebFactory());
 	}
 
 	@Override
@@ -36,7 +34,7 @@ public class RunnableLandingPage implements TestcaseRunnableInterface {
 		
 		landingPage.setDto(dto);
 		
-		webBrowser.navigate(xmlUrlBridge.getUrl("DemoWebApplication"));
+		this.getWebBrowser().navigate(xmlUrlBridge.getUrl("DemoWebApplication"));
 		landingPage.setEmail(null);
 		landingPage.setPassword(null);
 		landingPage.selectLoginButton();

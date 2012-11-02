@@ -8,7 +8,7 @@ Maven: Version 3.0.4
 Java: JDK Version 1.6.0.35
 Ant: Version 1.8.4
 Silktest: Version 2011 HF3
-Selenium: WebDriver Version 2.23.1
+Selenium: WebDriver Version 2.25.0
 JUnit: Version 4.10
 Eclipse: Eclipse JavaEE for Web Developers - Juno Release - Normally run the Java Perspective
 
@@ -26,3 +26,8 @@ NOTE: if the jars in the classpath are coming up with errors, check your M2_REPO
 	c. if M2_REPO variable is not present, create it and point to local maven .m2/repository location
 	
 Check pom.xml for more detailed information.   A zip file should be produced as a result of using the maven build system.
+
+Update 20121102 Roderick Ortega
+1. updated selenium version to 2.25.0 due to issue with executing with chromium driver
+2. checked in a demo web application implementation and runner template.  to execute page and workflow tests, use the runner in src/test/java.
+3. currently, the only testcases i am executing are the using the generic stubbers to validate the process flow.  selenium to follow.

@@ -23,54 +23,54 @@ public class TestAbstractAutomationFrame {
 	
 	@Test
 	public void test01() throws Exception {
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "ServiceSelector")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "Email")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "Password")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "LoginButton")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "SignInButton")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "NewsletterSignUpEmail")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "NewsletterSignUpSubmit")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "LearnMoreLink")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "AllServicesLink")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "NewsArchiveLink")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "LoggedInUserName")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "LoggedInUserDetails")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage", "LogoutButton")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("LoginPage")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("TopNavigation", "NavigationList")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("TopNavigation", "Home")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("TopNavigation", "Account")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("TopNavigation", "ContactUs")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("TopNavigation")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("AccountDetailsPage", "UserFullName")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("AccountDetailsPage", "ContactInformation")));
-		System.out.println(automationFrame.getLocator(new FrameParameters("AccountDetailsPage", "PurchasedQuotesTableWrapper")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "ServiceSelector")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "Email")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "Password")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "LoginButton")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "SignUpButton")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "NewsletterSignUpEmail")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "NewsletterSignUpSubmit")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "LearnMoreLink")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "AllServicesLink")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "NewsArchiveLink")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "LoggedInUserName")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "LoggedInUserDetails")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage", "LogoutButton")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("LandingPage")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("SiteTopNavigation", "NavigationList")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("SiteTopNavigation", "Home")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("SiteTopNavigation", "Account")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("SiteTopNavigation", "ContactUs")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("SiteTopNavigation")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("DetailsPage", "UserFullName")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("DetailsPage", "ContactInformation")));
+		System.out.println(automationFrame.getLocator(new FrameParameters("DetailsPage", "PurchasedQuotesTableWrapper")));
 	}
 	
 	@Test
 	public void test02() throws Exception {
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "ServiceSelector")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "Email")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "Password")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "LoginButton")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "SignInButton")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "NewsletterSignUpEmail")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "NewsletterSignUpSubmit")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "LearnMoreLink")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "AllServicesLink")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "NewsArchiveLink")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "LoggedInUserName")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "LoggedInUserDetails")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage", "LogoutButton")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("LoginPage")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("TopNavigation", "NavigationList")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("TopNavigation", "Home")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("TopNavigation", "Account")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("TopNavigation", "ContactUs")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("TopNavigation")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("AccountDetailsPage", "UserFullName")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("AccountDetailsPage", "ContactInformation")));
-		System.out.println(automationFrame.getCssSelector(new FrameParameters("AccountDetailsPage", "PurchasedQuotesTableWrapper")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "ServiceSelector")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "Email")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "Password")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "LoginButton")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "SignUpButton")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "NewsletterSignUpEmail")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "NewsletterSignUpSubmit")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "LearnMoreLink")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "AllServicesLink")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "NewsArchiveLink")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "LoggedInUserName")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "LoggedInUserDetails")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage", "LogoutButton")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("LandingPage")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("SiteTopNavigation", "NavigationList")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("SiteTopNavigation", "Home")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("SiteTopNavigation", "Account")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("SiteTopNavigation", "ContactUs")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("SiteTopNavigation")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("DetailsPage", "UserFullName")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("DetailsPage", "ContactInformation")));
+		System.out.println(automationFrame.getCssSelector(new FrameParameters("DetailsPage", "PurchasedQuotesTableWrapper")));
 	}
 	
 	@After

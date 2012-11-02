@@ -12,7 +12,7 @@ import com.company.demowebapplication.business.process.model.AutoQuoteWorkflow;
 import com.company.demowebapplication.data.AutomobileInstantQuotePageDto;
 import com.company.demowebapplication.data.LandingPageDto;
 
-public class TestAutoQuoteWorkflow implements TestcaseRunnableInterface {
+public class RunnableAutoQuoteWorkflow implements TestcaseRunnableInterface {
 
 	private AbstractGuiWebFactoryInterface webFactory;
 	private AbstractWebBrowserInterface webBrowser;

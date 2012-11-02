@@ -12,7 +12,7 @@ import com.company.demowebapplication.data.DataTransferObject;
 import com.company.demowebapplication.interfaces.pages.LandingPageInterface;
 import com.company.demowebapplication.pages.LandingPage;
 
-public class TestLandingPage implements TestcaseRunnableInterface {
+public class RunnableLandingPage implements TestcaseRunnableInterface {
 
 	private LandingPageInterface landingPage;
 	private AbstractGuiWebFactoryInterface webFactory;

@@ -6,6 +6,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.company.common.browser.GenericWebBrowser;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.type.AbstractWebButtonInterface;
@@ -19,7 +20,6 @@ import com.company.common.interfaces.type.AbstractWebTableInterface;
 import com.company.common.interfaces.type.AbstractWebTableRowInterface;
 import com.company.common.interfaces.type.AbstractWebTextFieldInterface;
 import com.company.common.type.web.generics.GenericGuiWebFactory;
-import com.company.common.type.web.generics.GenericWebBrowser;
 import com.company.common.types.Locator;
 import com.company.common.types.SearchParameters;
 
@@ -30,10 +30,10 @@ public class TestGenericGuiWebFactory {
 	private Locator locator;
 	
 	@Before
-	public void before() {
+	public void before() throws Exception {
 		webBrowser = new GenericWebBrowser();
 		guiWebFactory = new GenericGuiWebFactory(webBrowser);
-		guiWebFactory.setBrowser(webBrowser);
+		guiWebFactory.setWebBrowser(webBrowser);
 		locator = new Locator("//ELEMENT[@id='AutomationId']");
 		System.out.println("==== new test ====");
 	}

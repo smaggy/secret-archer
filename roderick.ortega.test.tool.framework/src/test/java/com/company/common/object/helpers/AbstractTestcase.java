@@ -2,7 +2,7 @@ package com.company.common.object.helpers;
 
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
-import com.company.common.interfaces.process.TestcaseRunnableInterface;
+import com.company.common.interfaces.tools.TestcaseRunnableInterface;
 
 public abstract class AbstractTestcase implements TestcaseRunnableInterface {
 	

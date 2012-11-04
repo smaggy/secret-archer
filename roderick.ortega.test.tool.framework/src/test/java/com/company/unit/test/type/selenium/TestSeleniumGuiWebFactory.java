@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -12,7 +13,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import com.company.common.browser.SeleniumWebBrowser;
+import com.company.common.browser.SeleniumIeWebBrowser;
 import com.company.common.frame.XmlFrameBridge;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
@@ -31,8 +32,8 @@ public class TestSeleniumGuiWebFactory {
 	private static XmlFrameBridge demoWebApplication;
 	
 	@BeforeClass
-	public static void beforeClass() throws ParserConfigurationException, SAXException, IOException {
-		webBrowser = new SeleniumWebBrowser();
+	public static void beforeClass() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
+		webBrowser = new SeleniumIeWebBrowser();
 		guiWebFactory = new SeleniumGuiWebFactory(webBrowser);
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		testAutomationFrame = new XmlFrameBridge(new File("./Resources/Frames/TestAutomation.xml"));

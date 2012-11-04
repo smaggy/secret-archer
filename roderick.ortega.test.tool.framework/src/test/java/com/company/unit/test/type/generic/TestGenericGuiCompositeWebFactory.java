@@ -3,12 +3,12 @@ package com.company.unit.test.type.generic;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.company.common.browser.GenericWebBrowser;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiCompositeWebFactoryInterface;
 import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
 import com.company.common.interfaces.type.composite.AbstractWebStackPanelInterface;
 import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterface;
-import com.company.common.type.web.generics.GenericWebBrowser;
 import com.company.common.type.web.generics.composite.GenericGuiCompositeWebFactory;
 import com.company.common.types.Locator;
 import com.company.common.types.CompanyStringDate;
@@ -21,10 +21,10 @@ public class TestGenericGuiCompositeWebFactory {
 	private Locator locator;
 	
 	@Before
-	public void before() {
+	public void before() throws Exception {
 		guiCompositeWebFactory = new GenericGuiCompositeWebFactory();
 		webBrowser = new GenericWebBrowser();
-		guiCompositeWebFactory.setBrowser(webBrowser);
+		guiCompositeWebFactory.setWebBrowser(webBrowser);
 		locator = new Locator("//ELEMENT[@id='AutomationId']");
 		System.out.println("==== new test ====");
 	}

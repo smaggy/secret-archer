@@ -7,12 +7,12 @@ import com.company.common.interfaces.factory.AbstractGuiCompositeWebFactoryInter
 public abstract class AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
 	private AbstractWebBrowserInterface browser;
 
-	public AbstractWebBrowserInterface getBrowser() {
+	public AbstractWebBrowserInterface getWebBrowser() {
 		System.out.println("AbstractGuiCompositeWebFactory|getBrowser");
 		return browser;
 	}
 
-	public void setBrowser(AbstractWebBrowserInterface browser) {
+	public void setWebBrowser(AbstractWebBrowserInterface browser) {
 		System.out.println("AbstractGuiCompositeWebFactory|setBrowser: " + browser);
 		this.browser = browser;
 	}

@@ -25,60 +25,60 @@ public class SeleniumGuiWebFactory extends AbstractGuiWebFactory implements Abst
 	@Override
 	public AbstractWebButtonInterface createWebButton(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebButton: " + locator);
-		return getBrowser().findWebButton(locator);
+		return getWebBrowser().findWebButton(locator);
 	}
 
 	@Override
 	public AbstractWebCheckBoxInterface createWebCheckBox(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebCheckBox: " + locator);
-		return getBrowser().findWebCheckBox(locator);
+		return getWebBrowser().findWebCheckBox(locator);
 	}
 
 	@Override
 	public AbstractWebElementInterface createWebElement(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebElement: " + locator);
-		return getBrowser().findWebElement(locator);
+		return getWebBrowser().findWebElement(locator);
 	}
 
 	@Override
 	public AbstractWebLinkInterface createWebLink(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebLink: " + locator);
-		return getBrowser().findWebLink(locator);
+		return getWebBrowser().findWebLink(locator);
 	}
 
 	@Override
 	public AbstractWebListInterface createWebList(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebList: " + locator);
-		return getBrowser().findWebList(locator);
+		return getWebBrowser().findWebList(locator);
 	}
 
 	@Override
 	public AbstractWebListBoxInterface createWebListBox(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebListBox: " + locator);
-		return getBrowser().findWebListBox(locator);
+		return getWebBrowser().findWebListBox(locator);
 	}
 
 	@Override
 	public AbstractWebRadioButtonInterface createWebRadioButton(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebRadioButton: " + locator);
-		return getBrowser().findWebRadioButton(locator);
+		return getWebBrowser().findWebRadioButton(locator);
 	}
 
 	@Override
 	public AbstractWebTableInterface createWebTable(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebTable: " + locator);
-		return getBrowser().findWebTable(locator);
+		return getWebBrowser().findWebTable(locator);
 	}
 
 	@Override
 	public AbstractWebTableRowInterface createWebTableRow(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebTableRow: " + locator);
-		return getBrowser().findWebTableRow(locator);
+		return getWebBrowser().findWebTableRow(locator);
 	}
 
 	@Override
 	public AbstractWebTextFieldInterface createWebTextField(Locator locator) {
 		System.out.println("SeleniumGuiWebFactory|createWebTextField: " + locator);
-		return getBrowser().findWebTextField(locator);
+		return getWebBrowser().findWebTextField(locator);
 	}
 }

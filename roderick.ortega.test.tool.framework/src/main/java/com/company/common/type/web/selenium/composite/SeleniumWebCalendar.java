@@ -2,7 +2,7 @@ package com.company.common.type.web.selenium.composite;
 
 import org.openqa.selenium.WebElement;
 
-import com.company.common.browser.SeleniumWebBrowser;
+import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.test.TestObjectInterface;
 import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
 import com.company.common.type.web.selenium.SeleniumWebElement;
@@ -12,7 +12,7 @@ import com.company.common.types.CompanyStringDay;
 
 public class SeleniumWebCalendar extends SeleniumWebElement implements TestObjectInterface, AbstractWebCalendarInterface {
 
-	public SeleniumWebCalendar(WebElement webElement, Locator locator, SeleniumWebBrowser webBrowser) {
+	public SeleniumWebCalendar(WebElement webElement, Locator locator, AbstractSeleniumWebBrowser webBrowser) {
 		super(webElement, locator, webBrowser);
 	}
 

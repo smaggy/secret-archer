@@ -1,4 +1,4 @@
-package com.company.common.interfaces.process;
+package com.company.common.interfaces.tools;
 
 public interface SuiteRunnableInterface extends TestcaseRunnableInterface {
 	public void suiteSetup() throws Exception;

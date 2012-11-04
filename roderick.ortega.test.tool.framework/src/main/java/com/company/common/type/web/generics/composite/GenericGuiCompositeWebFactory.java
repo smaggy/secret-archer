@@ -14,27 +14,27 @@ public class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactor
 	public AbstractWebCalendarInterface createWebCalendar(Locator locator) {
 		System.out.println("GenericGuiCompositeWebFactory|createWebCalendar: " + locator);
 		// -----------------------------------------------
-		getBrowser().findWebButton(locator);
-		getBrowser().findWebCheckBox(locator);
-		getBrowser().findWebElement(locator);
-		getBrowser().findWebLink(locator);
-		getBrowser().findWebList(locator);
-		getBrowser().findWebListBox(locator);
-		getBrowser().findWebRadioButton(locator);
-		getBrowser().findWebTable(locator);
-		getBrowser().findWebTableRow(locator);
-		getBrowser().findWebTextField(locator);
+		getWebBrowser().findWebButton(locator);
+		getWebBrowser().findWebCheckBox(locator);
+		getWebBrowser().findWebElement(locator);
+		getWebBrowser().findWebLink(locator);
+		getWebBrowser().findWebList(locator);
+		getWebBrowser().findWebListBox(locator);
+		getWebBrowser().findWebRadioButton(locator);
+		getWebBrowser().findWebTable(locator);
+		getWebBrowser().findWebTableRow(locator);
+		getWebBrowser().findWebTextField(locator);
 		// -----------------------------------------------
-		getBrowser().findAllWebElements(locator);
-		getBrowser().findAllWebButtons(locator);
-		getBrowser().findAllWebCheckBoxes(locator);
-		getBrowser().findAllWebLinks(locator);
-		getBrowser().findAllWebLists(locator);
-		getBrowser().findAllWebListBoxes(locator);
-		getBrowser().findAllWebRadioButtons(locator);
-		getBrowser().findAllWebTables(locator);
-		getBrowser().findAllWebTableRows(locator);
-		getBrowser().findAllWebTextFields(locator);
+		getWebBrowser().findAllWebElements(locator);
+		getWebBrowser().findAllWebButtons(locator);
+		getWebBrowser().findAllWebCheckBoxes(locator);
+		getWebBrowser().findAllWebLinks(locator);
+		getWebBrowser().findAllWebLists(locator);
+		getWebBrowser().findAllWebListBoxes(locator);
+		getWebBrowser().findAllWebRadioButtons(locator);
+		getWebBrowser().findAllWebTables(locator);
+		getWebBrowser().findAllWebTableRows(locator);
+		getWebBrowser().findAllWebTextFields(locator);
 		return new GenericWebCalendar();
 	}
 
@@ -42,27 +42,27 @@ public class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactor
 	public AbstractWebStackPanelInterface createWebStackPanel(Locator locator) {
 		System.out.println("GenericGuiCompositeWebFactory|createWebStackPanel: " + locator);
 		// -----------------------------------------------
-		getBrowser().findWebButton(locator);
-		getBrowser().findWebCheckBox(locator);
-		getBrowser().findWebElement(locator);
-		getBrowser().findWebLink(locator);
-		getBrowser().findWebList(locator);
-		getBrowser().findWebListBox(locator);
-		getBrowser().findWebRadioButton(locator);
-		getBrowser().findWebTable(locator);
-		getBrowser().findWebTableRow(locator);
-		getBrowser().findWebTextField(locator);
+		getWebBrowser().findWebButton(locator);
+		getWebBrowser().findWebCheckBox(locator);
+		getWebBrowser().findWebElement(locator);
+		getWebBrowser().findWebLink(locator);
+		getWebBrowser().findWebList(locator);
+		getWebBrowser().findWebListBox(locator);
+		getWebBrowser().findWebRadioButton(locator);
+		getWebBrowser().findWebTable(locator);
+		getWebBrowser().findWebTableRow(locator);
+		getWebBrowser().findWebTextField(locator);
 		// -----------------------------------------------
-		getBrowser().findAllWebElements(locator);
-		getBrowser().findAllWebButtons(locator);
-		getBrowser().findAllWebCheckBoxes(locator);
-		getBrowser().findAllWebLinks(locator);
-		getBrowser().findAllWebLists(locator);
-		getBrowser().findAllWebListBoxes(locator);
-		getBrowser().findAllWebRadioButtons(locator);
-		getBrowser().findAllWebTables(locator);
-		getBrowser().findAllWebTableRows(locator);
-		getBrowser().findAllWebTextFields(locator);
+		getWebBrowser().findAllWebElements(locator);
+		getWebBrowser().findAllWebButtons(locator);
+		getWebBrowser().findAllWebCheckBoxes(locator);
+		getWebBrowser().findAllWebLinks(locator);
+		getWebBrowser().findAllWebLists(locator);
+		getWebBrowser().findAllWebListBoxes(locator);
+		getWebBrowser().findAllWebRadioButtons(locator);
+		getWebBrowser().findAllWebTables(locator);
+		getWebBrowser().findAllWebTableRows(locator);
+		getWebBrowser().findAllWebTextFields(locator);
 		return new GenericWebStackPanel();
 	}
 
@@ -70,27 +70,27 @@ public class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactor
 	public AbstractWebSuggestBoxInterface createWebSuggestBox(Locator locator) {
 		System.out.println("GenericGuiCompositeWebFactory|createWebSuggestBox: " + locator);
 		// -----------------------------------------------
-		getBrowser().findWebButton(locator);
-		getBrowser().findWebCheckBox(locator);
-		getBrowser().findWebElement(locator);
-		getBrowser().findWebLink(locator);
-		getBrowser().findWebList(locator);
-		getBrowser().findWebListBox(locator);
-		getBrowser().findWebRadioButton(locator);
-		getBrowser().findWebTable(locator);
-		getBrowser().findWebTableRow(locator);
-		getBrowser().findWebTextField(locator);
+		getWebBrowser().findWebButton(locator);
+		getWebBrowser().findWebCheckBox(locator);
+		getWebBrowser().findWebElement(locator);
+		getWebBrowser().findWebLink(locator);
+		getWebBrowser().findWebList(locator);
+		getWebBrowser().findWebListBox(locator);
+		getWebBrowser().findWebRadioButton(locator);
+		getWebBrowser().findWebTable(locator);
+		getWebBrowser().findWebTableRow(locator);
+		getWebBrowser().findWebTextField(locator);
 		// -----------------------------------------------
-		getBrowser().findAllWebElements(locator);
-		getBrowser().findAllWebButtons(locator);
-		getBrowser().findAllWebCheckBoxes(locator);
-		getBrowser().findAllWebLinks(locator);
-		getBrowser().findAllWebLists(locator);
-		getBrowser().findAllWebListBoxes(locator);
-		getBrowser().findAllWebRadioButtons(locator);
-		getBrowser().findAllWebTables(locator);
-		getBrowser().findAllWebTableRows(locator);
-		getBrowser().findAllWebTextFields(locator);
+		getWebBrowser().findAllWebElements(locator);
+		getWebBrowser().findAllWebButtons(locator);
+		getWebBrowser().findAllWebCheckBoxes(locator);
+		getWebBrowser().findAllWebLinks(locator);
+		getWebBrowser().findAllWebLists(locator);
+		getWebBrowser().findAllWebListBoxes(locator);
+		getWebBrowser().findAllWebRadioButtons(locator);
+		getWebBrowser().findAllWebTables(locator);
+		getWebBrowser().findAllWebTableRows(locator);
+		getWebBrowser().findAllWebTextFields(locator);
 		return new GenericWebSuggestBox();
 	}
 

@@ -27,6 +27,17 @@ NOTE: if the jars in the classpath are coming up with errors, check your M2_REPO
 	
 Check pom.xml for more detailed information.   A zip file should be produced as a result of using the maven build system.
 
+Update 20121103 Roderick Ortega
+1. received the following error in the console.
+The path to the driver executable must be set by the webdriver.ie.driver system property; for more information, see http://code.google.com/p/selenium/wiki/InternetExplorerDriver. The latest version can be downloaded from http://code.google.com/p/selenium/downloads/list
+Nov 3, 2012 7:10:47 AM org.openqa.selenium.ie.InternetExplorerDriverServer initializeLib
+WARNING: This method of starting the IE driver is deprecated and will be removed in selenium 2.26. Please download the IEDriverServer.exe from http://code.google.com/p/selenium/downloads/list and ensure that it is in your PATH.
+Nov 3, 2012 7:10:51 AM org.apache.http.impl.client.DefaultRequestDirector tryExecute
+INFO: I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+Nov 3, 2012 7:10:51 AM org.apache.http.impl.client.DefaultRequestDirector tryExecute
+
+To resolve this error, install the ie driver to your local and remote systems where the tests will be executed from.
+
 Update 20121102 Roderick Ortega
 1. updated selenium version to 2.25.0 due to issue with executing with chromium driver
 2. checked in a demo web application implementation and runner template.  to execute page and workflow tests, use the runner in src/test/java.

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 
-import com.company.common.browser.SeleniumWebBrowser;
+import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.test.TestObjectInterface;
 import com.company.common.interfaces.type.AbstractWebElementInterface;
 import com.company.common.interfaces.type.composite.AbstractWebStackPanelInterface;
@@ -13,7 +13,7 @@ import com.company.common.types.Locator;
 
 public class SeleniumWebStackPanel extends SeleniumWebElement implements TestObjectInterface, AbstractWebStackPanelInterface {
 
-	public SeleniumWebStackPanel(WebElement webElement, Locator locator, SeleniumWebBrowser webBrowser) {
+	public SeleniumWebStackPanel(WebElement webElement, Locator locator, AbstractSeleniumWebBrowser webBrowser) {
 		super(webElement, locator, webBrowser);
 	}
 

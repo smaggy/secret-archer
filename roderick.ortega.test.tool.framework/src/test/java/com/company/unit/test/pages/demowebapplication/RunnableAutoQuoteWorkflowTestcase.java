@@ -4,7 +4,7 @@ import java.io.File;
 
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
-import com.company.common.interfaces.process.TestcaseRunnableInterface;
+import com.company.common.interfaces.tools.TestcaseRunnableInterface;
 import com.company.common.object.helpers.AbstractTestcase;
 import com.company.common.object.helpers.XmlUrlBridge;
 import com.company.demowebapplication.business.process.model.AutoQuoteWorkflow;

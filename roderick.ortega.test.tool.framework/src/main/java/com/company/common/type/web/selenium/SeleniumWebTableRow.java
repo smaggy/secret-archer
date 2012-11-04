@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 
-import com.company.common.browser.SeleniumWebBrowser;
+import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
@@ -26,7 +26,7 @@ public class SeleniumWebTableRow extends SeleniumWebElement implements TestObjec
 		this.index = index;
 	}
 	
-	public SeleniumWebTableRow(WebElement webElement, Locator locator, SeleniumWebBrowser webBrowser) {
+	public SeleniumWebTableRow(WebElement webElement, Locator locator, AbstractSeleniumWebBrowser webBrowser) {
 		super(webElement, locator, webBrowser);
 	}
 

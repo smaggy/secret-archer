@@ -6,7 +6,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.company.common.interfaces.action.FindableInterface;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
@@ -33,14 +32,10 @@ import com.company.common.type.web.selenium.SeleniumWebTextField;
 import com.company.common.types.Locator;
 import com.company.common.types.Url;
 
-public class SeleniumWebBrowser implements AbstractWebBrowserInterface, FindableInterface {
+public abstract class AbstractSeleniumWebBrowser implements AbstractWebBrowserInterface, FindableInterface {
 
 	private WebDriver webDriver;
-	
-	public SeleniumWebBrowser() {
-		// default - internet explorer version of webDriver
-		setWebDriver(new InternetExplorerDriver());
-	}
+	private XmlServerPathBridge xmlServerPathBridge;
 	
 	public WebDriver getWebDriver() {
 		return webDriver;
@@ -50,23 +45,35 @@ public class SeleniumWebBrowser implements AbstractWebBrowserInterface, Findable
 		this.webDriver = webDriver;
 	}
 
+	public XmlServerPathBridge getXmlServerPathBridge() {
+		return xmlServerPathBridge;
+	}
+
+	public void setXmlServerPathBridge(XmlServerPathBridge xmlServerPathBridge) {
+		this.xmlServerPathBridge = xmlServerPathBridge;
+	}
+
 	@Override
 	public void close() {
+		System.out.println("AbstractSeleniumWebBrowser|close");
 		webDriver.close();
 	}
 
 	@Override
 	public String getUrl() {
+		System.out.println("AbstractSeleniumWebBrowser|getUrl");
 		return webDriver.getCurrentUrl();
 	}
 
 	@Override
 	public void navigate(Url url) {
+		System.out.println("AbstractSeleniumWebBrowser|navigate: [" + url + "]");
 		webDriver.navigate().to(url.getUrl());
 	}
 
 	@Override
 	public String getTitle() {
+		System.out.println("AbstractSeleniumWebBrowser|getTitle");
 		return webDriver.getTitle();
 	}
 

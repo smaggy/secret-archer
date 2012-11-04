@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 
-import com.company.common.browser.SeleniumWebBrowser;
+import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
@@ -15,11 +15,11 @@ import com.company.common.types.Locator;
 public class SeleniumWebElement extends SeleniumTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractSeleniumWebElementInterface {
 	
 	private WebElement webElement;
-	private SeleniumWebBrowser webBrowser;
+	private AbstractSeleniumWebBrowser webBrowser;
 	private Locator locator;
 	private CssSelector cssSelector;
 	
-	public SeleniumWebElement (WebElement webElement, Locator locator, SeleniumWebBrowser webBrowser) {
+	public SeleniumWebElement (WebElement webElement, Locator locator, AbstractSeleniumWebBrowser webBrowser) {
 		this.webElement = webElement;
 		this.locator = locator;
 		this.webBrowser = webBrowser;
@@ -40,12 +40,12 @@ public class SeleniumWebElement extends SeleniumTestObject implements TestObject
 		this.webElement = webElement;
 	}
 
-	public SeleniumWebBrowser getWebBrowser() {
+	public AbstractSeleniumWebBrowser getWebBrowser() {
 		System.out.println("SeleniumWebElement|getWebBrowser");
 		return webBrowser;
 	}
 
-	public void setWebBrowser(SeleniumWebBrowser webBrowser) {
+	public void setWebBrowser(AbstractSeleniumWebBrowser webBrowser) {
 		this.webBrowser = webBrowser;
 	}
 

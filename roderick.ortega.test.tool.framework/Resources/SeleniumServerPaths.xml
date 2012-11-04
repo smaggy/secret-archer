@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPaths>
+	<server id="IeDriverServer" type="Windows">
+		<path>C:/software/AutomationLibs/SeleniumServers/IEDriverServer.exe</path>
+	</server>
+	<server id="ChromeDriver" type="Windows">
+		<path>C:/software/AutomationLibs/SeleniumServers/chromedriver.exe</path>
+	</server>
+</ServerPaths>

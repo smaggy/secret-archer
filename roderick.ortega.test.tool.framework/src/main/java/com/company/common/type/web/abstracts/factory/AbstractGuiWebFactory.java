@@ -9,15 +9,15 @@ public abstract class AbstractGuiWebFactory implements AbstractGuiWebFactoryInte
 	private AbstractWebBrowserInterface browser;
 	
 	public AbstractGuiWebFactory(AbstractWebBrowserInterface webBrowser) {
-		this.setBrowser(webBrowser);
+		this.setWebBrowser(webBrowser);
 	}
 
-	public AbstractWebBrowserInterface getBrowser() {
+	public AbstractWebBrowserInterface getWebBrowser() {
 		System.out.println("AbstractGuiWebFactory|getBrowser");
 		return browser;
 	}
 
-	public void setBrowser(AbstractWebBrowserInterface browser) {
+	public void setWebBrowser(AbstractWebBrowserInterface browser) {
 		System.out.println("AbstractGuiWebFactory|setBrowser: " + browser);
 		this.browser = browser;
 	}

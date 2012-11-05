@@ -1,4 +1,4 @@
-package com.company.common.frame;
+package com.company.common.concrete.bridges;
 
 import java.io.File;
 import java.io.IOException;

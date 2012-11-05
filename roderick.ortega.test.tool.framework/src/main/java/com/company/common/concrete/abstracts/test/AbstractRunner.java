@@ -1,4 +1,4 @@
-package com.company.unit.test.runner;
+package com.company.common.concrete.abstracts.test;
 
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;

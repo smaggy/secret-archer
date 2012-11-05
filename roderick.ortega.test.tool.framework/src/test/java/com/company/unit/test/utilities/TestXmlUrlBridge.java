@@ -9,7 +9,7 @@ import javax.xml.xpath.XPathExpressionException;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import com.company.common.object.helpers.XmlUrlBridge;
+import com.company.common.concrete.bridges.XmlUrlBridge;
 
 public class TestXmlUrlBridge {
 	@Test

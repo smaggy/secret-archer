@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.company.common.concrete.bridges.XmlServerPathBridge;
 import com.company.common.interfaces.action.FindableInterface;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.type.AbstractWebButtonInterface;

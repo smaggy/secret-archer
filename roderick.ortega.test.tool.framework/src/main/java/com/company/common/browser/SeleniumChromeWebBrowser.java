@@ -9,6 +9,7 @@ import javax.xml.xpath.XPathExpressionException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.xml.sax.SAXException;
 
+import com.company.common.concrete.bridges.XmlServerPathBridge;
 import com.company.common.interfaces.action.FindableInterface;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 

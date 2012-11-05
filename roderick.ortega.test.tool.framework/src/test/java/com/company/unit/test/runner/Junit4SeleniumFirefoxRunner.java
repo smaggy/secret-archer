@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.company.common.browser.SeleniumFirefoxWebBrowser;
+import com.company.common.concrete.abstracts.test.AbstractRunner;
 import com.company.common.interfaces.tools.TestcaseRunnableInterface;
 import com.company.common.type.web.selenium.SeleniumGuiWebFactory;
 import com.company.unit.test.pages.demowebapplication.RunnableLandingPageTestcase;

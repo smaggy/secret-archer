@@ -1,4 +1,4 @@
-package com.company.common.browser;
+package com.company.common.concrete.bridges;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,21 +9,21 @@ import javax.xml.xpath.XPathExpressionException;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
+import com.company.common.types.Url;
 import com.company.common.types.XPathQuery;
 import com.company.common.utils.XmlReader;
 
-public class XmlServerPathBridge {
-
+public class XmlUrlBridge {
+	
 	private XmlReader xmlReader;
 	
-	public XmlServerPathBridge(File xmlFile) throws ParserConfigurationException, SAXException, IOException {
+	public XmlUrlBridge(File xmlFile) throws ParserConfigurationException, SAXException, IOException {
 		this.xmlReader = new XmlReader(xmlFile);
 	}
 	
-	public String getPath(String pathId) throws XPathExpressionException {
-		XPathQuery xPathQuery = new XPathQuery("//server[@id='" + pathId + "']");
+	public Url getUrl(String siteId) throws XPathExpressionException {
+		XPathQuery xPathQuery = new XPathQuery("//site[@id='" + siteId + "']");
 		Node node = this.xmlReader.evaluateXPathExpression(xPathQuery);
-		return this.xmlReader.getChildElementValue(node, "path");
+		return new Url(this.xmlReader.getChildElementValue(node, "url"));
 	}
-	
 }

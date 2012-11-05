@@ -10,11 +10,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.company.common.browser.SilktestWebBrowser;
-import com.company.common.frame.XmlFrameBridge;
+import com.company.common.concrete.bridges.XmlFrameBridge;
+import com.company.common.concrete.bridges.XmlUrlBridge;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.type.AbstractWebElementInterface;
-import com.company.common.object.helpers.XmlUrlBridge;
 import com.company.common.type.web.silktest.SilktestGuiWebFactory;
 import com.company.common.types.FrameParameters;
 import com.company.common.types.Locator;

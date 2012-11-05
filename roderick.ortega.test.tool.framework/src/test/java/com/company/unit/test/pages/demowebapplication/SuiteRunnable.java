@@ -1,9 +1,9 @@
 package com.company.unit.test.pages.demowebapplication;
 
+import com.company.common.concrete.abstracts.test.AbstractTestcase;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.tools.SuiteRunnableInterface;
-import com.company.common.object.helpers.AbstractTestcase;
 
 public class SuiteRunnable extends AbstractTestcase implements SuiteRunnableInterface {
 

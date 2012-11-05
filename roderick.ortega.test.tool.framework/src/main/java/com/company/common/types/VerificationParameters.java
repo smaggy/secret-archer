@@ -17,6 +17,34 @@ public class VerificationParameters {
 	private List<String> lsExpected;
 	private VerificationType verificationType;
 	
+	public VerificationParameters(boolean actual, boolean expected, String verificationMessage) {
+		setVerificationMessage(verificationMessage);
+		setbActual(actual);
+		setbExpected(expected);
+		setVerificationType(VerificationType.BOOLEAN_VERIFICATION);
+	}
+	
+	public VerificationParameters(String actual, String expected, String verificationMessage) {
+		setVerificationMessage(verificationMessage);
+		setsActual(actual);
+		setsExpected(expected);
+		setVerificationType(VerificationType.STRING_VERIFICATION);
+	}
+	
+	public VerificationParameters(int actual, int expected, String verificationMessage) {
+		setVerificationMessage(verificationMessage);
+		setiActual(actual);
+		setiExpected(expected);
+		setVerificationType(VerificationType.INTEGER_VERIFICATION);
+	}
+	
+	public VerificationParameters(List<String> actual, List<String> expected, String verificationMessage) {
+		setVerificationMessage(verificationMessage);
+		setLsActual(actual);
+		setLsExpected(expected);
+		setVerificationType(VerificationType.LIST_OF_STRING_VERIFICATION);
+	}
+	
 	public String getVerificationMessage() {
 		return verificationMessage;
 	}
@@ -95,34 +123,6 @@ public class VerificationParameters {
 
 	private void setVerificationType(VerificationType verificationType) {
 		this.verificationType = verificationType;
-	}
-
-	public VerificationParameters(boolean actual, boolean expected, String verificationMessage) {
-		setVerificationMessage(verificationMessage);
-		setbActual(actual);
-		setbExpected(expected);
-		setVerificationType(VerificationType.BOOLEAN_VERIFICATION);
-	}
-	
-	public VerificationParameters(String actual, String expected, String verificationMessage) {
-		setVerificationMessage(verificationMessage);
-		setsActual(actual);
-		setsExpected(expected);
-		setVerificationType(VerificationType.STRING_VERIFICATION);
-	}
-	
-	public VerificationParameters(int actual, int expected, String verificationMessage) {
-		setVerificationMessage(verificationMessage);
-		setiActual(actual);
-		setiExpected(expected);
-		setVerificationType(VerificationType.INTEGER_VERIFICATION);
-	}
-	
-	public VerificationParameters(List<String> actual, List<String> expected, String verificationMessage) {
-		setVerificationMessage(verificationMessage);
-		setLsActual(actual);
-		setLsExpected(expected);
-		setVerificationType(VerificationType.LIST_OF_STRING_VERIFICATION);
 	}
 	
 	public String toString() {

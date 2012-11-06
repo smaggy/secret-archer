@@ -41,4 +41,10 @@ public class GenericWebList extends GenericWebElement implements AbstractWebList
 		return null;
 	}
 
+	@Override
+	public List<String> getListText() {
+		System.out.println("GenericWebList|getListText");
+		return null;
+	}
+
 }

@@ -41,4 +41,10 @@ public class SilktestWebList extends SilktestWebElement implements TestObjectInt
 		return null;
 	}
 
+	@Override
+	public List<String> getListText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

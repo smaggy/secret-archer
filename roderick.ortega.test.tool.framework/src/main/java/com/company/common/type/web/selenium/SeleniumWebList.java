@@ -1,5 +1,6 @@
 package com.company.common.type.web.selenium;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import com.company.common.interfaces.type.AbstractWebElementInterface;
 import com.company.common.interfaces.type.AbstractWebListInterface;
 import com.company.common.types.Locator;
 import com.company.common.types.SearchParameters;
+import com.company.common.utils.Searchable;
 
 public class SeleniumWebList extends SeleniumWebElement implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractWebListInterface {
 	
@@ -64,8 +66,20 @@ public class SeleniumWebList extends SeleniumWebElement implements TestObjectInt
 
 	@Override
 	public List<Integer> searchList(List<String> list, SearchParameters searchParameters) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("SeleniumWebList|searchList: [" + list + "|" + searchParameters + "]");
+		return Searchable.searchList(list, searchParameters);
+	}
+
+	@Override
+	public List<String> getListText() {
+		System.out.println("SeleniumWebList|getListText");
+		List<String> retList = new ArrayList<String>();
+		Locator locator = new Locator(getLocator().getXPathLocator() + "//LI");
+		List<AbstractWebElementInterface> seleniumWebElements = getWebBrowser().findAllWebElements(locator);
+		for (AbstractWebElementInterface element : seleniumWebElements) {
+			retList.add(element.getText());
+		}
+		return retList;
 	}
 
 }

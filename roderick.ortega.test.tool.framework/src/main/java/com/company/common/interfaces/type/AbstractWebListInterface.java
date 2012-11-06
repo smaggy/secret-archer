@@ -9,4 +9,5 @@ public interface AbstractWebListInterface extends AbstractWebElementInterface, S
 	public List<AbstractWebElementInterface> getListItems(boolean printFlag);
 	public int size();
 	public void reload();
+	public List<String> getListText();
 }

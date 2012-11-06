@@ -1,10 +1,12 @@
 package com.company.demowebapplication.business.process.model;
 
+import com.company.common.interfaces.action.PageBuildableInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.interfaces.process.DataLoadableInterface;
 import com.company.demowebapplication.data.DataTransferObject;
 import com.company.demowebapplication.interfaces.workflows.AbstractSiteWorkflowInterface;
 
-public abstract class AbstractSiteWorkflow implements AbstractSiteWorkflowInterface {
+public abstract class AbstractSiteWorkflow implements AbstractSiteWorkflowInterface, DataLoadableInterface, PageBuildableInterface {
 
 	private DataTransferObject dataTransferObject;
 	private AbstractGuiWebFactoryInterface webFactory;

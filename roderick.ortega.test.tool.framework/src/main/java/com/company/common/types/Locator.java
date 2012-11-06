@@ -1,7 +1,11 @@
 package com.company.common.types;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Locator {
 	
+	final static Logger logger = LoggerFactory.getLogger(Locator.class);
 	private String xPathLocator;
 	
 	public Locator(String xPathLocator) {
@@ -20,10 +24,10 @@ public class Locator {
 	private void validate(String xPathLocator) {
 		
 		if (xPathLocator.contains("*")) {
-			System.out.println(" ... locator contains a *.  Consider revising xPath query.");
+			logger.info(" ... locator contains a *.  Consider revising xPath query.");
 		}
 		if (xPathLocator.contains("@textcontents='")) {
-			System.out.println(" ... locator contains a '@textcontents='.  Consider revising xPath query.");
+			logger.info(" ... locator contains a '@textcontents='.  Consider revising xPath query.");
 		}
 		
 	}

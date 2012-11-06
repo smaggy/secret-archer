@@ -1,5 +1,8 @@
 package com.company.common.type.web.generics;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
@@ -7,45 +10,47 @@ import com.company.common.type.web.abstracts.AbstractTestObject;
 
 public class GenericTestObject extends AbstractTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(GenericTestObject.class);
+	
 	@Override
 	public boolean exists() {
-		System.out.println("GenericTestObject|exists");
+		logger.debug("GenericTestObject|exists");
 		return false;
 	}
 
 	@Override
 	public void pressKeys(String keys) {
-		System.out.println("GenericTestObject|pressKeys: " + keys);
+		logger.debug("GenericTestObject|pressKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys) {
-		System.out.println("GenericTestObject|typeKeys: " + keys);
+		logger.debug("GenericTestObject|typeKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys, int delay) {
-		System.out.println("GenericTestObject|typeKeys: " + keys + " delay: " + delay);
+		logger.debug("GenericTestObject|typeKeys: " + keys + " delay: " + delay);
 
 	}
 
 	@Override
 	public void click() {
-		System.out.println("GenericTestObject|click");
+		logger.debug("GenericTestObject|click");
 
 	}
 
 	@Override
 	public void doubleClick() {
-		System.out.println("GenericTestObject|doubleClick");
+		logger.debug("GenericTestObject|doubleClick");
 
 	}
 
 	@Override
 	public void mouseMove() {
-		System.out.println("GenericTestObject|mouseMove");
+		logger.debug("GenericTestObject|mouseMove");
 
 	}
 }

@@ -1,5 +1,8 @@
 package com.company.common.type.web.generics.composite;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.action.BrowseableInterface;
 import com.company.common.interfaces.factory.AbstractGuiCompositeWebFactoryInterface;
 import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
@@ -10,9 +13,11 @@ import com.company.common.types.Locator;
 
 public class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(GenericGuiCompositeWebFactory.class);
+	
 	@Override
 	public AbstractWebCalendarInterface createWebCalendar(Locator locator) {
-		System.out.println("GenericGuiCompositeWebFactory|createWebCalendar: " + locator);
+		logger.debug("GenericGuiCompositeWebFactory|createWebCalendar: " + locator);
 		// -----------------------------------------------
 		getWebBrowser().findWebButton(locator);
 		getWebBrowser().findWebCheckBox(locator);
@@ -40,7 +45,7 @@ public class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactor
 
 	@Override
 	public AbstractWebStackPanelInterface createWebStackPanel(Locator locator) {
-		System.out.println("GenericGuiCompositeWebFactory|createWebStackPanel: " + locator);
+		logger.debug("GenericGuiCompositeWebFactory|createWebStackPanel: " + locator);
 		// -----------------------------------------------
 		getWebBrowser().findWebButton(locator);
 		getWebBrowser().findWebCheckBox(locator);
@@ -68,7 +73,7 @@ public class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactor
 
 	@Override
 	public AbstractWebSuggestBoxInterface createWebSuggestBox(Locator locator) {
-		System.out.println("GenericGuiCompositeWebFactory|createWebSuggestBox: " + locator);
+		logger.debug("GenericGuiCompositeWebFactory|createWebSuggestBox: " + locator);
 		// -----------------------------------------------
 		getWebBrowser().findWebButton(locator);
 		getWebBrowser().findWebCheckBox(locator);

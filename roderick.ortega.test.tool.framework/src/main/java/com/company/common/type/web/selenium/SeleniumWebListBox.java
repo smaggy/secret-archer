@@ -3,6 +3,8 @@ package com.company.common.type.web.selenium;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
@@ -14,13 +16,15 @@ import com.company.common.types.Locator;
 
 public class SeleniumWebListBox extends SeleniumWebElement implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractWebListBoxInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(SeleniumWebListBox.class);
+	
 	public SeleniumWebListBox(WebElement webElement, Locator locator, AbstractSeleniumWebBrowser webBrowser) {
 		super(webElement, locator, webBrowser);
 	}
 
 	@Override
 	public int getItemCount() {
-		System.out.println("SeleniumWebListBox|getItemCount");
+		logger.debug("SeleniumWebListBox|getItemCount");
 		// build the xQuery
 		Locator locator = new Locator(getLocator().getXPathLocator() + "//OPTION");
 		// get and return all the elements
@@ -30,7 +34,7 @@ public class SeleniumWebListBox extends SeleniumWebElement implements TestObject
 
 	@Override
 	public void select(int itemIndex) {
-		System.out.println("SeleniumWebListBox|select: " + itemIndex);
+		logger.debug("SeleniumWebListBox|select: " + itemIndex);
 		// build the xQuery
 		Locator locator = new Locator(getLocator().getXPathLocator() + "//OPTION");
 		// get and return all the elements
@@ -40,7 +44,7 @@ public class SeleniumWebListBox extends SeleniumWebElement implements TestObject
 
 	@Override
 	public void select(String itemText) {
-		System.out.println("SeleniumWebListBox|select: " + itemText);
+		logger.debug("SeleniumWebListBox|select: " + itemText);
 		// build the xQuery
 		Locator locator = new Locator(getLocator().getXPathLocator() + "//OPTION");
 		// get and return all the elements

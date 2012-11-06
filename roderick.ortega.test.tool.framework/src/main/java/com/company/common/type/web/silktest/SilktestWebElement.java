@@ -2,6 +2,9 @@ package com.company.common.type.web.silktest;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.borland.silktest.jtf.xbrowser.DomElement;
 import com.company.common.browser.SilktestWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
@@ -13,13 +16,18 @@ import com.company.common.types.Locator;
 
 public class SilktestWebElement extends SilktestTestObject implements AbstractWebElementInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(SilktestWebElement.class);
+	
 	private DomElement domElement;
 	private SilktestWebBrowser webBrowser;
 	private Locator locator;
 	private CssSelector cssSelector;
 	
 	public SilktestWebElement(DomElement domElement, Locator locator, SilktestWebBrowser webBrowser) {
-		this.domElement = domElement;
+		logger.debug("SilktestWebElement|constructor: building " + this.getClass().getSimpleName());
+		this.setDomElement(domElement);
+		this.setLocator(locator);
+		this.setWebBrowser(webBrowser);
 	}
 	
 	/**
@@ -68,61 +76,61 @@ public class SilktestWebElement extends SilktestTestObject implements AbstractWe
 
 	@Override
 	public List<String> getDomAttributeList() {
-		System.out.println("SilktestWebElement|getDomAttributeList");
+		logger.debug("SilktestWebElement|getDomAttributeList");
 		return getDomElement().getDomAttributeList();
 	}
 
 	@Override
 	public String getText() {
-		System.out.println("SilktestWebElement|getText");
+		logger.debug("SilktestWebElement|getText");
 		return getDomElement().getText();
 	}
 
 	@Override
 	public String getDomAttribute(String attribute) {
-		System.out.println("SilktestWebElement|getDomAttribute: [" + attribute + "]");
+		logger.debug("SilktestWebElement|getDomAttribute: [" + attribute + "]");
 		return getDomElement().getDomAttribute(attribute).toString();
 	}
 
 	@Override
 	public boolean exists() {
-		System.out.println("SilktestWebElement|exists");
+		logger.debug("SilktestWebElement|exists");
 		return getDomElement().exists();
 	}
 
 	@Override
 	public void pressKeys(String keys) {
-		System.out.println("SilktestWebElement|pressKeys: " + keys);
+		logger.debug("SilktestWebElement|pressKeys: " + keys);
 		getDomElement().pressKeys(keys);
 	}
 
 	@Override
 	public void typeKeys(String keys) {
-		System.out.println("SilktestWebElement|typeKeys: " + keys);
+		logger.debug("SilktestWebElement|typeKeys: " + keys);
 		getDomElement().typeKeys(keys);
 	}
 
 	@Override
 	public void typeKeys(String keys, int delay) {
-		System.out.println("SilktestWebElement|typeKeys: " + keys + "|" + delay);
+		logger.debug("SilktestWebElement|typeKeys: " + keys + "|" + delay);
 		getDomElement().typeKeys(keys, delay);
 	}
 
 	@Override
 	public void click() {
-		System.out.println("SilktestWebElement|click");
+		logger.debug("SilktestWebElement|click");
 		getDomElement().click();
 	}
 
 	@Override
 	public void doubleClick() {
-		System.out.println("SilktestWebElement|doubleClick");
+		logger.debug("SilktestWebElement|doubleClick");
 		getDomElement().doubleClick();
 	}
 
 	@Override
 	public void mouseMove() {
-		System.out.println("SilktestWebElement|mouseMove");
+		logger.debug("SilktestWebElement|mouseMove");
 		getDomElement().mouseMove();
 	}
 	

@@ -4,6 +4,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.borland.silktest.jtf.BrowserBaseState;
 import com.borland.silktest.jtf.Desktop;
 import com.borland.silktest.jtf.xbrowser.BrowserWindow;
@@ -43,6 +46,7 @@ import com.company.common.types.Url;
 
 public class SilktestWebBrowser implements AbstractWebBrowserInterface, FindableInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(SilktestWebBrowser.class);
 	private Desktop desktop;
 	private BrowserBaseState browserBaseState;
 	private BrowserWindow browserWindow;
@@ -56,100 +60,101 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 	
 	@Override
 	public void close() {
-		System.out.println("SilktestWebBrowser|close");
+		logger.debug("SilktestWebBrowser|close");
 		browserWindow.close();
 	}
 
 	@Override
 	public String getUrl() {
-		System.out.println("SilktestWebBrowser|getUrl");
+		logger.debug("SilktestWebBrowser|getUrl");
 		return browserWindow.getUrl();
 	}
 
 	@Override
 	public void navigate(Url url) {
-		System.out.println("SilktestWebBrowser|navigate: [" + url + "]");
+		logger.debug("SilktestWebBrowser|navigate: [" + url + "]");
 		browserWindow.navigate(url.getUrl());
 	}
 
 	@Override
 	public String getTitle() {
-		System.out.println("SilktestWebBrowser|getTitle");
+		logger.debug("SilktestWebBrowser|getTitle");
 		return browserWindow.getText();
 	}
 
 	@Override
 	public AbstractWebElementInterface findWebElement(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebElement: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebElement: [" + locator + "]");
 		DomElement element = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebElement(element, locator, this);
 	}
 
 	@Override
 	public AbstractWebButtonInterface findWebButton(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebButton: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebButton: [" + locator + "]");
 		DomButton domButton = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebButton(domButton, locator, this);
 	}
 
 	@Override
 	public AbstractWebCheckBoxInterface findWebCheckBox(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebCheckBox: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebCheckBox: [" + locator + "]");
 		DomCheckBox domCheckBox = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebCheckBox(domCheckBox, locator, this);
 	}
 
 	@Override
 	public AbstractWebLinkInterface findWebLink(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebLink: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebLink: [" + locator + "]");
 		DomLink domLink = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebLink(domLink, locator, this);
 	}
 
 	@Override
 	public AbstractWebListInterface findWebList(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebList: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebList: [" + locator + "]");
 		DomElement domElement = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebList(domElement, locator, this);
 	}
 
 	@Override
 	public AbstractWebListBoxInterface findWebListBox(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebListBox: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebListBox: [" + locator + "]");
 		DomListBox domListBox = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebListBox(domListBox, locator, this);
 	}
 
 	@Override
 	public AbstractWebRadioButtonInterface findWebRadioButton(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebRadioButton: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebRadioButton: [" + locator + "]");
 		DomRadioButton domRadioButton = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebRadioButton(domRadioButton, locator, this);
 	}
 
 	@Override
 	public AbstractWebTableInterface findWebTable(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebTable: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebTable: [" + locator + "]");
 		DomTable domTable = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebTable(domTable, locator, this);
 	}
 
 	@Override
 	public AbstractWebTableRowInterface findWebTableRow(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebTableRow: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebTableRow: [" + locator + "]");
 		DomTableRow domTableRow = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebTableRow(domTableRow, locator, this);
 	}
 
 	@Override
 	public AbstractWebTextFieldInterface findWebTextField(Locator locator) {
-		System.out.println("SilktestWebBrowser|findWebTextField: [" + locator + "]");
+		logger.debug("SilktestWebBrowser|findWebTextField: [" + locator + "]");
 		DomTextField domTextField = browserWindow.find(locator.getXPathLocator());
 		return new SilktestWebTextField(domTextField, locator, this);
 	}
 
 	@Override
 	public List<AbstractWebElementInterface> findAllWebElements(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebElements: [" + locator + "]");
 		List<DomElement> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebElementInterface> retList = new ArrayList<AbstractWebElementInterface>();
 		int counter = 1;
@@ -163,6 +168,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebButtonInterface> findAllWebButtons(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebButtons: [" + locator + "]");
 		List<DomButton> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebButtonInterface> retList = new ArrayList<AbstractWebButtonInterface>();
 		int counter = 1;
@@ -176,6 +182,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebLinkInterface> findAllWebLinks(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebLinks: [" + locator + "]");
 		List<DomLink> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebLinkInterface> retList = new ArrayList<AbstractWebLinkInterface>();
 		int counter = 1;
@@ -189,6 +196,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebListInterface> findAllWebLists(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebLists: [" + locator + "]");
 		List<DomElement> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebListInterface> retList = new ArrayList<AbstractWebListInterface>();
 		int counter = 1;
@@ -202,6 +210,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebListBoxInterface> findAllWebListBoxes(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebListBoxes: [" + locator + "]");
 		List<DomListBox> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebListBoxInterface> retList = new ArrayList<AbstractWebListBoxInterface>();
 		int counter = 1;
@@ -215,6 +224,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebRadioButtonInterface> findAllWebRadioButtons(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebRadioButtons: [" + locator + "]");
 		List<DomRadioButton> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebRadioButtonInterface> retList = new ArrayList<AbstractWebRadioButtonInterface>();
 		int counter = 1;
@@ -228,6 +238,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebTableInterface> findAllWebTables(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebTables: [" + locator + "]");
 		List<DomTable> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebTableInterface> retList = new ArrayList<AbstractWebTableInterface>();
 		int counter = 1;
@@ -241,6 +252,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebTableRowInterface> findAllWebTableRows(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebTableRows: [" + locator + "]");
 		List<DomTableRow> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebTableRowInterface> retList = new ArrayList<AbstractWebTableRowInterface>();
 		int counter = 1;
@@ -254,6 +266,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebTextFieldInterface> findAllWebTextFields(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebTextFields: [" + locator + "]");
 		List<DomTextField> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebTextFieldInterface> retList = new ArrayList<AbstractWebTextFieldInterface>();
 		int counter = 1;
@@ -267,6 +280,7 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 
 	@Override
 	public List<AbstractWebCheckBoxInterface> findAllWebCheckBoxes(Locator locator) {
+		logger.debug("SilktestWebBrowser|findAllWebCheckBoxes: [" + locator + "]");
 		List<DomCheckBox> elements = browserWindow.findAll(locator.getXPathLocator());
 		List<AbstractWebCheckBoxInterface> retList = new ArrayList<AbstractWebCheckBoxInterface>();
 		int counter = 1;

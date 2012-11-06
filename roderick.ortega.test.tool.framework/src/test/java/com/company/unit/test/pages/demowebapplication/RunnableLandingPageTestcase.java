@@ -2,6 +2,9 @@ package com.company.unit.test.pages.demowebapplication;
 
 import java.io.File;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.concrete.abstracts.test.AbstractTestcase;
 import com.company.common.concrete.bridges.XmlUrlBridge;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
@@ -13,6 +16,8 @@ import com.company.demowebapplication.pages.LandingPage;
 
 public class RunnableLandingPageTestcase extends AbstractTestcase implements TestcaseRunnableInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(RunnableLandingPageTestcase.class);
+	
 	private LandingPageInterface landingPage;
 	private XmlUrlBridge xmlUrlBridge;
 	
@@ -22,6 +27,10 @@ public class RunnableLandingPageTestcase extends AbstractTestcase implements Tes
 	
 	@Override
 	public void testcaseSetup() throws Exception {
+		logger.info("Title: RunnableLandingPageTestcase");
+		logger.info("Description: performs actions on the microfocus demo web application.");
+		logger.info("Purpose: tests the overall workflow and type factories.");
+		
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		landingPage = new LandingPage(new File("./Resources/Frames/DemoWebApplication.xml"), this.getWebFactory());
 	}

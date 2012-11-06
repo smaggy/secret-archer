@@ -1,5 +1,8 @@
 package com.company.common.type.web.generics.composite;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.test.TestObjectInterface;
 import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
 import com.company.common.types.CompanyStringDate;
@@ -7,33 +10,35 @@ import com.company.common.types.CompanyStringDay;
 
 public class GenericWebCalendar implements AbstractWebCalendarInterface, TestObjectInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(GenericWebCalendar.class);
+	
 	@Override
 	public void selectDate(CompanyStringDate date) {
-		System.out.println("GenericWebCalendar|selectDate: " + date.toString());
+		logger.debug("GenericWebCalendar|selectDate: " + date.toString());
 
 	}
 
 	@Override
 	public void selectDay(int day) {
-		System.out.println("GenericWebCalendar|selectDay: " + day);
+		logger.debug("GenericWebCalendar|selectDay: " + day);
 
 	}
 
 	@Override
 	public void selectDay(CompanyStringDay day) {
-		System.out.println("GenericWebCalendar|selectDay: " + day.toString());
+		logger.debug("GenericWebCalendar|selectDay: " + day.toString());
 
 	}
 
 	@Override
 	public String getDate() {
-		System.out.println("GenericWebCalendar|getDate");
+		logger.debug("GenericWebCalendar|getDate");
 		return null;
 	}
 
 	@Override
 	public boolean exists() {
-		// TODO Auto-generated method stub
+		logger.debug("GenericWebCalendar|exists");
 		return false;
 	}
 

@@ -1,5 +1,8 @@
 package com.company.common.type.web.silktest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.borland.silktest.jtf.xbrowser.DomListBox;
 import com.company.common.browser.SilktestWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
@@ -10,25 +13,27 @@ import com.company.common.types.Locator;
 
 public class SilktestWebListBox extends SilktestWebElement implements AbstractWebListBoxInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(SilktestWebListBox.class);
+	
 	public SilktestWebListBox(DomListBox domListBox, Locator locator, SilktestWebBrowser webBrowser) {
 		super(domListBox, locator, webBrowser);
 	}
 	
 	@Override
 	public int getItemCount() {
-		System.out.println("SilktestWebListBox|getItemCount");
+		logger.debug("SilktestWebListBox|getItemCount");
 		return ((DomListBox) getDomElement()).getItemCount();
 	}
 
 	@Override
 	public void select(int itemIndex) {
-		System.out.println("SilktestWebListBox|select: [" + itemIndex + "]");
+		logger.debug("SilktestWebListBox|select: [" + itemIndex + "]");
 		((DomListBox) getDomElement()).select(itemIndex);
 	}
 
 	@Override
 	public void select(String itemText) {
-		System.out.println("SilktestWebListBox|select: [" + itemText + "]");
+		logger.debug("SilktestWebListBox|select: [" + itemText + "]");
 		((DomListBox) getDomElement()).select(itemText);
 	}
 

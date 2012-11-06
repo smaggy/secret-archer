@@ -6,6 +6,8 @@ import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import com.company.common.frame.AbstractAutomationFrame;
@@ -17,6 +19,8 @@ import com.company.demowebapplication.interfaces.pages.SiteFooterNavigationInter
 
 public abstract class AbstractSitePage extends AbstractAutomationFrame implements AbstractSitePageInterface, SiteFooterNavigationInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(AbstractSitePage.class);
+	
 	private DataTransferObject dataTransferObject;
 	private AbstractGuiWebFactoryInterface webFactory;
 	
@@ -47,21 +51,25 @@ public abstract class AbstractSitePage extends AbstractAutomationFrame implement
 	
 	@Override
 	public void selectHome() throws XPathExpressionException {
+		logger.info("ACTION: selectHome");
 		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","Home"))).select();
 	}
 
 	@Override
 	public void selectWebService() throws XPathExpressionException {
+		logger.info("ACTION: selectWebService");
 		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","WebService"))).select();
 	}
 
 	@Override
 	public void selectSettings() throws XPathExpressionException {
+		logger.info("ACTION: selectSettings");
 		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","Settings"))).select();
 	}
 
 	@Override
 	public void selectContactUs() throws XPathExpressionException {
+		logger.info("ACTION: selectContactUs");
 		getWebFactory().createWebLink(getLocator(new FrameParameters("SiteFooterNavigation","ContactUs"))).select();
 	}
 

@@ -1,10 +1,15 @@
 package com.company.common.concrete.abstracts.test;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.interfaces.tools.TestcaseRunnableInterface;
 
 public abstract class AbstractTestcase implements TestcaseRunnableInterface {
+	
+	final static Logger logger = LoggerFactory.getLogger(AbstractTestcase.class);
 	
 	private AbstractGuiWebFactoryInterface webFactory;
 	private AbstractWebBrowserInterface webBrowser;

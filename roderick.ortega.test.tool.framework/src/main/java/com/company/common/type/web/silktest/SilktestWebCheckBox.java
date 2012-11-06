@@ -1,5 +1,8 @@
 package com.company.common.type.web.silktest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.borland.silktest.jtf.xbrowser.DomCheckBox;
 import com.company.common.browser.SilktestWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
@@ -10,25 +13,27 @@ import com.company.common.types.Locator;
 
 public class SilktestWebCheckBox extends SilktestWebElement implements AbstractWebCheckBoxInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(SilktestWebCheckBox.class);
+	
 	public SilktestWebCheckBox(DomCheckBox domCheckBox, Locator locator, SilktestWebBrowser webBrowser) {
 		super(domCheckBox, locator, webBrowser);
 	}
 	
 	@Override
 	public void check() {
-		System.out.println("SilktestWebCheckBox|check");
+		logger.debug("SilktestWebCheckBox|check");
 		((DomCheckBox) getDomElement()).check();
 	}
 
 	@Override
 	public void uncheck() {
-		System.out.println("SilktestWebCheckBox|uncheck");
+		logger.debug("SilktestWebCheckBox|uncheck");
 		((DomCheckBox) getDomElement()).uncheck();
 	}
 
 	@Override
 	public int getState() {
-		System.out.println("SilktestWebCheckBox|getState");
+		logger.debug("SilktestWebCheckBox|getState");
 		return ((DomCheckBox) getDomElement()).getState();
 	}
 

@@ -3,6 +3,8 @@ package com.company.common.type.web.selenium;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
@@ -14,15 +16,18 @@ import com.company.common.types.Locator;
 
 public class SeleniumWebElement extends SeleniumTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractSeleniumWebElementInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(SeleniumWebElement.class);
+	
 	private WebElement webElement;
 	private AbstractSeleniumWebBrowser webBrowser;
 	private Locator locator;
 	private CssSelector cssSelector;
 	
 	public SeleniumWebElement (WebElement webElement, Locator locator, AbstractSeleniumWebBrowser webBrowser) {
-		this.webElement = webElement;
-		this.locator = locator;
-		this.webBrowser = webBrowser;
+		logger.debug("SeleniumWebElement|constructor: building " + this.getClass().getSimpleName());
+		this.setWebElement(webElement);
+		this.setLocator(locator);
+		this.setWebBrowser(webBrowser);
 	}
 	
 	/**
@@ -32,7 +37,7 @@ public class SeleniumWebElement extends SeleniumTestObject implements TestObject
 	 */
 	
 	public WebElement getWebElement() {
-		System.out.println("SeleniumWebElement|getWebElement");
+		logger.debug("SeleniumWebElement|getWebElement");
 		return webElement;
 	}
 	
@@ -41,7 +46,7 @@ public class SeleniumWebElement extends SeleniumTestObject implements TestObject
 	}
 
 	public AbstractSeleniumWebBrowser getWebBrowser() {
-		System.out.println("SeleniumWebElement|getWebBrowser");
+		logger.debug("SeleniumWebElement|getWebBrowser");
 		return webBrowser;
 	}
 
@@ -50,7 +55,7 @@ public class SeleniumWebElement extends SeleniumTestObject implements TestObject
 	}
 
 	public Locator getLocator() {
-		System.out.println("SeleniumWebElement|getLocator");
+		logger.debug("SeleniumWebElement|getLocator");
 		return locator;
 	}
 
@@ -59,7 +64,7 @@ public class SeleniumWebElement extends SeleniumTestObject implements TestObject
 	}
 
 	public CssSelector getCssSelector() {
-		System.out.println("SeleniumWebElement|getCssSelector");
+		logger.debug("SeleniumWebElement|getCssSelector");
 		return cssSelector;
 	}
 
@@ -81,60 +86,61 @@ public class SeleniumWebElement extends SeleniumTestObject implements TestObject
 	
 	@Override
 	public String getDomAttribute(String attribute) {
+		logger.debug("SeleniumWebElement|getDomAttribute: [" + attribute + "]");
 		return getWebElement().getAttribute(attribute);
 	}
 
 	@Override
 	public String getText() {
-		System.out.println("SeleniumWebElement|getText");
+		logger.debug("SeleniumWebElement|getText");
 		return getWebElement().getText();
 	}
 	
 	@Override
 	public boolean exists() {
-		System.out.println("SeleniumWebElement|exists");
+		logger.debug("SeleniumWebElement|exists");
 		return getWebElement().isDisplayed();
 	}
 
 	@Override
 	public void pressKeys(String keys) {
-		System.out.println("SeleniumWebElement|pressKeys: " + keys);
+		logger.debug("SeleniumWebElement|pressKeys: " + keys);
 		// TODO reo check to see if this is valid
 		getWebElement().sendKeys(keys);
 	}
 
 	@Override
 	public void typeKeys(String keys) {
-		System.out.println("SeleniumWebElement|typeKeys: " + keys);
+		logger.debug("SeleniumWebElement|typeKeys: " + keys);
 		// TODO reo check to see if this is valid
 		getWebElement().sendKeys(keys);
 	}
 
 	@Override
 	public void typeKeys(String keys, int delay) {
-		System.out.println("SeleniumWebElement|typeKeys: " + keys + "|" + delay);
-		System.out.println("... Bypassing delay.");
+		logger.debug("SeleniumWebElement|typeKeys: " + keys + "|" + delay);
+		logger.debug("... Bypassing delay.");
 		// TODO reo check to see if this is valid
 		getWebElement().sendKeys(keys);
 	}
 
 	@Override
 	public void click() {
-		System.out.println("SeleniumWebElement|click");
+		logger.debug("SeleniumWebElement|click");
 		getWebElement().click();
 	}
 
 	@Override
 	public void doubleClick() {
 		// TODO reo check to see if this is valid
-		System.out.println("SeleniumTestObject|doubleClick");
+		logger.debug("SeleniumTestObject|doubleClick");
 		getWebElement().click();
 		getWebElement().click();
 	}
 
 	@Override
 	public void mouseMove() {
-		System.out.println("SeleniumTestObject|mouseMove");
+		logger.debug("SeleniumTestObject|mouseMove");
 		// TODO reo check to see if this is valid
 		getWebElement().isDisplayed();
 	}

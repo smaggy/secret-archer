@@ -1,5 +1,8 @@
 package com.company.common.type.web.selenium;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
@@ -7,45 +10,47 @@ import com.company.common.type.web.abstracts.AbstractTestObject;
 
 public class SeleniumTestObject extends AbstractTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(SeleniumTestObject.class);
+	
 	@Override
 	public boolean exists() {
-		System.out.println("SeleniumTestObject|exists");
+		logger.debug("SeleniumTestObject|exists");
 		return false;
 	}
 
 	@Override
 	public void pressKeys(String keys) {
-		System.out.println("SeleniumTestObject|pressKeys: " + keys);
+		logger.debug("SeleniumTestObject|pressKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys) {
-		System.out.println("SeleniumTestObject|typeKeys: " + keys);
+		logger.debug("SeleniumTestObject|typeKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys, int delay) {
-		System.out.println("SeleniumTestObject|typeKeys: " + keys + "|" + delay);
+		logger.debug("SeleniumTestObject|typeKeys: " + keys + "|" + delay);
 
 	}
 
 	@Override
 	public void click() {
-		System.out.println("SeleniumTestObject|click");
+		logger.debug("SeleniumTestObject|click");
 
 	}
 
 	@Override
 	public void doubleClick() {
-		System.out.println("SeleniumTestObject|doubleClick");
+		logger.debug("SeleniumTestObject|doubleClick");
 
 	}
 
 	@Override
 	public void mouseMove() {
-		System.out.println("SeleniumTestObject|mouseMove");
+		logger.debug("SeleniumTestObject|mouseMove");
 
 	}
 }

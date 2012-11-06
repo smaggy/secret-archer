@@ -44,7 +44,9 @@ public class AutoQuoteWorkflow extends AbstractSiteWorkflow implements AutoQuote
 		}
 		lp.setEmail(lpDto.getEmail());
 		lp.setPassword(lpDto.getPassword());
+		lp.selectLoginButton();
 		lp.selectService(ServiceTypeEnum.AUTO_QUOTE);
+		Thread.sleep(1000);
 	}
 
 	@Override

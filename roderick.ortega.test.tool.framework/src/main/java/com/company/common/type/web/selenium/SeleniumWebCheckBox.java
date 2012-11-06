@@ -1,6 +1,8 @@
 package com.company.common.type.web.selenium;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
@@ -11,13 +13,15 @@ import com.company.common.types.Locator;
 
 public class SeleniumWebCheckBox extends SeleniumWebElement implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractWebCheckBoxInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(SeleniumWebCheckBox.class);
+	
 	public SeleniumWebCheckBox(WebElement webElement, Locator locator, AbstractSeleniumWebBrowser webBrowser) {
 		super(webElement, locator, webBrowser);
 	}
 
 	@Override
 	public void check() {
-		System.out.println("SeleniumWebButton|check");
+		logger.debug("SeleniumWebButton|check");
 		if (getState() == 0) {
 			this.click();
 		}
@@ -25,7 +29,7 @@ public class SeleniumWebCheckBox extends SeleniumWebElement implements TestObjec
 
 	@Override
 	public void uncheck() {
-		System.out.println("SeleniumWebButton|uncheck");
+		logger.debug("SeleniumWebButton|uncheck");
 		if (getState() == 1 ) {
 			this.click();
 		}
@@ -33,7 +37,7 @@ public class SeleniumWebCheckBox extends SeleniumWebElement implements TestObjec
 
 	@Override
 	public int getState() {
-		System.out.println("SeleniumWebButton|getState");
+		logger.debug("SeleniumWebButton|getState");
 		boolean selected = getWebElement().isSelected();
 		if (selected) {
 			return 1;

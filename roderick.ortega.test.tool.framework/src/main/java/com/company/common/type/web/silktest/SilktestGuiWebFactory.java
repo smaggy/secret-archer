@@ -1,5 +1,8 @@
 package com.company.common.type.web.silktest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.action.BrowseableInterface;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
@@ -18,67 +21,69 @@ import com.company.common.types.Locator;
 
 public class SilktestGuiWebFactory extends AbstractGuiWebFactory implements AbstractGuiWebFactoryInterface, BrowseableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(SilktestGuiWebFactory.class);
+	
 	public SilktestGuiWebFactory(AbstractWebBrowserInterface webBrowser) {
 		super(webBrowser);
 	}
 
 	@Override
 	public AbstractWebButtonInterface createWebButton(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebButton: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebButton: [" + locator + "]");
 		return getWebBrowser().findWebButton(locator);
 	}
 
 	@Override
 	public AbstractWebCheckBoxInterface createWebCheckBox(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebCheckBox: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebCheckBox: [" + locator + "]");
 		return getWebBrowser().findWebCheckBox(locator);
 	}
 
 	@Override
 	public AbstractWebElementInterface createWebElement(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebElement: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebElement: [" + locator + "]");
 		return getWebBrowser().findWebElement(locator);
 	}
 
 	@Override
 	public AbstractWebLinkInterface createWebLink(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebLink: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebLink: [" + locator + "]");
 		return getWebBrowser().findWebLink(locator);
 	}
 
 	@Override
 	public AbstractWebListInterface createWebList(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebList: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebList: [" + locator + "]");
 		return getWebBrowser().findWebList(locator);
 	}
 
 	@Override
 	public AbstractWebListBoxInterface createWebListBox(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebListBox: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebListBox: [" + locator + "]");
 		return getWebBrowser().findWebListBox(locator);
 	}
 
 	@Override
 	public AbstractWebRadioButtonInterface createWebRadioButton(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebRadioButton: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebRadioButton: [" + locator + "]");
 		return getWebBrowser().findWebRadioButton(locator);
 	}
 
 	@Override
 	public AbstractWebTableInterface createWebTable(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebTable: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebTable: [" + locator + "]");
 		return getWebBrowser().findWebTable(locator);
 	}
 
 	@Override
 	public AbstractWebTableRowInterface createWebTableRow(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebTableRow: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebTableRow: [" + locator + "]");
 		return getWebBrowser().findWebTableRow(locator);
 	}
 
 	@Override
 	public AbstractWebTextFieldInterface createWebTextField(Locator locator) {
-		System.out.println("SilktestGuiWebFactory|createWebTextField: [" + locator + "]");
+		logger.debug("SilktestGuiWebFactory|createWebTextField: [" + locator + "]");
 		return getWebBrowser().findWebTextField(locator);
 	}
 

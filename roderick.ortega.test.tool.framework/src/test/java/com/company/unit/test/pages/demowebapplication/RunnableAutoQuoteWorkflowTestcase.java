@@ -2,6 +2,9 @@ package com.company.unit.test.pages.demowebapplication;
 
 import java.io.File;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.concrete.abstracts.test.AbstractTestcase;
 import com.company.common.concrete.bridges.XmlUrlBridge;
 import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
@@ -13,6 +16,8 @@ import com.company.demowebapplication.data.LandingPageDto;
 
 public class RunnableAutoQuoteWorkflowTestcase extends AbstractTestcase implements TestcaseRunnableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(RunnableAutoQuoteWorkflowTestcase.class);
+	
 	private XmlUrlBridge xmlUrlBridge;
 	private AutoQuoteWorkflow autoQuoteWorkflow;
 	
@@ -22,6 +27,10 @@ public class RunnableAutoQuoteWorkflowTestcase extends AbstractTestcase implemen
 	
 	@Override
 	public void testcaseSetup() throws Exception {
+		logger.info("Title: RunnableAutoQuoteWorkflowTestcase");
+		logger.info("Description: performs actions on the microfocus demo web application.");
+		logger.info("Purpose: tests the overall workflow and type factories for quotes on the site.");
+		
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		
 		autoQuoteWorkflow = new AutoQuoteWorkflow(this.getWebFactory());
@@ -43,14 +52,14 @@ public class RunnableAutoQuoteWorkflowTestcase extends AbstractTestcase implemen
 		aiqpDto.setAge("40");
 		aiqpDto.setGender("Male");
 		aiqpDto.setDrivingRecord("Excellent");
-		aiqpDto.setYear("1940");
+		aiqpDto.setYear("1999");
 		aiqpDto.setMake("Buick");
 		aiqpDto.setModel("Century");
 		aiqpDto.setFinancialInfo("Own");
 		
 		autoQuoteWorkflow.login(lpDto);
 		autoQuoteWorkflow.enterDataToForm(aiqpDto);
-		// autoQuoteWorkflow.verifySubmittedData(aiqpDto);
+		autoQuoteWorkflow.verifySubmittedData(aiqpDto);
 		
 	}
 

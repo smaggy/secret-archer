@@ -3,6 +3,9 @@ package com.company.common.type.web.silktest;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.borland.silktest.jtf.xbrowser.DomTable;
 import com.borland.silktest.jtf.xbrowser.DomTableRow;
 import com.company.common.browser.SilktestWebBrowser;
@@ -20,45 +23,47 @@ import com.company.common.utils.Searchable;
 
 public class SilktestWebTable extends SilktestWebElement implements AbstractWebTableInterface, TestObjectInterface, ClickableInterface, KeyableInterface, SearchableTableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(SilktestWebTable.class);
+	
 	public SilktestWebTable(DomTable domTable, Locator locator, SilktestWebBrowser webBrowser) {
 		super(domTable, locator, webBrowser);
 	}
 
 	@Override
 	public AbstractWebElementInterface getCell(int rowIndex, int colIndex) {
-		System.out.println("SilktestWebTable|getCell: [" + rowIndex + "|" + colIndex + "]");
+		logger.debug("SilktestWebTable|getCell: [" + rowIndex + "|" + colIndex + "]");
 		Locator retLocator = new Locator(this.getLocator().getXPathLocator() + "//TR[" + rowIndex + "]//TD[" + colIndex + "]");
 		return new SilktestWebElement(((DomTable) getDomElement()).getCell(rowIndex, colIndex), retLocator, this.getWebBrowser());
 	}
 
 	@Override
 	public String getCellText(int rowIndex, int colIndex) {
-		System.out.println("SilktestWebTable|getCellText: [" + rowIndex + "|" + colIndex + "]");
+		logger.debug("SilktestWebTable|getCellText: [" + rowIndex + "|" + colIndex + "]");
 		return ((DomTable) getDomElement()).getCellText(rowIndex, colIndex);
 	}
 
 	@Override
 	public int getColumnCount() {
-		System.out.println("SilktestWebTable|getColumnCount");
+		logger.debug("SilktestWebTable|getColumnCount");
 		return ((DomTable) getDomElement()).getColumnCount();
 	}
 
 	@Override
 	public AbstractWebTableRowInterface getRow(int rowIndex) {
-		System.out.println("SilktestWebTable|getRow: [" + rowIndex + "]");
+		logger.debug("SilktestWebTable|getRow: [" + rowIndex + "]");
 		Locator retLocator = new Locator(this.getLocator().getXPathLocator() + "//TR[" + rowIndex + "]");
 		return new SilktestWebTableRow(((DomTable) getDomElement()).getRow(rowIndex), retLocator, this.getWebBrowser());
 	}
 
 	@Override
 	public int getRowCount() {
-		System.out.println("SilktestWebTable|getRowCount");
+		logger.debug("SilktestWebTable|getRowCount");
 		return ((DomTable) getDomElement()).getRowCount();
 	}
 
 	@Override
 	public List<AbstractWebTableRowInterface> getRows() {
-		System.out.println("SilktestWebTable|getRows");
+		logger.debug("SilktestWebTable|getRows");
 		List<SilktestWebTableRow> silktestRows = new ArrayList<SilktestWebTableRow>();
 		List<DomTableRow> rows = ((DomTable) getDomElement()).getRows();
 		int counter = 1;
@@ -72,19 +77,19 @@ public class SilktestWebTable extends SilktestWebElement implements AbstractWebT
 
 	@Override
 	public List<String> getRowText(int rowIndex) {
-		System.out.println("SilktestWebTable|getRowText: [" + rowIndex + "]");
+		logger.debug("SilktestWebTable|getRowText: [" + rowIndex + "]");
 		return ((DomTable) getDomElement()).getRowText(rowIndex);
 	}
 
 	@Override
 	public List<TableCell> searchTable(List<List<String>> table, SearchParameters searchParameters) {
-		System.out.println("SilktestWebTable|searchTable: [" + searchParameters + "]");
+		logger.debug("SilktestWebTable|searchTable: [" + searchParameters + "]");
 		return Searchable.searchTable(table, searchParameters);
 	}
 
 	@Override
 	public List<List<String>> getTableText() {
-		System.out.println("SilktestWebTable|getTableText");
+		logger.debug("SilktestWebTable|getTableText");
 		List<List<String>> table = new ArrayList<List<String>>();
 		int totalRows = this.getRowCount();
 		for (int i = 1; i < totalRows; i++) {

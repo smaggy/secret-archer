@@ -3,6 +3,8 @@ package com.company.common.type.web.selenium;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.AbstractSeleniumWebBrowser;
 import com.company.common.interfaces.action.ClickableInterface;
@@ -15,6 +17,8 @@ import com.company.common.types.Locator;
 
 public class SeleniumWebTableRow extends SeleniumWebElement implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractWebTableRowInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(SeleniumWebTableRow.class);
+	
 	private int index;
 	
 	@Override
@@ -32,6 +36,7 @@ public class SeleniumWebTableRow extends SeleniumWebElement implements TestObjec
 
 	@Override
 	public AbstractWebElementInterface getCell(int itemIdentifierIndex) {
+		logger.debug("SeleniumWebTableRow|getCell: [" + itemIdentifierIndex + "]");
 		Locator locator = new Locator(this.getLocator().getXPathLocator() + "//TD");
 		Locator newLocator = new Locator(locator.getXPathLocator() + "[" + itemIdentifierIndex + "]");
 		
@@ -41,6 +46,7 @@ public class SeleniumWebTableRow extends SeleniumWebElement implements TestObjec
 
 	@Override
 	public int getCellCount() {
+		logger.debug("SeleniumWebTableRow|getCellCount");
 		Locator locator = new Locator(this.getLocator().getXPathLocator() + "//TD");
 		List<AbstractWebElementInterface> elements = getWebBrowser().findAllWebElements(locator);
 		return elements.size();

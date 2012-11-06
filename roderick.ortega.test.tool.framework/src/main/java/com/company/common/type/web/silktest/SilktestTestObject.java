@@ -1,5 +1,8 @@
 package com.company.common.type.web.silktest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
@@ -7,45 +10,47 @@ import com.company.common.type.web.abstracts.AbstractTestObject;
 
 public class SilktestTestObject extends AbstractTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface {
 	
+	final static Logger logger = LoggerFactory.getLogger(SilktestTestObject.class);
+	
 	@Override
 	public boolean exists() {
-		System.out.println("SilktestTestObject|exists");
+		logger.debug("SilktestTestObject|exists");
 		return false;
 	}
 
 	@Override
 	public void pressKeys(String keys) {
-		System.out.println("SilktestTestObject|pressKeys: " + keys);
+		logger.debug("SilktestTestObject|pressKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys) {
-		System.out.println("SilktestTestObject|typeKeys: " + keys);
+		logger.debug("SilktestTestObject|typeKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys, int delay) {
-		System.out.println("SilktestTestObject|typeKeys: " + keys + "|" + delay);
+		logger.debug("SilktestTestObject|typeKeys: " + keys + "|" + delay);
 
 	}
 
 	@Override
 	public void click() {
-		System.out.println("SilktestTestObject|click");
+		logger.debug("SilktestTestObject|click");
 
 	}
 
 	@Override
 	public void doubleClick() {
-		System.out.println("SilktestTestObject|doubleClick");
+		logger.debug("SilktestTestObject|doubleClick");
 
 	}
 
 	@Override
 	public void mouseMove() {
-		System.out.println("SilktestTestObject|mouseMove");
+		logger.debug("SilktestTestObject|mouseMove");
 
 	}
 	

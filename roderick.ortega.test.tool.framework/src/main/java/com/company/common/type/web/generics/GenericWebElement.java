@@ -2,6 +2,9 @@ package com.company.common.type.web.generics;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.company.common.interfaces.action.ClickableInterface;
 import com.company.common.interfaces.action.KeyableInterface;
 import com.company.common.interfaces.test.TestObjectInterface;
@@ -9,21 +12,23 @@ import com.company.common.interfaces.type.AbstractWebElementInterface;
 
 public class GenericWebElement extends GenericTestObject implements AbstractWebElementInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(GenericWebElement.class);
+	
 	@Override
 	public List<String> getDomAttributeList() {
-		System.out.println("GenericWebElement|getDomAttributeList");
+		logger.debug("GenericWebElement|getDomAttributeList");
 		return null;
 	}
 
 	@Override
 	public String getText() {
-		System.out.println("GenericWebElement|getText");
+		logger.debug("GenericWebElement|getText");
 		return null;
 	}
 
 	@Override
 	public String getDomAttribute(String attribute) {
-		System.out.println("GenericWebElement|getDomAttribute: " + attribute);
+		logger.debug("GenericWebElement|getDomAttribute: " + attribute);
 		return null;
 	}
 

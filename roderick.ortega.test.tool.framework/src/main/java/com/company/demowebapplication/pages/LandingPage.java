@@ -6,6 +6,8 @@ import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
@@ -17,12 +19,15 @@ import com.company.demowebapplication.interfaces.pages.LandingPageInterface;
 
 public class LandingPage extends AbstractSitePage implements DataLoadableInterface, LandingPageInterface, FrameableInterface {
 
+	final static Logger logger = LoggerFactory.getLogger(LandingPage.class);
+	
 	public LandingPage(File frameFile, AbstractGuiWebFactoryInterface webFactory) throws ParserConfigurationException, SAXException, IOException {
 		super(frameFile, webFactory);
 	}
 
 	@Override
 	public void setEmail(String email) throws XPathExpressionException {
+		logger.info("ACTION: setEmail: [" + email + "]");
 		if (email != null) {
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Email"))).setText(email);
 		}
@@ -33,6 +38,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void setPassword(String password) throws XPathExpressionException {
+		logger.info("ACTION: setPassword: [" + password + "]");
 		if (password != null) {
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Password"))).setText(password);
 		}
@@ -43,26 +49,31 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void selectLoginButton() throws XPathExpressionException {
+		logger.info("ACTION: selectLoginButton");
 		getWebFactory().createWebButton(getLocator(new FrameParameters("LandingPage","LoginButton"))).select();
 	}
 
 	@Override
 	public void selectSignUpButton() throws XPathExpressionException {
+		logger.info("ACTION: selectSignUpButton");
 		getWebFactory().createWebButton(getLocator(new FrameParameters("LandingPage","SignUpButton"))).select();
 	}
 
 	@Override
 	public void selectDetailsButton() throws XPathExpressionException {
+		logger.info("ACTION: selectLoginButton");
 		getWebFactory().createWebButton(getLocator(new FrameParameters("LandingPage","LoggedInUserDetails"))).select();
 	}
 
 	@Override
 	public void selectLogOutButton() throws XPathExpressionException {
+		logger.info("ACTION: selectLoginButton");
 		getWebFactory().createWebButton(getLocator(new FrameParameters("LandingPage","LogoutButton"))).select();
 	}
 
 	@Override
 	public void selectService(ServiceTypeEnum serviceType) throws XPathExpressionException {
+		logger.info("ACTION: selectService: [" + serviceType + "]");
 		if (serviceType != null) {
 			getWebFactory().createWebListBox(getLocator(new FrameParameters("LandingPage","ServiceSelector"))).select(serviceType.toString());
 		}
@@ -73,21 +84,25 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void selectLearnMore() throws XPathExpressionException {
+		logger.info("ACTION: selectLearnMore");
 		getWebFactory().createWebLink(getLocator(new FrameParameters("LandingPage","LearnMoreLink"))).select();
 	}
 
 	@Override
 	public void selectAllServices() throws XPathExpressionException {
+		logger.info("ACTION: selectAllServices");
 		getWebFactory().createWebLink(getLocator(new FrameParameters("LandingPage","AllServicesLink"))).select();
 	}
 
 	@Override
 	public void selectNewsArchive() throws XPathExpressionException {
+		logger.info("ACTION: selectNewsArchive");
 		getWebFactory().createWebLink(getLocator(new FrameParameters("LandingPage","NewsArchiveLink"))).select();
 	}
 
 	@Override
 	public void setNewsletterSignUpEmail(String email) throws XPathExpressionException {
+		logger.info("ACTION: setNewsletterSignUpEmail: [" + email + "]");
 		if (email != null) {
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","NewsletterSignUpEmail"))).setText(email);
 		}
@@ -98,6 +113,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void selectNewsletterSignUpButton() throws XPathExpressionException {
+		logger.info("ACTION: selectNewsletterSignUpButton");
 		getWebFactory().createWebButton(getLocator(new FrameParameters("LandingPage","NewsletterSignUpSubmit"))).select();
 	}
 

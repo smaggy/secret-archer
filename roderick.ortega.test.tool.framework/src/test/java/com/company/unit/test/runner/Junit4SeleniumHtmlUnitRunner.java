@@ -5,6 +5,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.SeleniumHtmlUnitWebBrowser;
 import com.company.common.concrete.abstracts.test.AbstractRunner;
@@ -14,27 +16,32 @@ import com.company.unit.test.pages.demowebapplication.RunnableLandingPageTestcas
 
 public class Junit4SeleniumHtmlUnitRunner extends AbstractRunner {
 	
+	private Logger logger = LoggerFactory.getLogger(Junit4SeleniumIeRunner.class);
 	private TestcaseRunnableInterface testcase;
 
 	@BeforeClass
 	public static void beforeClass() throws Exception {
+		System.setProperty("logback.configurationFile", "./logback.xml");
 		Junit4SeleniumIeRunner.setWebBrowser(new SeleniumHtmlUnitWebBrowser());
 		Junit4SeleniumIeRunner.setWebFactory(new SeleniumGuiWebFactory(Junit4SeleniumIeRunner.getWebBrowser()));
 	}
 	
 	@Before
 	public void before() throws Exception {
+		logger.info("executing testcase setup via Selenium Html Unit Runner");
 		testcase = new RunnableLandingPageTestcase(Junit4SeleniumIeRunner.getWebBrowser(),Junit4SeleniumIeRunner.getWebFactory());
 		testcase.testcaseSetup();
 	}
 	
 	@Test
 	public void test() throws Exception {
+		logger.info("executing testcase via Selenium Html Unit Runner");
 		testcase.testcase();
 	}
 	
 	@After
 	public void after() throws Exception {
+		logger.info("executing testcase teardown via Selenium Html Unit Runner");
 		testcase.testcaseTeardown();
 	}
 	

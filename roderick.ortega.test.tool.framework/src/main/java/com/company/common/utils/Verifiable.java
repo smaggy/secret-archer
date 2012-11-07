@@ -24,24 +24,28 @@ public class Verifiable {
 
 			logger.info("[verify] ... Attempt Integer Assertion for '" + parameters.getVerificationMessage() + "'");
 			Assert.assertEquals(parameters.getiExpected(), parameters.getiActual());
+			logger.info("[verify] ... Verification passed when comparing expected: [" + parameters.getiExpected() + "] and actual: [" + parameters.getiActual() + "]");
 			break;
 
 		case BOOLEAN_VERIFICATION:
 
 			logger.info("[verify] ... Attempt Boolean Assertion for '" + parameters.getVerificationMessage() + "'");
 			Assert.assertEquals(parameters.isbExpected(), parameters.isbActual());
+			logger.info("[verify] ... Verification passed when comparing expected: [" + parameters.isbExpected() + "] and actual: [" + parameters.isbActual() + "]");
 			break;
 
 		case STRING_VERIFICATION:
 
 			logger.info("[verify] ... Attempt String Assertion for '" + parameters.getVerificationMessage() + "'");
 			Assert.assertEquals(parameters.getsExpected(), parameters.getsActual());
+			logger.info("[verify] ... Verification passed when comparing expected: [" + parameters.getsExpected() + "] and actual: [" + parameters.getsActual() + "]");
 			break;
 
 		case LIST_OF_STRING_VERIFICATION:
 
 			logger.info("[verify] ... Attempt List of String Assertion for '" + parameters.getVerificationMessage() + "'");
 			Assert.assertEquals(parameters.getLsExpected(), parameters.getLsActual());
+			logger.info("[verify] ... Verification passed when comparing expected: [" + parameters.getLsExpected() + "] and actual: [" + parameters.getLsActual() + "]");
 			break;
 
 		default:
@@ -57,7 +61,7 @@ public class Verifiable {
 		
 		try {
 			
-			logger.info("[continueOnError] ... Attempting verification for [" + parameters + "]");
+			logger.info("[continueOnError] ... Attempting verification for '" + parameters + "'");
 			Verifiable.verify(parameters);
 		
 		}

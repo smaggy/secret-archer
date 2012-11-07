@@ -304,55 +304,74 @@ public class AutomobileInstantQuotePage extends AbstractSiteInteriorPage impleme
 	@Override
 	public String getDisplayedZipCode() throws Exception {
 		logger.info("ACTION: getDisplayedZipCode");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultZipCode"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultZipCode"))).getText();
+		String[] pageTextTokens = pageText.split("Zip Code:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedAge() throws Exception {
 		logger.info("ACTION: getDisplayedAge");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAge"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAge"))).getText();
+		String[] pageTextTokens = pageText.split("Age:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedGender() throws Exception {
 		logger.info("ACTION: getDisplayedGender");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultGender"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultGender"))).getText();
+		String[] pageTextTokens = pageText.split("Gender:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedDrivingRecord() throws Exception {
 		logger.info("ACTION: getDisplayedDrivingRecord");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultDrivingRecord"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultDrivingRecord"))).getText();
+		String[] pageTextTokens = pageText.split("Driving Record:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedAutomobileType() throws Exception {
 		logger.info("ACTION: getDisplayedAutomobileType");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileType"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileType"))).getText();
+		String[] pageTextTokens = pageText.split("Automobile Type:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedYear() throws Exception {
 		logger.info("ACTION: getDisplayedYear");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileYear"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileYear"))).getText();
+		String[] pageTextTokens = pageText.split("Year:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedMake() throws Exception {
 		logger.info("ACTION: getDisplayedMake");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileMake"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileMake"))).getText();
+		String[] pageTextTokens = pageText.split("Make:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedModel() throws Exception {
 		logger.info("ACTION: getDisplayedModel");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileModel"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultAutomobileModel"))).getText();
+		String[] pageTextTokens = pageText.split("Model:");
+		return pageTextTokens[1].trim();
 	}
 
 	@Override
 	public String getDisplayedFinancialInfo() throws Exception {
 		logger.info("ACTION: getDisplayedFinancialInfo");
-		return getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultFinancialInfo"))).getText();
+		String pageText = getWebFactory().createWebElement(getLocator(new FrameParameters("AutomobileInstantQuotePage","ResultFinancialInfo"))).getText();
+		String[] pageTextTokens1 = pageText.split("You currently ");
+		String[] pageTextTokens2 = pageTextTokens1[1].split(" this vehicle.");
+		return pageTextTokens2[0].trim();
 	}
 
 	@Override

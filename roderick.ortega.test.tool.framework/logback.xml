@@ -19,6 +19,7 @@
 <!-- <root level="trace"> -->
 <!-- <root level="debug"> -->
 <!-- <root level="info"> -->
+<!-- <root level="error"> -->
   <root level="debug">
     <appender-ref ref="STDOUT" />
     <appender-ref ref="LOG"/>

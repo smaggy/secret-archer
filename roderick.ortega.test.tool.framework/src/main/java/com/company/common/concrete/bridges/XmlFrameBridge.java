@@ -30,12 +30,21 @@ public class XmlFrameBridge {
 		return new Locator(this.xmlReader.getChildElementValue(node, XPATH_ELEMENT));
 	}
 	
+	private Locator getXPathLocator(Node node, String browserAttributeValue) {
+		return new Locator(this.xmlReader.getChildElementValue(node, XPATH_ELEMENT, browserAttributeValue));
+	}
+	
 	private CssSelector getCssSelector(Node node) {
 		return new CssSelector(this.xmlReader.getChildElementValue(node, CSS_SELECTOR_ELEMENT));
 	}
 	
 	public Locator getTestObjectLocator(FrameParameters frameParameters) throws XPathExpressionException {
-		return getXPathLocator(getTestObjectNode(frameParameters));
+		if (frameParameters.getBrowserType() != null) {
+			return getXPathLocator(getTestObjectNode(frameParameters), frameParameters.getBrowserType());
+		}
+		else {
+			return getXPathLocator(getTestObjectNode(frameParameters));
+		}
 	}
 	
 	public Locator getPageLocator(FrameParameters frameParameters) throws XPathExpressionException {

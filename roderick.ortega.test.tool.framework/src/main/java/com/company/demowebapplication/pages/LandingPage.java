@@ -61,13 +61,13 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 
 	@Override
 	public void selectDetailsButton() throws XPathExpressionException {
-		logger.info("ACTION: selectLoginButton");
+		logger.info("ACTION: selectDetailsButton");
 		getWebFactory().createWebButton(getLocator(new FrameParameters("LandingPage","LoggedInUserDetails"))).select();
 	}
 
 	@Override
 	public void selectLogOutButton() throws XPathExpressionException {
-		logger.info("ACTION: selectLoginButton");
+		logger.info("ACTION: selectLogOutButton");
 		getWebFactory().createWebButton(getLocator(new FrameParameters("LandingPage","LogoutButton"))).select();
 	}
 

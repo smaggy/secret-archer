@@ -84,5 +84,16 @@ public class AutoQuoteWorkflow extends AbstractSiteWorkflow implements AutoQuote
 		Verifiable.continueOnError(new VerificationParameters(aiqp.getDisplayedModel(), aiqpDto.getModel(), "Verify Model"));
 		Verifiable.continueOnError(new VerificationParameters(aiqp.getDisplayedFinancialInfo(), aiqpDto.getFinancialInfo(), "Verify Financial Info"));
 	}
+
+	@Override
+	public void navigateHome() throws Exception {
+		aiqp.selectHomeButton();
+	}
+
+	@Override
+	public void logout() throws Exception {
+		navigateHome();
+		lp.selectLogOutButton();
+	}
 	
 }

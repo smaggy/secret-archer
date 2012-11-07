@@ -53,6 +53,26 @@ public class XmlReader {
 				Element element = (Element) innernode;
 				if (element.getNodeName().equalsIgnoreCase(elementTagName)) {
 					returnString = element.getTextContent();
+					break;
+				}
+			}
+		}
+		
+		return returnString;	
+	}
+	
+	public String getChildElementValue(Node node, String elementTagName, String browserAttributeValue) {
+		String returnString = null;
+		
+		NodeList nodeList = node.getChildNodes();
+		
+		for (int temp = 0; temp < nodeList.getLength(); temp++) {
+			Node innernode = nodeList.item(temp);
+			if (innernode.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) innernode;
+				if (element.getNodeName().equalsIgnoreCase(elementTagName) && element.getAttribute("browser").equalsIgnoreCase(browserAttributeValue)) {
+					returnString = element.getTextContent();
+					break;
 				}
 			}
 		}

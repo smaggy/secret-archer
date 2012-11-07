@@ -60,13 +60,12 @@ public class RunnableAutoQuoteWorkflowTestcase extends AbstractTestcase implemen
 		autoQuoteWorkflow.login(lpDto);
 		autoQuoteWorkflow.enterDataToForm(aiqpDto);
 		autoQuoteWorkflow.verifySubmittedData(aiqpDto);
-		
+		autoQuoteWorkflow.logout();
 	}
 
 	@Override
 	public void testcaseTeardown() throws Exception {
-		// TODO Auto-generated method stub
-		
+		getWebBrowser().close();
 	}
 
 }

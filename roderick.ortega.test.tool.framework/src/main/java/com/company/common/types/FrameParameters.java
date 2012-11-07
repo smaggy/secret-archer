@@ -6,6 +6,7 @@ public class FrameParameters {
 	
 	private String pageId;
 	private String testObjectId;
+	private String browserType;
 	private FrameParameterType frameParameterType;
 	
 	public FrameParameters(String pageId) {
@@ -16,6 +17,13 @@ public class FrameParameters {
 	public FrameParameters(String pageId, String objectId) {
 		setPageId(pageId);
 		setTestObjectId(objectId);
+		setFrameParameterType(FrameParameterType.PAGE_AND_TEST_OBJECT);
+	}
+	
+	public FrameParameters(String pageId, String objectId, String browserType) {
+		setPageId(pageId);
+		setTestObjectId(objectId);
+		setBrowserType(browserType);
 		setFrameParameterType(FrameParameterType.PAGE_AND_TEST_OBJECT);
 	}
 	
@@ -35,6 +43,14 @@ public class FrameParameters {
 		this.testObjectId = testObjectId;
 	}
 	
+	public String getBrowserType() {
+		return browserType;
+	}
+
+	public void setBrowserType(String browserType) {
+		this.browserType = browserType;
+	}
+
 	public FrameParameterType getFrameParameterType() {
 		return frameParameterType;
 	}
@@ -44,7 +60,7 @@ public class FrameParameters {
 	}
 
 	public String toString() {
-		return "[" + pageId + "|" + testObjectId + "|" + frameParameterType + "]";
+		return "[" + pageId + "|" + testObjectId + "|" + browserType + "|" + frameParameterType + "]";
 	}
 	
 }

@@ -225,7 +225,9 @@
 		</object>
 		<object id="MakeDivWrapper" type="WebElement">
 			<!-- for ie browser through selenium -->
-			<xpath>//DIV[@id='ext-gen11']</xpath>
+			<xpath browser="ie">//DIV[@id='ext-gen11']</xpath>
+			<xpath browser="firefox"></xpath>
+			<xpath browser="chrome"></xpath>
 			<css></css>
 		</object>
 		<object id="Model" type="WebListBox">
@@ -238,7 +240,9 @@
 		</object>
 		<object id="ModelDivWrapper" type="WebElement">
 			<!-- for ie browser through selenium -->
-			<xpath>//DIV[@id='ext-gen14']</xpath>
+			<xpath browser="ie">//DIV[@id='ext-gen14']</xpath>
+			<xpath browser="firefox"></xpath>
+			<xpath browser="chrome"></xpath>
 			<css></css>
 		</object>
 		<object id="FinancialInfoOwn" type="WebRadioButton">

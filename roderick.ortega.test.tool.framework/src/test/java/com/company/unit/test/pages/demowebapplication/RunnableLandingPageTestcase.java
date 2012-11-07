@@ -52,8 +52,7 @@ public class RunnableLandingPageTestcase extends AbstractTestcase implements Tes
 
 	@Override
 	public void testcaseTeardown() throws Exception {
-		// TODO Auto-generated method stub
-		
+		getWebBrowser().close();
 	}
 
 }

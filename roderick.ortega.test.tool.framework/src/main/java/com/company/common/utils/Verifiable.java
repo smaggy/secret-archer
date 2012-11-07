@@ -63,7 +63,7 @@ public class Verifiable {
 		}
 		catch (AssertionFailedError f) {
 			logger.info("[continueOnError] ... continue on error set.  printing stack trace but allowing testcase to proceed with other verifications.");
-			f.printStackTrace();
+			logger.error(f.getMessage());
 		}
 
 	}
@@ -76,7 +76,7 @@ public class Verifiable {
 		}
 		catch (AssertionFailedError f) {
 			logger.info("[haltOnError] ... Verification failed for [" + parameters + "]");
-			f.printStackTrace();
+			logger.error(f.getMessage());
 			throw f;
 		}
 	}

@@ -7,4 +7,6 @@ public interface AutoQuoteWorkflowInterface extends AbstractSiteWorkflowInterfac
 	public void login(LandingPageDto lpDto) throws Exception;
 	public void enterDataToForm(AutomobileInstantQuotePageDto aiqpDto) throws Exception;
 	public void verifySubmittedData(AutomobileInstantQuotePageDto aiqpDto) throws Exception;
+	public void navigateHome() throws Exception;
+	public void logout() throws Exception;
 }

@@ -19,7 +19,7 @@ import com.company.common.interfaces.type.AbstractWebTextFieldInterface;
 import com.company.common.type.web.abstracts.factory.AbstractGuiWebFactory;
 import com.company.common.types.Locator;
 
-public class GenericGuiWebFactory extends AbstractGuiWebFactory implements AbstractGuiWebFactoryInterface, BrowseableInterface {
+public final class GenericGuiWebFactory extends AbstractGuiWebFactory implements AbstractGuiWebFactoryInterface, BrowseableInterface {
 	
 	final static Logger logger = LoggerFactory.getLogger(GenericGuiWebFactory.class);
 	

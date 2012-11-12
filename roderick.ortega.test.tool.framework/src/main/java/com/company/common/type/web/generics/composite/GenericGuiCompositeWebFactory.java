@@ -11,7 +11,7 @@ import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterfa
 import com.company.common.type.web.abstracts.factory.AbstractGuiCompositeWebFactory;
 import com.company.common.types.Locator;
 
-public class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
+public final class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
 
 	final static Logger logger = LoggerFactory.getLogger(GenericGuiCompositeWebFactory.class);
 	

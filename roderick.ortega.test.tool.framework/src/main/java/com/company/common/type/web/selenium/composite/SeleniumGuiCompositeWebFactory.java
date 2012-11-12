@@ -8,7 +8,7 @@ import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterfa
 import com.company.common.type.web.abstracts.factory.AbstractGuiCompositeWebFactory;
 import com.company.common.types.Locator;
 
-public class SeleniumGuiCompositeWebFactory extends AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
+public final class SeleniumGuiCompositeWebFactory extends AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
 
 	@Override
 	public AbstractWebCalendarInterface createWebCalendar(Locator locator) {

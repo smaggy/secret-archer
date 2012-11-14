@@ -2,9 +2,9 @@ package com.company.demowebapplication.business.process.model;
 
 import java.io.File;
 
-import com.company.common.interfaces.action.PageBuildableInterface;
-import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
-import com.company.common.interfaces.process.DataLoadableInterface;
+import com.company.common.model.action.PageBuildableInterface;
+import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.model.process.DataLoadableInterface;
 import com.company.common.types.VerificationParameters;
 import com.company.common.utils.Verifiable;
 import com.company.demowebapplication.data.AutomobileInstantQuotePageDto;

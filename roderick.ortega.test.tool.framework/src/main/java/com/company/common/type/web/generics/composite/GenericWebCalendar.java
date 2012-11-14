@@ -3,8 +3,8 @@ package com.company.common.type.web.generics.composite;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.composite.AbstractWebCalendarInterface;
 import com.company.common.types.CompanyStringDate;
 import com.company.common.types.CompanyStringDay;
 

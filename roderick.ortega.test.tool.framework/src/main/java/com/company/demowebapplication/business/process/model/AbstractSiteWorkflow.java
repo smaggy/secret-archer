@@ -1,8 +1,8 @@
 package com.company.demowebapplication.business.process.model;
 
-import com.company.common.interfaces.action.PageBuildableInterface;
-import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
-import com.company.common.interfaces.process.DataLoadableInterface;
+import com.company.common.model.action.PageBuildableInterface;
+import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.model.process.DataLoadableInterface;
 import com.company.demowebapplication.data.DataTransferObject;
 import com.company.demowebapplication.interfaces.workflows.AbstractSiteWorkflowInterface;
 

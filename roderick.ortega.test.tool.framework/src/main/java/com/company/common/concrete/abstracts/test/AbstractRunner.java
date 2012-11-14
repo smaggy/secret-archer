@@ -1,7 +1,7 @@
 package com.company.common.concrete.abstracts.test;
 
-import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
-import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.model.browser.AbstractWebBrowserInterface;
+import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
 
 public class AbstractRunner {
 	

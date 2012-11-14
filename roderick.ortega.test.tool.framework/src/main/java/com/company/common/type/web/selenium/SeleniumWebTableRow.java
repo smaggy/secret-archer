@@ -7,12 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.AbstractSeleniumWebBrowser;
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractSeleniumWebElementInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
-import com.company.common.interfaces.type.AbstractWebTableRowInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractSeleniumWebElementInterface;
+import com.company.common.model.type.AbstractWebElementInterface;
+import com.company.common.model.type.AbstractWebTableRowInterface;
 import com.company.common.types.Locator;
 
 public class SeleniumWebTableRow extends SeleniumWebElement implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractWebTableRowInterface {

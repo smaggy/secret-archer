@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
 
 import com.company.common.concrete.abstracts.test.AbstractTestcase;
 import com.company.common.concrete.bridges.XmlUrlBridge;
-import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
-import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
-import com.company.common.interfaces.tools.TestcaseRunnableInterface;
+import com.company.common.model.browser.AbstractWebBrowserInterface;
+import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.model.tools.TestcaseRunnableInterface;
 import com.company.demowebapplication.data.DataTransferObject;
 import com.company.demowebapplication.interfaces.pages.LandingPageInterface;
 import com.company.demowebapplication.pages.LandingPage;

@@ -3,9 +3,9 @@ package com.company.common.concrete.abstracts.test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
-import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
-import com.company.common.interfaces.tools.TestcaseRunnableInterface;
+import com.company.common.model.browser.AbstractWebBrowserInterface;
+import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.model.tools.TestcaseRunnableInterface;
 
 public abstract class AbstractTestcase implements TestcaseRunnableInterface {
 	

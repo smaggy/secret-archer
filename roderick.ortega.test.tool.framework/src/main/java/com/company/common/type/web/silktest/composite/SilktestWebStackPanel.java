@@ -2,9 +2,9 @@ package com.company.common.type.web.silktest.composite;
 
 import java.util.List;
 
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
-import com.company.common.interfaces.type.composite.AbstractWebStackPanelInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebElementInterface;
+import com.company.common.model.type.composite.AbstractWebStackPanelInterface;
 
 public class SilktestWebStackPanel implements AbstractWebStackPanelInterface, TestObjectInterface {
 

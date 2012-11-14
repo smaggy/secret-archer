@@ -3,10 +3,10 @@ package com.company.common.type.web.generics;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebListBoxInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebListBoxInterface;
 
 public class GenericWebListBox extends GenericWebElement implements AbstractWebListBoxInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
 

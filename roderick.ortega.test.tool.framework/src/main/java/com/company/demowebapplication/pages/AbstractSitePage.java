@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import com.company.common.frame.AbstractAutomationFrame;
-import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.types.FrameParameters;
 import com.company.demowebapplication.data.DataTransferObject;
 import com.company.demowebapplication.interfaces.pages.AbstractSitePageInterface;

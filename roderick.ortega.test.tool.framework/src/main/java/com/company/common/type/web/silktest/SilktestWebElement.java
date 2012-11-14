@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory;
 
 import com.borland.silktest.jtf.xbrowser.DomElement;
 import com.company.common.browser.SilktestWebBrowser;
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebElementInterface;
 import com.company.common.types.CssSelector;
 import com.company.common.types.Locator;
 

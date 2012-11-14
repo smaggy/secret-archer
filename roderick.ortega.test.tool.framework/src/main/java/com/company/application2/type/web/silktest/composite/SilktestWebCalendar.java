@@ -1,7 +1,7 @@
 package com.company.application2.type.web.silktest.composite;
 
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.composite.AbstractWebCalendarInterface;
 import com.company.common.types.CompanyStringDate;
 import com.company.common.types.CompanyStringDay;
 

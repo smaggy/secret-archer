@@ -1,10 +1,10 @@
 package com.company.common.type.web.selenium.composite;
 
-import com.company.common.interfaces.action.BrowseableInterface;
-import com.company.common.interfaces.factory.AbstractGuiCompositeWebFactoryInterface;
-import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
-import com.company.common.interfaces.type.composite.AbstractWebStackPanelInterface;
-import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterface;
+import com.company.common.model.action.BrowseableInterface;
+import com.company.common.model.factory.AbstractGuiCompositeWebFactoryInterface;
+import com.company.common.model.type.composite.AbstractWebCalendarInterface;
+import com.company.common.model.type.composite.AbstractWebStackPanelInterface;
+import com.company.common.model.type.composite.AbstractWebSuggestBoxInterface;
 import com.company.common.type.web.abstracts.factory.AbstractGuiCompositeWebFactory;
 import com.company.common.types.Locator;
 

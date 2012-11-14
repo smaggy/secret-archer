@@ -1,9 +1,9 @@
 package com.company.common.type.web.abstracts;
 
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebRadioButtonInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebRadioButtonInterface;
 
 public abstract class AbstractWebRadioButton extends AbstractWebElement implements AbstractWebRadioButtonInterface, ClickableInterface, KeyableInterface, TestObjectInterface {
 

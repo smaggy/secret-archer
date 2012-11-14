@@ -2,11 +2,11 @@ package com.company.common.type.web.abstracts;
 
 import java.util.List;
 
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
-import com.company.common.interfaces.type.AbstractWebListInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebElementInterface;
+import com.company.common.model.type.AbstractWebListInterface;
 import com.company.common.types.SearchParameters;
 
 public abstract class AbstractWebList extends AbstractWebElement implements AbstractWebListInterface, ClickableInterface, KeyableInterface, TestObjectInterface {

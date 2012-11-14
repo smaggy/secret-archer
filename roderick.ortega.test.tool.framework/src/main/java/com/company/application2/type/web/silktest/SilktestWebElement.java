@@ -2,10 +2,10 @@ package com.company.application2.type.web.silktest;
 
 import java.util.List;
 
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebElementInterface;
 
 public class SilktestWebElement extends SilktestTestObject implements ClickableInterface, KeyableInterface, TestObjectInterface, AbstractWebElementInterface {
 

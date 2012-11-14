@@ -5,10 +5,10 @@ import org.slf4j.LoggerFactory;
 
 import com.borland.silktest.jtf.xbrowser.DomCheckBox;
 import com.company.common.browser.SilktestWebBrowser;
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebCheckBoxInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebCheckBoxInterface;
 import com.company.common.types.Locator;
 
 public class SilktestWebCheckBox extends SilktestWebElement implements AbstractWebCheckBoxInterface, TestObjectInterface, ClickableInterface, KeyableInterface {

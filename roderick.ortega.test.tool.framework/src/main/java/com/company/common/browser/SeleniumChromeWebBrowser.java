@@ -10,8 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.xml.sax.SAXException;
 
 import com.company.common.concrete.bridges.XmlServerPathBridge;
-import com.company.common.interfaces.action.FindableInterface;
-import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
+import com.company.common.model.action.FindableInterface;
+import com.company.common.model.browser.AbstractWebBrowserInterface;
 
 public class SeleniumChromeWebBrowser extends AbstractSeleniumWebBrowser implements AbstractWebBrowserInterface, FindableInterface {
 

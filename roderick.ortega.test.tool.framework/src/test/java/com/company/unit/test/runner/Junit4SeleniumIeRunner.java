@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.SeleniumIeWebBrowser;
 import com.company.common.concrete.abstracts.test.AbstractRunner;
-import com.company.common.interfaces.tools.TestcaseRunnableInterface;
+import com.company.common.model.tools.TestcaseRunnableInterface;
 import com.company.common.type.web.selenium.SeleniumGuiWebFactory;
 import com.company.unit.test.pages.demowebapplication.RunnableAutoQuoteWorkflowTestcase;
 import com.company.unit.test.pages.demowebapplication.RunnableLandingPageTestcase;

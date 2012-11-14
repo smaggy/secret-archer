@@ -5,9 +5,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
-import com.company.common.interfaces.type.composite.AbstractWebStackPanelInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebElementInterface;
+import com.company.common.model.type.composite.AbstractWebStackPanelInterface;
 
 public class GenericWebStackPanel implements AbstractWebStackPanelInterface, TestObjectInterface {
 

@@ -5,8 +5,8 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 
 import com.company.common.browser.AbstractSeleniumWebBrowser;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.composite.AbstractWebSuggestBoxInterface;
 import com.company.common.type.web.selenium.SeleniumWebElement;
 import com.company.common.types.Locator;
 

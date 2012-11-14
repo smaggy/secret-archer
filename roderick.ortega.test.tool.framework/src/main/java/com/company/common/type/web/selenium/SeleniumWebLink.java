@@ -5,10 +5,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.AbstractSeleniumWebBrowser;
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebLinkInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebLinkInterface;
 import com.company.common.types.Locator;
 
 public class SeleniumWebLink extends SeleniumWebElement implements TestObjectInterface, ClickableInterface, KeyableInterface, AbstractWebLinkInterface {

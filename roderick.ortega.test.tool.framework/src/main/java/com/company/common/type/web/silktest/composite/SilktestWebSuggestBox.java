@@ -2,8 +2,8 @@ package com.company.common.type.web.silktest.composite;
 
 import java.util.List;
 
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.composite.AbstractWebSuggestBoxInterface;
 
 public class SilktestWebSuggestBox implements AbstractWebSuggestBoxInterface, TestObjectInterface {
 

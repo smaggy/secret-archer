@@ -10,10 +10,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
-import com.company.common.interfaces.factory.AbstractGuiWebFactoryInterface;
-import com.company.common.interfaces.process.DataLoadableInterface;
-import com.company.common.interfaces.process.FrameableInterface;
-import com.company.common.interfaces.type.AbstractWebElementInterface;
+import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
+import com.company.common.model.process.DataLoadableInterface;
+import com.company.common.model.process.FrameableInterface;
+import com.company.common.model.type.AbstractWebElementInterface;
 import com.company.common.types.FrameParameters;
 import com.company.common.types.Locator;
 import com.company.demowebapplication.enums.AutomobileTypeEnum;

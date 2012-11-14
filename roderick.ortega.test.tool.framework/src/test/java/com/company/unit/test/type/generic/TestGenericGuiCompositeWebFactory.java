@@ -4,11 +4,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.company.common.browser.GenericWebBrowser;
-import com.company.common.interfaces.browser.AbstractWebBrowserInterface;
-import com.company.common.interfaces.factory.AbstractGuiCompositeWebFactoryInterface;
-import com.company.common.interfaces.type.composite.AbstractWebCalendarInterface;
-import com.company.common.interfaces.type.composite.AbstractWebStackPanelInterface;
-import com.company.common.interfaces.type.composite.AbstractWebSuggestBoxInterface;
+import com.company.common.model.browser.AbstractWebBrowserInterface;
+import com.company.common.model.factory.AbstractGuiCompositeWebFactoryInterface;
+import com.company.common.model.type.composite.AbstractWebCalendarInterface;
+import com.company.common.model.type.composite.AbstractWebStackPanelInterface;
+import com.company.common.model.type.composite.AbstractWebSuggestBoxInterface;
 import com.company.common.type.web.generics.composite.GenericGuiCompositeWebFactory;
 import com.company.common.types.Locator;
 import com.company.common.types.CompanyStringDate;

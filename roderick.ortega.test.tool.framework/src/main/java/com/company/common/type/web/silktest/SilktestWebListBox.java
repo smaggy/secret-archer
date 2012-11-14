@@ -5,10 +5,10 @@ import org.slf4j.LoggerFactory;
 
 import com.borland.silktest.jtf.xbrowser.DomListBox;
 import com.company.common.browser.SilktestWebBrowser;
-import com.company.common.interfaces.action.ClickableInterface;
-import com.company.common.interfaces.action.KeyableInterface;
-import com.company.common.interfaces.test.TestObjectInterface;
-import com.company.common.interfaces.type.AbstractWebListBoxInterface;
+import com.company.common.model.action.ClickableInterface;
+import com.company.common.model.action.KeyableInterface;
+import com.company.common.model.test.TestObjectInterface;
+import com.company.common.model.type.AbstractWebListBoxInterface;
 import com.company.common.types.Locator;
 
 public class SilktestWebListBox extends SilktestWebElement implements AbstractWebListBoxInterface, TestObjectInterface, ClickableInterface, KeyableInterface {

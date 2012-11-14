@@ -12,6 +12,8 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -21,6 +23,8 @@ import org.xml.sax.SAXException;
 import com.company.common.types.XPathQuery;
 
 public class XmlReader {
+	
+	final static Logger logger = LoggerFactory.getLogger(XmlReader.class);
 	
 	private DocumentBuilderFactory documentBuilderFactory;
 	private DocumentBuilder documentBuilder;
@@ -36,6 +40,7 @@ public class XmlReader {
 	}
 	
 	public Node evaluateXPathExpression(XPathQuery xPathQuery) throws XPathExpressionException {
+		logger.debug("Evaluating the xpath expression: [" + xPathQuery.getxPathQuery() + "]");
 		XPath xPath = xPathFactory.newXPath();
 		XPathExpression expr = xPath.compile(xPathQuery.getxPathQuery());
 		Object retNode = expr.evaluate(this.document, XPathConstants.NODE);
@@ -43,6 +48,7 @@ public class XmlReader {
 	}
 	
 	public String getChildElementValue(Node node, String elementTagName) {
+		logger.debug("Getting the child element value: [" + elementTagName + "], from Node: [" + node.getNodeName() + "]");
 		String returnString = null;
 		
 		NodeList nodeList = node.getChildNodes();
@@ -52,6 +58,7 @@ public class XmlReader {
 			if (innernode.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) innernode;
 				if (element.getNodeName().equalsIgnoreCase(elementTagName)) {
+					logger.debug("Encountered the element: [" + elementTagName + "], returning the value and stopping the search.");
 					returnString = element.getTextContent();
 					break;
 				}
@@ -62,6 +69,7 @@ public class XmlReader {
 	}
 	
 	public String getChildElementValue(Node node, String elementTagName, String browserAttributeValue) {
+		logger.debug("Getting the child element value: [" + elementTagName + "], from Node: [" + node.getNodeName() + "], whose browser attribute is: [" + browserAttributeValue + "]");
 		String returnString = null;
 		
 		NodeList nodeList = node.getChildNodes();
@@ -71,6 +79,7 @@ public class XmlReader {
 			if (innernode.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) innernode;
 				if (element.getNodeName().equalsIgnoreCase(elementTagName) && element.getAttribute("browser").equalsIgnoreCase(browserAttributeValue)) {
+					logger.debug("Encountered the element: [" + elementTagName + "] with browser attribute: [" + browserAttributeValue + "], returning the value and stopping the search.");
 					returnString = element.getTextContent();
 					break;
 				}

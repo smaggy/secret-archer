@@ -28,15 +28,22 @@ public class Junit4SeleniumChromeRunner extends AbstractRunner {
 	
 	@Before
 	public void before() throws Exception {
-		logger.info("executing testcase setup setup via Selenium Chrome Runner");
+		logger.info("Executing testcase setup setup via Selenium Chrome Runner");
 		testcase = new RunnableLandingPageTestcase(Junit4SeleniumIeRunner.getWebBrowser(),Junit4SeleniumIeRunner.getWebFactory());
 		testcase.testcaseSetup();
 	}
 	
 	@Test
-	public void test() throws Exception {
+	public void test() throws Throwable {
 		logger.info("executing testcase via Selenium Chrome Runner");
-		testcase.testcase();
+		try {
+			testcase.testcase();
+		}
+		catch (Throwable e) {
+			logger.error("An error was encountered during the testcase execution, recording the event.");
+			logger.info(e.getMessage());
+			throw e;
+		}
 	}
 	
 	@After

@@ -28,20 +28,27 @@ public class Junit4SilktestRunner extends AbstractRunner {
 	
 	@Before
 	public void before() throws Exception {
-		logger.info("executing testcase setup via Silktest Runner");
+		logger.info("Executing testcase setup via Silktest Runner");
 		testcase = new RunnableLandingPageTestcase(Junit4SilktestRunner.getWebBrowser(),Junit4SilktestRunner.getWebFactory());
 		testcase.testcaseSetup();
 	}
 	
 	@Test
-	public void test() throws Exception {
-		logger.info("executing testcase via Silktest Runner");
-		testcase.testcase();
+	public void test() throws Throwable {
+		logger.info("Executing testcase via Silktest Runner");
+		try {
+			testcase.testcase();
+		}
+		catch (Throwable e) {
+			logger.error("An error was encountered during the testcase execution, recording the event.");
+			logger.info(e.getMessage());
+			throw e;
+		}
 	}
 	
 	@After
 	public void after() throws Exception {
-		logger.info("executing testcase teardown via Silktest Runner");
+		logger.info("Executing testcase teardown via Silktest Runner");
 		testcase.testcaseTeardown();
 	}
 	

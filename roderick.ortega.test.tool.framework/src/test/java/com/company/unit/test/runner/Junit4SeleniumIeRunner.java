@@ -29,21 +29,28 @@ public class Junit4SeleniumIeRunner extends AbstractRunner {
 	
 	@Before
 	public void before() throws Exception {
-		logger.info("executing testcase setup via Selenium Ie Runner");
+		logger.info("Executing testcase setup via Selenium Ie Runner");
 		testcase = new RunnableLandingPageTestcase(Junit4SeleniumIeRunner.getWebBrowser(),Junit4SeleniumIeRunner.getWebFactory());
 		testcase = new RunnableAutoQuoteWorkflowTestcase(Junit4SeleniumIeRunner.getWebBrowser(),Junit4SeleniumIeRunner.getWebFactory());
 		testcase.testcaseSetup();
 	}
 	
 	@Test
-	public void test() throws Exception {
-		logger.info("executing testcase via Selenium Ie Runner");
-		testcase.testcase();
+	public void test() throws Throwable {
+		logger.info("Executing testcase via Selenium Ie Runner");
+		try {
+			testcase.testcase();
+		}
+		catch (Throwable e) {
+			logger.error("An error was encountered during the testcase execution, recording the event.");
+			logger.info(e.getMessage());
+			throw e;
+		}
 	}
 	
 	@After
 	public void after() throws Exception {
-		logger.info("executing testcase teardown via Selenium Ie Runner");
+		logger.info("Executing testcase teardown via Selenium Ie Runner");
 		testcase.testcaseTeardown();
 	}
 	

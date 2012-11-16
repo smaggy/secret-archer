@@ -1,4 +1,4 @@
-package com.company.unit.test.type.generic;
+package com.company.unit.test.type.mock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.company.common.browser.GenericWebBrowser;
+import com.company.common.browser.MockWebBrowser;
 import com.company.common.model.browser.AbstractWebBrowserInterface;
 import com.company.common.model.factory.AbstractGuiWebFactoryInterface;
 import com.company.common.model.type.AbstractWebButtonInterface;
@@ -19,11 +19,11 @@ import com.company.common.model.type.AbstractWebRadioButtonInterface;
 import com.company.common.model.type.AbstractWebTableInterface;
 import com.company.common.model.type.AbstractWebTableRowInterface;
 import com.company.common.model.type.AbstractWebTextFieldInterface;
-import com.company.common.type.web.generics.GenericGuiWebFactory;
+import com.company.common.type.web.mock.MockGuiWebFactory;
 import com.company.common.types.Locator;
 import com.company.common.types.SearchParameters;
 
-public class TestGenericGuiWebFactory {
+public class TestMockGuiWebFactory {
 	
 	private AbstractGuiWebFactoryInterface guiWebFactory;
 	private AbstractWebBrowserInterface webBrowser;
@@ -31,8 +31,8 @@ public class TestGenericGuiWebFactory {
 	
 	@Before
 	public void before() throws Exception {
-		webBrowser = new GenericWebBrowser();
-		guiWebFactory = new GenericGuiWebFactory(webBrowser);
+		webBrowser = new MockWebBrowser();
+		guiWebFactory = new MockGuiWebFactory(webBrowser);
 		guiWebFactory.setWebBrowser(webBrowser);
 		locator = new Locator("//ELEMENT[@id='AutomationId']");
 		System.out.println("==== new test ====");

@@ -19,194 +19,194 @@ import com.company.common.model.type.AbstractWebTableInterface;
 import com.company.common.model.type.AbstractWebTableRowInterface;
 import com.company.common.model.type.AbstractWebTextFieldInterface;
 import com.company.common.type.web.abstracts.factory.AbstractWebBrowser;
-import com.company.common.type.web.generics.GenericWebButton;
-import com.company.common.type.web.generics.GenericWebCheckBox;
-import com.company.common.type.web.generics.GenericWebElement;
-import com.company.common.type.web.generics.GenericWebLink;
-import com.company.common.type.web.generics.GenericWebList;
-import com.company.common.type.web.generics.GenericWebListBox;
-import com.company.common.type.web.generics.GenericWebRadioButton;
-import com.company.common.type.web.generics.GenericWebTable;
-import com.company.common.type.web.generics.GenericWebTableRow;
-import com.company.common.type.web.generics.GenericWebTextField;
+import com.company.common.type.web.mock.MockWebButton;
+import com.company.common.type.web.mock.MockWebCheckBox;
+import com.company.common.type.web.mock.MockWebElement;
+import com.company.common.type.web.mock.MockWebLink;
+import com.company.common.type.web.mock.MockWebList;
+import com.company.common.type.web.mock.MockWebListBox;
+import com.company.common.type.web.mock.MockWebRadioButton;
+import com.company.common.type.web.mock.MockWebTable;
+import com.company.common.type.web.mock.MockWebTableRow;
+import com.company.common.type.web.mock.MockWebTextField;
 import com.company.common.types.Locator;
 import com.company.common.types.Url;
 
-public class GenericWebBrowser extends AbstractWebBrowser implements AbstractWebBrowserInterface, FindableInterface {
+public class MockWebBrowser extends AbstractWebBrowser implements AbstractWebBrowserInterface, FindableInterface {
 
-	final static Logger logger = LoggerFactory.getLogger(GenericWebBrowser.class);
+	final static Logger logger = LoggerFactory.getLogger(MockWebBrowser.class);
 	
 	@Override
 	public void close() {
-		logger.debug("GenericWebBrowser|close");
+		logger.debug("MockWebBrowser|close");
 
 	}
 
 	@Override
 	public String getUrl() {
-		logger.debug("GenericWebBrowser|getUrl");
+		logger.debug("MockWebBrowser|getUrl");
 		return "http://www.google.com/";
 	}
 
 	@Override
 	public void navigate(Url url) {
-		logger.debug("GenericWebBrowser|navigate: " + url.toString());
+		logger.debug("MockWebBrowser|navigate: " + url.toString());
 
 	}
 
 	@Override
 	public String getTitle() {
-		logger.debug("GenericWebBrowser|getTitle");
+		logger.debug("MockWebBrowser|getTitle");
 		return "Application Title";
 	}
 
 	@Override
 	public AbstractWebElementInterface findWebElement(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebElement: " + locator.toString());
-		return new GenericWebElement();
+		logger.debug("MockWebBrowser|findWebElement: " + locator.toString());
+		return new MockWebElement();
 	}
 
 	@Override
 	public AbstractWebButtonInterface findWebButton(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebButton: " + locator.toString());
-		return new GenericWebButton();
+		logger.debug("MockWebBrowser|findWebButton: " + locator.toString());
+		return new MockWebButton();
 	}
 	
 	@Override
 	public AbstractWebCheckBoxInterface findWebCheckBox(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebButton: " + locator.toString());
-		return new GenericWebCheckBox();
+		logger.debug("MockWebBrowser|findWebButton: " + locator.toString());
+		return new MockWebCheckBox();
 	}
 
 	@Override
 	public AbstractWebLinkInterface findWebLink(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebLink: " + locator.toString());
-		return new GenericWebLink();
+		logger.debug("MockWebBrowser|findWebLink: " + locator.toString());
+		return new MockWebLink();
 	}
 
 	@Override
 	public AbstractWebListInterface findWebList(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebList: " + locator.toString());
-		return new GenericWebList();
+		logger.debug("MockWebBrowser|findWebList: " + locator.toString());
+		return new MockWebList();
 	}
 
 	@Override
 	public AbstractWebListBoxInterface findWebListBox(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebListBox: " + locator.toString());
-		return new GenericWebListBox();
+		logger.debug("MockWebBrowser|findWebListBox: " + locator.toString());
+		return new MockWebListBox();
 	}
 
 	@Override
 	public AbstractWebRadioButtonInterface findWebRadioButton(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebRadioButton: " + locator.toString());
-		return new GenericWebRadioButton();
+		logger.debug("MockWebBrowser|findWebRadioButton: " + locator.toString());
+		return new MockWebRadioButton();
 	}
 
 	@Override
 	public AbstractWebTableInterface findWebTable(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebTable: " + locator.toString());
-		return new GenericWebTable();
+		logger.debug("MockWebBrowser|findWebTable: " + locator.toString());
+		return new MockWebTable();
 	}
 
 	@Override
 	public AbstractWebTableRowInterface findWebTableRow(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebTableRow: " + locator.toString());
-		return new GenericWebTableRow();
+		logger.debug("MockWebBrowser|findWebTableRow: " + locator.toString());
+		return new MockWebTableRow();
 	}
 
 	@Override
 	public AbstractWebTextFieldInterface findWebTextField(Locator locator) {
-		logger.debug("GenericWebBrowser|findWebTextField: " + locator.toString());
-		return new GenericWebTextField();
+		logger.debug("MockWebBrowser|findWebTextField: " + locator.toString());
+		return new MockWebTextField();
 	}
 
 	@Override
 	public List<AbstractWebElementInterface> findAllWebElements(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebElements: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebElements: " + locator.toString());
 		List<AbstractWebElementInterface> elements = new ArrayList<AbstractWebElementInterface>();
-		elements.add(new GenericWebElement());
-		elements.add(new GenericWebElement());
+		elements.add(new MockWebElement());
+		elements.add(new MockWebElement());
 		return elements;
 	}
 
 	@Override
 	public List<AbstractWebButtonInterface> findAllWebButtons(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebButtons: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebButtons: " + locator.toString());
 		List<AbstractWebButtonInterface> b = new ArrayList<AbstractWebButtonInterface>();
-		b.add(new GenericWebButton());
-		b.add(new GenericWebButton());
+		b.add(new MockWebButton());
+		b.add(new MockWebButton());
 		return b;
 	}
 
 	@Override
 	public List<AbstractWebCheckBoxInterface> findAllWebCheckBoxes(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebCheckBoxes: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebCheckBoxes: " + locator.toString());
 		List<AbstractWebCheckBoxInterface> c = new ArrayList<AbstractWebCheckBoxInterface>();
-		c.add(new GenericWebCheckBox());
-		c.add(new GenericWebCheckBox());
+		c.add(new MockWebCheckBox());
+		c.add(new MockWebCheckBox());
 		return c;
 	}
 
 	@Override
 	public List<AbstractWebLinkInterface> findAllWebLinks(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebLinks: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebLinks: " + locator.toString());
 		List<AbstractWebLinkInterface> l = new ArrayList<AbstractWebLinkInterface>();
-		l.add(new GenericWebLink());
-		l.add(new GenericWebLink());
+		l.add(new MockWebLink());
+		l.add(new MockWebLink());
 		return l;
 	}
 
 	@Override
 	public List<AbstractWebListInterface> findAllWebLists(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebLists: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebLists: " + locator.toString());
 		List<AbstractWebListInterface> l = new ArrayList<AbstractWebListInterface>();
-		l.add(new GenericWebList());
-		l.add(new GenericWebList());
+		l.add(new MockWebList());
+		l.add(new MockWebList());
 		return l;
 	}
 
 	@Override
 	public List<AbstractWebListBoxInterface> findAllWebListBoxes(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebListBoxes: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebListBoxes: " + locator.toString());
 		List<AbstractWebListBoxInterface> l = new ArrayList<AbstractWebListBoxInterface>();
-		l.add(new GenericWebListBox());
-		l.add(new GenericWebListBox());
+		l.add(new MockWebListBox());
+		l.add(new MockWebListBox());
 		return l;
 	}
 
 	@Override
 	public List<AbstractWebRadioButtonInterface> findAllWebRadioButtons(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebRadioButtons: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebRadioButtons: " + locator.toString());
 		List<AbstractWebRadioButtonInterface> rb = new ArrayList<AbstractWebRadioButtonInterface>();
-		rb.add(new GenericWebRadioButton());
-		rb.add(new GenericWebRadioButton());
+		rb.add(new MockWebRadioButton());
+		rb.add(new MockWebRadioButton());
 		return rb;
 	}
 
 	@Override
 	public List<AbstractWebTableInterface> findAllWebTables(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebTables: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebTables: " + locator.toString());
 		List<AbstractWebTableInterface> wt = new ArrayList<AbstractWebTableInterface>();
-		wt.add(new GenericWebTable());
-		wt.add(new GenericWebTable());
+		wt.add(new MockWebTable());
+		wt.add(new MockWebTable());
 		return wt;
 	}
 
 	@Override
 	public List<AbstractWebTableRowInterface> findAllWebTableRows(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebTableRows: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebTableRows: " + locator.toString());
 		List<AbstractWebTableRowInterface> tr = new ArrayList<AbstractWebTableRowInterface>();
-		tr.add(new GenericWebTableRow());
-		tr.add(new GenericWebTableRow());
+		tr.add(new MockWebTableRow());
+		tr.add(new MockWebTableRow());
 		return tr;
 	}
 
 	@Override
 	public List<AbstractWebTextFieldInterface> findAllWebTextFields(Locator locator) {
-		logger.debug("GenericWebBrowser|findAllWebTextFields: " + locator.toString());
+		logger.debug("MockWebBrowser|findAllWebTextFields: " + locator.toString());
 		List<AbstractWebTextFieldInterface> tf = new ArrayList<AbstractWebTextFieldInterface>();
-		tf.add(new GenericWebTextField());
-		tf.add(new GenericWebTextField());
+		tf.add(new MockWebTextField());
+		tf.add(new MockWebTextField());
 		return tf;
 	}
 }

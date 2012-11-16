@@ -1,20 +1,20 @@
-package com.company.unit.test.type.generic;
+package com.company.unit.test.type.mock;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.company.common.browser.GenericWebBrowser;
+import com.company.common.browser.MockWebBrowser;
 import com.company.common.model.browser.AbstractWebBrowserInterface;
 import com.company.common.model.factory.AbstractGuiCompositeWebFactoryInterface;
 import com.company.common.model.type.composite.AbstractWebCalendarInterface;
 import com.company.common.model.type.composite.AbstractWebStackPanelInterface;
 import com.company.common.model.type.composite.AbstractWebSuggestBoxInterface;
-import com.company.common.type.web.generics.composite.GenericGuiCompositeWebFactory;
+import com.company.common.type.web.mock.composite.MockGuiCompositeWebFactory;
 import com.company.common.types.Locator;
 import com.company.common.types.CompanyStringDate;
 import com.company.common.types.CompanyStringDay;
 
-public class TestGenericGuiCompositeWebFactory {
+public class TestMockGuiCompositeWebFactory {
 	
 	private AbstractGuiCompositeWebFactoryInterface guiCompositeWebFactory;
 	private AbstractWebBrowserInterface webBrowser;
@@ -22,8 +22,8 @@ public class TestGenericGuiCompositeWebFactory {
 	
 	@Before
 	public void before() throws Exception {
-		guiCompositeWebFactory = new GenericGuiCompositeWebFactory();
-		webBrowser = new GenericWebBrowser();
+		guiCompositeWebFactory = new MockGuiCompositeWebFactory();
+		webBrowser = new MockWebBrowser();
 		guiCompositeWebFactory.setWebBrowser(webBrowser);
 		locator = new Locator("//ELEMENT[@id='AutomationId']");
 		System.out.println("==== new test ====");

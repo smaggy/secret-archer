@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.company.common.browser.SeleniumHtmlUnitWebBrowser;
+import com.company.common.browser.SeleniumWebBrowserFactory;
 import com.company.common.concrete.abstracts.test.AbstractRunner;
 import com.company.common.model.tools.TestcaseRunnableInterface;
 import com.company.common.type.web.selenium.SeleniumGuiWebFactory;
@@ -21,8 +21,9 @@ public class Junit4SeleniumHtmlUnitRunner extends AbstractRunner {
 
 	@BeforeClass
 	public static void beforeClass() throws Exception {
+		SeleniumWebBrowserFactory seleniumWebBrowserFactory = new SeleniumWebBrowserFactory();
 		System.setProperty("logback.configurationFile", "./logback.xml");
-		Junit4SeleniumIeRunner.setWebBrowser(new SeleniumHtmlUnitWebBrowser());
+		Junit4SeleniumIeRunner.setWebBrowser(seleniumWebBrowserFactory.createHtmlUnitWebBrowser());
 		Junit4SeleniumIeRunner.setWebFactory(new SeleniumGuiWebFactory(Junit4SeleniumIeRunner.getWebBrowser()));
 	}
 	

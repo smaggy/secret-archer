@@ -8,36 +8,35 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.company.common.browser.GenericWebBrowser;
+import com.company.common.browser.SilktestWebBrowserFactory;
 import com.company.common.concrete.abstracts.test.AbstractRunner;
 import com.company.common.model.tools.TestcaseRunnableInterface;
-import com.company.common.type.web.generics.GenericGuiWebFactory;
-import com.company.unit.test.pages.demowebapplication.RunnableAutoQuoteWorkflowTestcase;
+import com.company.common.type.web.silktest.SilktestGuiWebFactory;
 import com.company.unit.test.pages.demowebapplication.RunnableLandingPageTestcase;
 
-public class Junit4GenericRunner extends AbstractRunner {
+public class Junit4SilktestIeRunner extends AbstractRunner {
 	
 	private Logger logger = LoggerFactory.getLogger(Junit4SeleniumIeRunner.class);
 	private TestcaseRunnableInterface testcase;
 	
 	@BeforeClass
 	public static void beforeClass() {
+		SilktestWebBrowserFactory silktestWebBrowserFactory = new SilktestWebBrowserFactory();
 		System.setProperty("logback.configurationFile", "./logback.xml");
-		Junit4GenericRunner.setWebBrowser(new GenericWebBrowser());
-		Junit4GenericRunner.setWebFactory(new GenericGuiWebFactory(Junit4GenericRunner.getWebBrowser()));
+		Junit4SilktestIeRunner.setWebBrowser(silktestWebBrowserFactory.createIeWebBrowser());
+		Junit4SilktestIeRunner.setWebFactory(new SilktestGuiWebFactory(Junit4SilktestIeRunner.getWebBrowser()));
 	}
 	
 	@Before
 	public void before() throws Exception {
-		logger.info("Executing testcase setup via Generic Runner");
-		testcase = new RunnableLandingPageTestcase(Junit4GenericRunner.getWebBrowser(),Junit4GenericRunner.getWebFactory());
-		testcase = new RunnableAutoQuoteWorkflowTestcase(Junit4SeleniumIeRunner.getWebBrowser(),Junit4SeleniumIeRunner.getWebFactory());
+		logger.info("Executing testcase setup via Silktest Ie Runner");
+		testcase = new RunnableLandingPageTestcase(Junit4SilktestIeRunner.getWebBrowser(),Junit4SilktestIeRunner.getWebFactory());
 		testcase.testcaseSetup();
 	}
 	
 	@Test
 	public void test() throws Throwable {
-		logger.info("Executing testcase via Generic Runner");
+		logger.info("Executing testcase via Silktest Ie Runner");
 		try {
 			testcase.testcase();
 		}
@@ -50,7 +49,7 @@ public class Junit4GenericRunner extends AbstractRunner {
 	
 	@After
 	public void after() throws Exception {
-		logger.info("Executing testcase teardown via Generic Runner");
+		logger.info("Executing testcase teardown via Silktest Ie Runner");
 		testcase.testcaseTeardown();
 	}
 	
@@ -58,4 +57,5 @@ public class Junit4GenericRunner extends AbstractRunner {
 	public static void afterClass() {
 		
 	}
+	
 }

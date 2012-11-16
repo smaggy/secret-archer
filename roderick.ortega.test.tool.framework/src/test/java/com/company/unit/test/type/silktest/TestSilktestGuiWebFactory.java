@@ -30,7 +30,7 @@ public class TestSilktestGuiWebFactory {
 	@BeforeClass
 	public static void beforeClass() throws Exception {
 		
-		webBrowser = new SilktestWebBrowser();
+		webBrowser = new SilktestWebBrowser(new File("./Resources/Properties/silk4j.internet.explorer.settings"));
 		guiWebFactory = new SilktestGuiWebFactory(webBrowser);
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		testAutomationFrame = new XmlFrameBridge(new File("./Resources/Frames/TestAutomation.xml"));

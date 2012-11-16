@@ -1,4 +1,4 @@
-package com.company.common.type.web.generics.composite;
+package com.company.common.type.web.mock.composite;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,13 +11,13 @@ import com.company.common.model.type.composite.AbstractWebSuggestBoxInterface;
 import com.company.common.type.web.abstracts.factory.AbstractGuiCompositeWebFactory;
 import com.company.common.types.Locator;
 
-public final class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
+public final class MockGuiCompositeWebFactory extends AbstractGuiCompositeWebFactory implements AbstractGuiCompositeWebFactoryInterface, BrowseableInterface {
 
-	final static Logger logger = LoggerFactory.getLogger(GenericGuiCompositeWebFactory.class);
+	final static Logger logger = LoggerFactory.getLogger(MockGuiCompositeWebFactory.class);
 	
 	@Override
 	public AbstractWebCalendarInterface createWebCalendar(Locator locator) {
-		logger.debug("GenericGuiCompositeWebFactory|createWebCalendar: " + locator);
+		logger.debug("MockGuiCompositeWebFactory|createWebCalendar: " + locator);
 		// -----------------------------------------------
 		getWebBrowser().findWebButton(locator);
 		getWebBrowser().findWebCheckBox(locator);
@@ -40,12 +40,12 @@ public final class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWeb
 		getWebBrowser().findAllWebTables(locator);
 		getWebBrowser().findAllWebTableRows(locator);
 		getWebBrowser().findAllWebTextFields(locator);
-		return new GenericWebCalendar();
+		return new MockWebCalendar();
 	}
 
 	@Override
 	public AbstractWebStackPanelInterface createWebStackPanel(Locator locator) {
-		logger.debug("GenericGuiCompositeWebFactory|createWebStackPanel: " + locator);
+		logger.debug("MockGuiCompositeWebFactory|createWebStackPanel: " + locator);
 		// -----------------------------------------------
 		getWebBrowser().findWebButton(locator);
 		getWebBrowser().findWebCheckBox(locator);
@@ -68,12 +68,12 @@ public final class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWeb
 		getWebBrowser().findAllWebTables(locator);
 		getWebBrowser().findAllWebTableRows(locator);
 		getWebBrowser().findAllWebTextFields(locator);
-		return new GenericWebStackPanel();
+		return new MockWebStackPanel();
 	}
 
 	@Override
 	public AbstractWebSuggestBoxInterface createWebSuggestBox(Locator locator) {
-		logger.debug("GenericGuiCompositeWebFactory|createWebSuggestBox: " + locator);
+		logger.debug("MockGuiCompositeWebFactory|createWebSuggestBox: " + locator);
 		// -----------------------------------------------
 		getWebBrowser().findWebButton(locator);
 		getWebBrowser().findWebCheckBox(locator);
@@ -96,7 +96,7 @@ public final class GenericGuiCompositeWebFactory extends AbstractGuiCompositeWeb
 		getWebBrowser().findAllWebTables(locator);
 		getWebBrowser().findAllWebTableRows(locator);
 		getWebBrowser().findAllWebTextFields(locator);
-		return new GenericWebSuggestBox();
+		return new MockWebSuggestBox();
 	}
 
 }

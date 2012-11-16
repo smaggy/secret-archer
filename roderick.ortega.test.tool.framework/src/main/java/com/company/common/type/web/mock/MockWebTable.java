@@ -1,4 +1,4 @@
-package com.company.common.type.web.generics;
+package com.company.common.type.web.mock;
 
 import java.util.List;
 
@@ -14,61 +14,61 @@ import com.company.common.model.type.AbstractWebTableRowInterface;
 import com.company.common.types.SearchParameters;
 import com.company.common.types.TableCell;
 
-public class GenericWebTable extends GenericWebElement implements AbstractWebTableInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
+public class MockWebTable extends MockWebElement implements AbstractWebTableInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
 
-	final static Logger logger = LoggerFactory.getLogger(GenericWebTable.class);
+	final static Logger logger = LoggerFactory.getLogger(MockWebTable.class);
 	
 	@Override
 	public AbstractWebElementInterface getCell(int rowIndex, int colIndex) {
-		logger.debug("GenericWebTable|getCell: " + rowIndex + " : " + colIndex);
+		logger.debug("MockWebTable|getCell: " + rowIndex + " : " + colIndex);
 		return null;
 	}
 
 	@Override
 	public String getCellText(int rowIndex, int colIndex) {
-		logger.debug("GenericWebTable|getCellText: " + rowIndex + " : " + colIndex);
+		logger.debug("MockWebTable|getCellText: " + rowIndex + " : " + colIndex);
 		return null;
 	}
 
 	@Override
 	public int getColumnCount() {
-		logger.debug("GenericWebTable|getColumnCount");
+		logger.debug("MockWebTable|getColumnCount");
 		return 0;
 	}
 
 	@Override
 	public AbstractWebTableRowInterface getRow(int rowIndex) {
-		logger.debug("GenericWebTable|getRow: " + rowIndex);
+		logger.debug("MockWebTable|getRow: " + rowIndex);
 		return null;
 	}
 
 	@Override
 	public int getRowCount() {
-		logger.debug("GenericWebTable|getRowCount");
+		logger.debug("MockWebTable|getRowCount");
 		return 0;
 	}
 
 	@Override
 	public List<AbstractWebTableRowInterface> getRows() {
-		logger.debug("GenericWebTable|getRows");
+		logger.debug("MockWebTable|getRows");
 		return null;
 	}
 
 	@Override
 	public List<String> getRowText(int rowIndex) {
-		logger.debug("GenericWebTable|getRowText: " + rowIndex);
+		logger.debug("MockWebTable|getRowText: " + rowIndex);
 		return null;
 	}
 
 	@Override
 	public List<TableCell> searchTable(List<List<String>> table, SearchParameters searchParameters) {
-		logger.debug("GenericWebTable|searchTable: " + table + "|" + searchParameters);
+		logger.debug("MockWebTable|searchTable: " + table + "|" + searchParameters);
 		return null;
 	}
 
 	@Override
 	public List<List<String>> getTableText() {
-		logger.debug("GenericWebTable|getTableText");
+		logger.debug("MockWebTable|getTableText");
 		return null;
 	}
 

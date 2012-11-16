@@ -1,4 +1,4 @@
-package com.company.common.type.web.generics;
+package com.company.common.type.web.mock;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,37 +8,37 @@ import com.company.common.model.action.KeyableInterface;
 import com.company.common.model.test.TestObjectInterface;
 import com.company.common.type.web.abstracts.AbstractTestObject;
 
-public class GenericTestObject extends AbstractTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface {
+public class MockTestObject extends AbstractTestObject implements TestObjectInterface, ClickableInterface, KeyableInterface {
 	
-	final static Logger logger = LoggerFactory.getLogger(GenericTestObject.class);
+	final static Logger logger = LoggerFactory.getLogger(MockTestObject.class);
 	
 	@Override
 	public boolean exists() {
-		logger.debug("GenericTestObject|exists");
+		logger.debug("MockTestObject|exists");
 		return false;
 	}
 
 	@Override
 	public void pressKeys(String keys) {
-		logger.debug("GenericTestObject|pressKeys: " + keys);
+		logger.debug("MockTestObject|pressKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys) {
-		logger.debug("GenericTestObject|typeKeys: " + keys);
+		logger.debug("MockTestObject|typeKeys: " + keys);
 
 	}
 
 	@Override
 	public void typeKeys(String keys, int delay) {
-		logger.debug("GenericTestObject|typeKeys: " + keys + " delay: " + delay);
+		logger.debug("MockTestObject|typeKeys: " + keys + " delay: " + delay);
 
 	}
 
 	@Override
 	public void click() {
-		logger.debug("GenericTestObject|click");
+		logger.debug("MockTestObject|click");
 
 	}
 
@@ -50,7 +50,7 @@ public class GenericTestObject extends AbstractTestObject implements TestObjectI
 
 	@Override
 	public void mouseMove() {
-		logger.debug("GenericTestObject|mouseMove");
+		logger.debug("MockTestObject|mouseMove");
 
 	}
 }

@@ -1,4 +1,4 @@
-package com.company.common.type.web.generics;
+package com.company.common.type.web.mock;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,25 +8,25 @@ import com.company.common.model.action.KeyableInterface;
 import com.company.common.model.test.TestObjectInterface;
 import com.company.common.model.type.AbstractWebCheckBoxInterface;
 
-public class GenericWebCheckBox extends GenericWebElement implements AbstractWebCheckBoxInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
+public class MockWebCheckBox extends MockWebElement implements AbstractWebCheckBoxInterface, TestObjectInterface, ClickableInterface, KeyableInterface {
 
-	final static Logger logger = LoggerFactory.getLogger(GenericWebCheckBox.class);
+	final static Logger logger = LoggerFactory.getLogger(MockWebCheckBox.class);
 	
 	@Override
 	public void check() {
-		logger.debug("GenericWebCheckBox|check");
+		logger.debug("MockWebCheckBox|check");
 		
 	}
 
 	@Override
 	public void uncheck() {
-		logger.debug("GenericWebCheckBox|uncheck");
+		logger.debug("MockWebCheckBox|uncheck");
 		
 	}
 
 	@Override
 	public int getState() {
-		logger.debug("GenericWebCheckBox|getState");
+		logger.debug("MockWebCheckBox|getState");
 		return 0;
 	}
 

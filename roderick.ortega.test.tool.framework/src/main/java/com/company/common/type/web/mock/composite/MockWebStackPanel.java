@@ -1,4 +1,4 @@
-package com.company.common.type.web.generics.composite;
+package com.company.common.type.web.mock.composite;
 
 import java.util.List;
 
@@ -9,55 +9,55 @@ import com.company.common.model.test.TestObjectInterface;
 import com.company.common.model.type.AbstractWebElementInterface;
 import com.company.common.model.type.composite.AbstractWebStackPanelInterface;
 
-public class GenericWebStackPanel implements AbstractWebStackPanelInterface, TestObjectInterface {
+public class MockWebStackPanel implements AbstractWebStackPanelInterface, TestObjectInterface {
 
-	final static Logger logger = LoggerFactory.getLogger(GenericWebStackPanel.class);
+	final static Logger logger = LoggerFactory.getLogger(MockWebStackPanel.class);
 	
 	@Override
 	public void selectStack(String item) {
-		logger.debug("GenericWebStackPanel|selectStack: " + item);
+		logger.debug("MockWebStackPanel|selectStack: " + item);
 
 	}
 
 	@Override
 	public String getStackPanelBannerText(int index) {
-		logger.debug("GenericWebStackPanel|getStackPanelBannerText: " + index);
+		logger.debug("MockWebStackPanel|getStackPanelBannerText: " + index);
 		return null;
 	}
 
 	@Override
 	public AbstractWebElementInterface getSelectedStackPanelBannerContent() {
-		logger.debug("GenericWebStackPanel|getSelectedStackPanelBannerContent");
+		logger.debug("MockWebStackPanel|getSelectedStackPanelBannerContent");
 		return null;
 	}
 
 	@Override
 	public AbstractWebElementInterface getSelectedStackBanner() {
-		logger.debug("GenericWebStackPanel|getSelectedStackBanner");
+		logger.debug("MockWebStackPanel|getSelectedStackBanner");
 		return null;
 	}
 
 	@Override
 	public AbstractWebElementInterface getStackPanelBanner(int index) {
-		logger.debug("GenericWebStackPanel|getStackPanelBanner: " + index);
+		logger.debug("MockWebStackPanel|getStackPanelBanner: " + index);
 		return null;
 	}
 
 	@Override
 	public List<AbstractWebElementInterface> getAllBanners() {
-		logger.debug("GenericWebStackPanel|getAllBanners");
+		logger.debug("MockWebStackPanel|getAllBanners");
 		return null;
 	}
 
 	@Override
 	public List<String> getAllBannerNames() {
-		logger.debug("GenericWebStackPanel|getAllBannerNames");
+		logger.debug("MockWebStackPanel|getAllBannerNames");
 		return null;
 	}
 
 	@Override
 	public boolean exists() {
-		logger.debug("GenericWebStackPanel|exists");
+		logger.debug("MockWebStackPanel|exists");
 		return false;
 	}
 

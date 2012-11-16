@@ -1,4 +1,4 @@
-package com.company.common.type.web.generics.composite;
+package com.company.common.type.web.mock.composite;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,37 +8,37 @@ import com.company.common.model.type.composite.AbstractWebCalendarInterface;
 import com.company.common.types.CompanyStringDate;
 import com.company.common.types.CompanyStringDay;
 
-public class GenericWebCalendar implements AbstractWebCalendarInterface, TestObjectInterface {
+public class MockWebCalendar implements AbstractWebCalendarInterface, TestObjectInterface {
 
-	final static Logger logger = LoggerFactory.getLogger(GenericWebCalendar.class);
+	final static Logger logger = LoggerFactory.getLogger(MockWebCalendar.class);
 	
 	@Override
 	public void selectDate(CompanyStringDate date) {
-		logger.debug("GenericWebCalendar|selectDate: " + date.toString());
+		logger.debug("MockWebCalendar|selectDate: " + date.toString());
 
 	}
 
 	@Override
 	public void selectDay(int day) {
-		logger.debug("GenericWebCalendar|selectDay: " + day);
+		logger.debug("MockWebCalendar|selectDay: " + day);
 
 	}
 
 	@Override
 	public void selectDay(CompanyStringDay day) {
-		logger.debug("GenericWebCalendar|selectDay: " + day.toString());
+		logger.debug("MockWebCalendar|selectDay: " + day.toString());
 
 	}
 
 	@Override
 	public String getDate() {
-		logger.debug("GenericWebCalendar|getDate");
+		logger.debug("MockWebCalendar|getDate");
 		return null;
 	}
 
 	@Override
 	public boolean exists() {
-		logger.debug("GenericWebCalendar|exists");
+		logger.debug("MockWebCalendar|exists");
 		return false;
 	}
 

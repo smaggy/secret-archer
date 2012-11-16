@@ -51,9 +51,9 @@ public class SilktestWebBrowser implements AbstractWebBrowserInterface, Findable
 	private BrowserBaseState browserBaseState;
 	private BrowserWindow browserWindow;
 	
-	public SilktestWebBrowser() {
+	public SilktestWebBrowser(File propertiesFile) {
 		this.desktop = new Desktop();
-		this.browserBaseState = new BrowserBaseState(new File("./Resources/Properties/silk4j.settings"));
+		this.browserBaseState = new BrowserBaseState(propertiesFile);
 		this.browserWindow = browserBaseState.execute(this.desktop).find("//BrowserWindow");
 		browserWindow.reload();
 	}

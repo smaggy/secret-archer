@@ -42,7 +42,7 @@ public class Junit4SeleniumHtmlUnitRunner extends AbstractRunner {
 		}
 		catch (Throwable e) {
 			logger.error("An error was encountered during the testcase execution, recording the event.");
-			logger.info(e.getMessage());
+			logErrorInformation(e);
 			throw e;
 		}
 	}

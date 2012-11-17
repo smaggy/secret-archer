@@ -13,17 +13,17 @@ import com.company.common.types.CssSelector;
 import com.company.common.types.FrameParameters;
 import com.company.common.types.Locator;
 import com.company.common.types.XPathQuery;
-import com.company.common.utils.XmlReader;
+import com.company.common.utils.xml.FrameXmlReader;
 
 public class XmlFrameBridge {
 	
 	private final static String XPATH_ELEMENT = "xpath";
 	private final static String CSS_SELECTOR_ELEMENT = "css";
 	
-	private XmlReader xmlReader;
+	private FrameXmlReader xmlReader;
 	
 	public XmlFrameBridge(File xmlFile) throws ParserConfigurationException, SAXException, IOException {
-		this.xmlReader = new XmlReader(xmlFile);
+		this.xmlReader = new FrameXmlReader(xmlFile);
 	}
 	
 	private Locator getXPathLocator(Node node) {

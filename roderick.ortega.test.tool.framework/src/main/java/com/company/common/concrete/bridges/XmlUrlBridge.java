@@ -11,7 +11,7 @@ import org.xml.sax.SAXException;
 
 import com.company.common.types.Url;
 import com.company.common.types.XPathQuery;
-import com.company.common.utils.XmlReader;
+import com.company.common.utils.xml.XmlReader;
 
 public class XmlUrlBridge {
 	

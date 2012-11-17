@@ -11,7 +11,7 @@ public class FrameParameters {
 	
 	public FrameParameters(String pageId) {
 		setPageId(pageId);
-		setFrameParameterType(FrameParameterType.PAGE_ONLY);
+		setFrameParameterType(FrameParameterType.PAGE_OBJECT);
 	}
 	
 	public FrameParameters(String pageId, String objectId) {

@@ -27,9 +27,11 @@ public class RunnableAutoQuoteWorkflowTestcase extends AbstractTestcase implemen
 	
 	@Override
 	public void testcaseSetup() throws Exception {
-		logger.info("Title: RunnableAutoQuoteWorkflowTestcase");
-		logger.info("Description: performs actions on the microfocus demo web application.");
-		logger.info("Purpose: tests the overall workflow and type factories for quotes on the site.");
+
+		this.setTestcaseTitle("RunnableAutoQuoteWorkflowTestcase");
+		this.setTestcasePurpose("Performs actions on the microfocus demo web application.");
+		this.setTestcaseDescription("Tests the overall workflow and type factories for quotes on the site.");
+		logTestcaseInformation();
 		
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		

@@ -27,9 +27,11 @@ public class RunnableLandingPageTestcase extends AbstractTestcase implements Tes
 	
 	@Override
 	public void testcaseSetup() throws Exception {
-		logger.info("Title: RunnableLandingPageTestcase");
-		logger.info("Description: performs actions on the microfocus demo web application.");
-		logger.info("Purpose: tests the overall workflow and type factories.");
+		
+		this.setTestcaseTitle("RunnableLandingPageTestcase");
+		this.setTestcasePurpose("Performs actions on the microfocus demo web application.");
+		this.setTestcaseDescription("Tests the overall workflow and type factories.");
+		logTestcaseInformation();
 		
 		xmlUrlBridge = new XmlUrlBridge(new File("./Resources/TestUrls.xml"));
 		landingPage = new LandingPage(new File("./Resources/Frames/DemoWebApplication.xml"), this.getWebFactory());

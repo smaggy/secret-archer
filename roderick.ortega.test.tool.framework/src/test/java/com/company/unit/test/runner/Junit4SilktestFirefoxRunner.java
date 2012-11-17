@@ -9,11 +9,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.company.common.browser.SilktestWebBrowserFactory;
+import com.company.common.concrete.abstracts.test.AbstractRunner;
 import com.company.common.model.tools.TestcaseRunnableInterface;
 import com.company.common.type.web.silktest.SilktestGuiWebFactory;
 import com.company.unit.test.pages.demowebapplication.RunnableLandingPageTestcase;
 
-public class Junit4SilktestFirefoxRunner {
+public class Junit4SilktestFirefoxRunner extends AbstractRunner {
 	private Logger logger = LoggerFactory.getLogger(Junit4SilktestFirefoxRunner.class);
 	private TestcaseRunnableInterface testcase;
 	
@@ -40,7 +41,7 @@ public class Junit4SilktestFirefoxRunner {
 		}
 		catch (Throwable e) {
 			logger.error("An error was encountered during the testcase execution, recording the event.");
-			logger.info(e.getMessage());
+			logErrorInformation(e);
 			throw e;
 		}
 	}

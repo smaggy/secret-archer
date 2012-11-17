@@ -20,7 +20,7 @@
 <!-- <root level="debug"> -->
 <!-- <root level="info"> -->
 <!-- <root level="error"> -->
-  <root level="debug">
+  <root level="info">
     <appender-ref ref="STDOUT" />
     <appender-ref ref="LOG"/>
   </root>

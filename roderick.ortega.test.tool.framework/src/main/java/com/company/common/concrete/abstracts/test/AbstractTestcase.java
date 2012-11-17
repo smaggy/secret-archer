@@ -13,6 +13,9 @@ public abstract class AbstractTestcase implements TestcaseRunnableInterface {
 	
 	private AbstractGuiWebFactoryInterface webFactory;
 	private AbstractWebBrowserInterface webBrowser;
+	private String testcaseTitle;
+	private String testcasePurpose;
+	private String testcaseDescription;
 	
 	public AbstractTestcase(AbstractWebBrowserInterface webBrowser, AbstractGuiWebFactoryInterface webFactory) {
 		this.webBrowser = webBrowser;
@@ -37,5 +40,42 @@ public abstract class AbstractTestcase implements TestcaseRunnableInterface {
 	@Override
 	public AbstractGuiWebFactoryInterface getWebFactory() throws Exception {
 		return this.webFactory;
+	}
+
+	public String getTestcaseTitle() {
+		return testcaseTitle;
+	}
+
+	public void setTestcaseTitle(String testcaseTitle) {
+		this.testcaseTitle = testcaseTitle;
+	}
+
+	public String getTestcasePurpose() {
+		return testcasePurpose;
+	}
+
+	public void setTestcasePurpose(String testcasePurpose) {
+		this.testcasePurpose = testcasePurpose;
+	}
+
+	public String getTestcaseDescription() {
+		return testcaseDescription;
+	}
+
+	public void setTestcaseDescription(String testcaseDescription) {
+		this.testcaseDescription = testcaseDescription;
+	}
+	
+	public void logTestcaseInformation() {
+		
+		String testcaseInformation = System.getProperty("line.separator");
+		testcaseInformation += " ==================================================================================== " + System.getProperty("line.separator");
+		testcaseInformation += " ===== Title: " + this.getTestcaseTitle() + System.getProperty("line.separator");
+		testcaseInformation += " ===== Purpose: " + this.getTestcasePurpose() + System.getProperty("line.separator");
+		testcaseInformation += " ===== Description: " + this.getTestcaseDescription() + System.getProperty("line.separator");
+		testcaseInformation += " ==================================================================================== ";
+		
+		logger.info(testcaseInformation);
+		
 	}
 }

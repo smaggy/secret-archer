@@ -94,6 +94,7 @@ public class AutoQuoteWorkflow extends AbstractSiteWorkflow implements AutoQuote
 	public void logout() throws Exception {
 		navigateHome();
 		lp.selectLogOutButton();
+		Thread.sleep(1000);				// time to logout gracefully before shutting down the browser
 	}
 	
 }

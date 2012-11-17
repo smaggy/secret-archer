@@ -36,7 +36,7 @@ public abstract class AbstractAutomationFrame implements FrameableInterface {
 		
 		switch (frameParameters.getFrameParameterType()) {
 		
-		case PAGE_ONLY:
+		case PAGE_OBJECT:
 			return xmlFrameBridge.getPageLocator(frameParameters);
 			
 		case PAGE_AND_TEST_OBJECT:
@@ -52,7 +52,7 @@ public abstract class AbstractAutomationFrame implements FrameableInterface {
 		
 		switch (frameParameters.getFrameParameterType()) {
 		
-		case PAGE_ONLY:
+		case PAGE_OBJECT:
 			return xmlFrameBridge.getPageCssSelector(frameParameters);
 			
 		case PAGE_AND_TEST_OBJECT:

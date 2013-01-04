@@ -31,6 +31,7 @@ public class Junit4SeleniumFirefoxRunner extends AbstractRunner {
 	public void before() throws Exception {
 		logger.info("Executing testcase setup via Selenium Firefox Runner");
 		testcase = new RunnableLandingPageTestcase(Junit4SeleniumIeRunner.getWebBrowser(),Junit4SeleniumIeRunner.getWebFactory());
+		testcase.testcaseSetup();
 	}
 	
 	@Test

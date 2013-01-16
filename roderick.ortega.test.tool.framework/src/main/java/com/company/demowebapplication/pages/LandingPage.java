@@ -32,6 +32,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Email"))).setText(email);
 		}
 		else {
+			logger.info("ACTION: setEmail: input is null, trying alternative [" + getDto().getLandingPageDto().getEmail() + "]");
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Email"))).setText(getDto().getLandingPageDto().getEmail());
 		}
 	}
@@ -43,6 +44,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Password"))).setText(password);
 		}
 		else {
+			logger.info("ACTION: setPassword: input is null, trying alternative [" + getDto().getLandingPageDto().getPassword() + "]");
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","Password"))).setText(getDto().getLandingPageDto().getPassword());
 		}
 	}
@@ -78,6 +80,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 			getWebFactory().createWebListBox(getLocator(new FrameParameters("LandingPage","ServiceSelector"))).select(serviceType.toString());
 		}
 		else {
+			logger.info("ACTION: selectService: input is null, trying alternative [" + getDto().getLandingPageDto().getService() + "]");
 			getWebFactory().createWebListBox(getLocator(new FrameParameters("LandingPage","ServiceSelector"))).select(getDto().getLandingPageDto().getService());
 		}
 	}
@@ -107,6 +110,7 @@ public class LandingPage extends AbstractSitePage implements DataLoadableInterfa
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","NewsletterSignUpEmail"))).setText(email);
 		}
 		else {
+			logger.info("ACTION: setNewsletterSignUpEmail: input is null, trying alternative [" + getDto().getLandingPageDto().getNewsletterEmail() + "]");
 			getWebFactory().createWebTextField(getLocator(new FrameParameters("LandingPage","NewsletterSignUpEmail"))).setText(getDto().getLandingPageDto().getNewsletterEmail());
 		}
 	}

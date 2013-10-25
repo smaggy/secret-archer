@@ -3,24 +3,50 @@ package com.company.common.types;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Implementation of a company specific view of the date.  Dates have many different formats this implementation enforces validation of a singular date within the context of the automation system.
+ * 
+ * @author ortega_e
+ *
+ */
 public class CompanyStringDate {
 	
 	final static Logger logger = LoggerFactory.getLogger(CompanyStringDate.class);
 	private String date;
 	
+	/**
+	 * Constructor
+	 * 
+	 * @param date
+	 */
 	public CompanyStringDate(String date) {
 		validate(date);
 		this.date = date;
 	}
 	
+	/**
+	 * Gets the Date
+	 * 
+	 * @return
+	 */
 	public String getDate() {
 		return date;
 	}
 
+	/**
+	 * Sets the Date
+	 * 
+	 * @param date
+	 */
 	public void setDate(String date) {
 		this.date = date;
 	}
 	
+	/**
+	 * Validates the date against specific rules.  May tie into the constructor or the setter and getter.
+	 * 
+	 * @param date
+	 */
 	private void validate(String date) {
 		
 		// break up into to tokens and validate
@@ -51,6 +77,9 @@ public class CompanyStringDate {
 		
 	}
 	
+	/**
+	 * ToString Decorator
+	 */
 	public String toString() {
 		return "[" + date + "]";
 	}

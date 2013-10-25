@@ -2,6 +2,12 @@ package com.company.common.types;
 
 import com.company.common.enums.FrameParameterType;
 
+/**
+ * Implementation of FrameParameters - Basically a DTO with frame specific data points used by the automation system
+ * 
+ * @author ortega_e
+ *
+ */
 public class FrameParameters {
 	
 	private String pageId;
@@ -59,6 +65,9 @@ public class FrameParameters {
 		this.frameParameterType = frameParameterType;
 	}
 
+	/**
+	 * ToString Decorator
+	 */
 	public String toString() {
 		return "[" + pageId + "|" + testObjectId + "|" + browserType + "|" + frameParameterType + "]";
 	}

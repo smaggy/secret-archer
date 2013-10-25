@@ -1,5 +1,11 @@
 package com.company.common.types;
 
+/**
+ * Implemenation of a TableCell
+ * 
+ * @author ortega_e
+ *
+ */
 public class TableCell {
 	
 	private int row;
